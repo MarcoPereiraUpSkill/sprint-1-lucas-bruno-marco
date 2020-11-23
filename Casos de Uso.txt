@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------------
-							UC1 - Inserir novo atleta (Completo)
+				UC1 - Inserir novo atleta (Completo)
 Ator:
 	Clube Desportivo
 Partes interessadas e seus interesses:
@@ -41,7 +41,7 @@ Questões em aberto:
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
-							UC2 - Retornar lista de atletas (Completo)
+				UC2 - Retornar lista de atletas (Completo)
 Ator:
 	Clube Desportivo
 Partes interessadas e seus interesses:
@@ -72,7 +72,7 @@ Questões em aberto:
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
-							UC3 - Apresentar valor a pagar a atleta no final de cada mês  (Completo)
+		UC3 - Apresentar valor a pagar a atleta no final de cada mês  (Completo)
 Ator:
 	Clube Desportivo
 Partes interessadas e seus interesses:
@@ -106,7 +106,7 @@ Questões em aberto:
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
-							UC4 - Retornar o valor total de todos os atletas  (Completo)
+			UC4 - Retornar o valor total de todos os atletas  (Completo)
 Ator:
 	Clube Desportivo
 Partes interessadas e seus interesses:
