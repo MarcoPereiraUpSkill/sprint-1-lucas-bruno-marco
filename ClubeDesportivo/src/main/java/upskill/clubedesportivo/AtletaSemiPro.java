@@ -17,8 +17,8 @@ public class AtletaSemiPro extends AtletaNaoPro{
     private static double parcelaFixa=0;
     private static double parcelaVariavel=0;
 
-    public AtletaSemiPro(int antiguidade, String nome, int nic, String genero, int idade, int fcr) {
-        super(antiguidade, nome, nic, genero, idade, fcr);
+    public AtletaSemiPro(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade) {
+        super(antiguidade, nome, nic, genero, idade, fcr, atividade);
     }
 
     @Override
