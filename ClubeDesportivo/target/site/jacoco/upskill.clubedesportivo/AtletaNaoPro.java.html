@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AtletaNaoPro.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ClubeDesportivo</a> &gt; <a href="index.source.html" class="el_package">upskill.clubedesportivo</a> &gt; <span class="el_source">AtletaNaoPro.java</span></div><h1>AtletaNaoPro.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package upskill.clubedesportivo;
+
+
+/**
+ *
+ * @author Vicious
+ */
+public class AtletaNaoPro extends Atleta{
+    private int antiguidade;
+    
+    private static final int ANTIGUIDADE_POR_OMISSAO=0;
+    
+<span class="fc" id="L18">    private static double percMinAntiguidade = 2;</span>
+<span class="fc" id="L19">    private static double percMedAntiguidade = 8;</span>
+<span class="fc" id="L20">    private static double percMaxAntiguidade = 20;</span>
+<span class="fc" id="L21">    private static int minAntiguidade = 5;</span>
+<span class="fc" id="L22">    private static int medAntiguidade = 10;</span>
+<span class="fc" id="L23">    private static int maxAntiguidade = 20;</span>
+
+    public AtletaNaoPro(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo) {
+<span class="fc" id="L26">        super(nome, nic, genero, idade, fcr, atividade, objetivo);</span>
+<span class="fc" id="L27">        this.antiguidade = antiguidade;</span>
+<span class="fc" id="L28">    }</span>
+
+    public int getAntiguidade() {
+<span class="nc" id="L31">        return antiguidade;</span>
+    }
+
+    public void setAntiguidade(int antiguidade) {
+<span class="nc" id="L35">        this.antiguidade = antiguidade;</span>
+<span class="nc" id="L36">    }</span>
+
+    @Override
+    public String toString() {
+<span class="nc" id="L40">        return &quot;AtletaNaoPro{&quot; + &quot;antiguidade=&quot; + antiguidade + '}';</span>
+    }
+
+    public static double getPercMinAntiguidade() {
+<span class="nc" id="L44">        return percMinAntiguidade;</span>
+    }
+
+    public static void setPercMinAntiguidade(double percMinAntiguidade) {
+<span class="nc" id="L48">        AtletaNaoPro.percMinAntiguidade = percMinAntiguidade;</span>
+<span class="nc" id="L49">    }</span>
+
+    public static double getPercMedAntiguidade() {
+<span class="nc" id="L52">        return percMedAntiguidade;</span>
+    }
+
+    public static void setPercMedAntiguidade(double percMedAntiguidade) {
+<span class="nc" id="L56">        AtletaNaoPro.percMedAntiguidade = percMedAntiguidade;</span>
+<span class="nc" id="L57">    }</span>
+
+    public static double getPercMaxAntiguidade() {
+<span class="nc" id="L60">        return percMaxAntiguidade;</span>
+    }
+
+    public static void setPercMaxAntiguidade(double percMaxAntiguidade) {
+<span class="nc" id="L64">        AtletaNaoPro.percMaxAntiguidade = percMaxAntiguidade;</span>
+<span class="nc" id="L65">    }</span>
+
+    public static int getMinAntiguidade() {
+<span class="nc" id="L68">        return minAntiguidade;</span>
+    }
+
+    public static void setMinAntiguidade(int minAntiguidade) {
+<span class="nc" id="L72">        AtletaNaoPro.minAntiguidade = minAntiguidade;</span>
+<span class="nc" id="L73">    }</span>
+
+    public static int getMedAntiguidade() {
+<span class="nc" id="L76">        return medAntiguidade;</span>
+    }
+
+    public static void setMedAntiguidade(int medAntiguidade) {
+<span class="nc" id="L80">        AtletaNaoPro.medAntiguidade = medAntiguidade;</span>
+<span class="nc" id="L81">    }</span>
+
+    public static int getMaxAntiguidade() {
+<span class="nc" id="L84">        return maxAntiguidade;</span>
+    }
+
+    public static void setMaxAntiguidade(int maxAntiguidade) {
+<span class="nc" id="L88">        AtletaNaoPro.maxAntiguidade = maxAntiguidade;</span>
+<span class="nc" id="L89">    }</span>
+
+
+    
+    
+    
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
