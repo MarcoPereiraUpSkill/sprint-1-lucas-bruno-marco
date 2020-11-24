@@ -15,12 +15,14 @@ public class Atleta {
     private String genero;
     private int idade;
     private int fcr;
+    private String atividade;
     
     private static final String NOME_POR_OMISSAO="";
     private static final int NIC_POR_OMISSAO=0;
     private static final String GENERO_POR_OMISSAO="";
     private static final int IDADE_POR_OMISSAO=1;
     private static final int FCR_POR_OMISSAO=1;
+    private static final String ATIVIDADE_POR_OMISSAO = "";
     
     private static double fcmPadrao = 208.75;
     private static double fcmPadraoI = 0.73;
@@ -31,12 +33,13 @@ public class Atleta {
     private static double fcmNatacao = 204;
     private static double fcmNatacaoI = 1.7;
 
-    public Atleta(String nome, int nic, String genero, int idade, int fcr) {
+    public Atleta(String nome, int nic, String genero, int idade, int fcr, String atividade) {
         this.nome = nome;
         this.nic = nic;
         this.genero = genero;
         this.idade = idade;
         this.fcr = fcr;
+        this.atividade = atividade;
     }
 
     public String getNome() {
@@ -84,6 +87,11 @@ public class Atleta {
         return "Atleta{" + "nome=" + nome + ", nic=" + nic + ", genero=" + genero + ", idade=" + idade + '}';
     }
           
-            
+    public boolean validarAtividade (){
+        return atividade.equalsIgnoreCase(Atividade.CAMINHADA)
+                || atividade.equalsIgnoreCase(Atividade.CICLISMO)
+                || atividade.equalsIgnoreCase(Atividade.CORRIDA)
+                || atividade.equalsIgnoreCase(Atividade.NATACAO);
+    }
     
 }
