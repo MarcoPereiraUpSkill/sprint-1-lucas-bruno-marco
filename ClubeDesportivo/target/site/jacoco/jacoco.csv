@@ -1,7 +1,7 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-ClubeDesportivo,upskill.clubedesportivo,AtletaAmador,22,20,0,0,13,6,9,2,9,2
-ClubeDesportivo,upskill.clubedesportivo,Atleta,88,146,6,16,22,31,21,12,15,7
-ClubeDesportivo,upskill.clubedesportivo,AtletaPro,36,19,0,0,10,5,7,2,7,2
-ClubeDesportivo,upskill.clubedesportivo,MainClubeDesportivo,97,0,6,0,9,0,5,0,2,0
-ClubeDesportivo,upskill.clubedesportivo,AtletaNaoPro,49,26,0,0,22,9,15,2,15,2
-ClubeDesportivo,upskill.clubedesportivo,AtletaSemiPro,12,16,0,0,7,4,5,2,5,2
+ClubeDesportivo,upskill.clubedesportivo,AtletaAmador,22,44,0,2,13,8,9,4,9,3
+ClubeDesportivo,upskill.clubedesportivo,Atleta,78,166,6,16,23,34,21,14,15,9
+ClubeDesportivo,upskill.clubedesportivo,AtletaPro,36,30,0,0,10,6,7,3,7,3
+ClubeDesportivo,upskill.clubedesportivo,MainClubeDesportivo,131,0,8,0,11,0,6,0,2,0
+ClubeDesportivo,upskill.clubedesportivo,AtletaNaoPro,54,49,2,6,23,10,18,5,16,3
+ClubeDesportivo,upskill.clubedesportivo,AtletaSemiPro,12,26,0,0,7,5,5,3,5,3

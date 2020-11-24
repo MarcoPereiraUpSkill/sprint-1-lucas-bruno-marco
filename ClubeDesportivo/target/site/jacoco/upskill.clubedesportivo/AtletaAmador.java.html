@@ -18,46 +18,52 @@ public class AtletaAmador extends AtletaNaoPro{
 <span class="fc" id="L18">    private static double percParcelaVariavel=7;</span>
 <span class="fc" id="L19">    private static double valorMinimo=5;</span>
 
-    public AtletaAmador(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo) {
-<span class="fc" id="L22">        super(antiguidade, nome, nic, genero, idade, fcr, atividade, objetivo);</span>
+    public AtletaAmador(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
+<span class="fc" id="L22">        super(antiguidade, nome, nic, genero, idade, fcr, atividade, objetivo, premios);</span>
 <span class="fc" id="L23">    }</span>
 
     @Override
     public String toString() {
 <span class="nc" id="L27">        return &quot;AtletaAmador{&quot; + '}';</span>
     }
+    
+    @Override
+    public double calcularValorMensal(){
+<span class="fc" id="L32">        double valorMensal = (getPremios()*(obterPercAntiguidade()/100))+(getPremios()*(percParcelaVariavel/100));</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">        return valorMensal&lt;valorMinimo ? valorMinimo : valorMensal; </span>
+    }
 
     public static double getParcelaFixa() {
-<span class="nc" id="L31">        return parcelaFixa;</span>
+<span class="nc" id="L37">        return parcelaFixa;</span>
     }
 
     public static void setParcelaFixa(double parcelaFixa) {
-<span class="nc" id="L35">        AtletaAmador.parcelaFixa = parcelaFixa;</span>
-<span class="nc" id="L36">    }</span>
+<span class="nc" id="L41">        AtletaAmador.parcelaFixa = parcelaFixa;</span>
+<span class="nc" id="L42">    }</span>
 
     public static double getParcelaVariavel() {
-<span class="nc" id="L39">        return parcelaVariavel;</span>
+<span class="nc" id="L45">        return parcelaVariavel;</span>
     }
 
     public static void setParcelaVariavel(double parcelaVariavel) {
-<span class="nc" id="L43">        AtletaAmador.parcelaVariavel = parcelaVariavel;</span>
-<span class="nc" id="L44">    }</span>
+<span class="nc" id="L49">        AtletaAmador.parcelaVariavel = parcelaVariavel;</span>
+<span class="nc" id="L50">    }</span>
 
     public static double getPercParcelaVariavel() {
-<span class="nc" id="L47">        return percParcelaVariavel;</span>
+<span class="nc" id="L53">        return percParcelaVariavel;</span>
     }
 
     public static void setPercParcelaVariavel(double percParcelaVariavel) {
-<span class="nc" id="L51">        AtletaAmador.percParcelaVariavel = percParcelaVariavel;</span>
-<span class="nc" id="L52">    }</span>
+<span class="nc" id="L57">        AtletaAmador.percParcelaVariavel = percParcelaVariavel;</span>
+<span class="nc" id="L58">    }</span>
 
     public static double getValorMinimo() {
-<span class="nc" id="L55">        return valorMinimo;</span>
+<span class="nc" id="L61">        return valorMinimo;</span>
     }
 
     public static void setValorMinimo(double valorMinimo) {
-<span class="nc" id="L59">        AtletaAmador.valorMinimo = valorMinimo;</span>
-<span class="nc" id="L60">    }</span>
+<span class="nc" id="L65">        AtletaAmador.valorMinimo = valorMinimo;</span>
+<span class="nc" id="L66">    }</span>
     
     
 }

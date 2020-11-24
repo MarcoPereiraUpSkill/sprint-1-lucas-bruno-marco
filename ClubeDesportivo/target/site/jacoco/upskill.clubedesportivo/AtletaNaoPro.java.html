@@ -22,8 +22,8 @@ public class AtletaNaoPro extends Atleta{
 <span class="fc" id="L22">    private static int medAntiguidade = 10;</span>
 <span class="fc" id="L23">    private static int maxAntiguidade = 20;</span>
 
-    public AtletaNaoPro(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo) {
-<span class="fc" id="L26">        super(nome, nic, genero, idade, fcr, atividade, objetivo);</span>
+    public AtletaNaoPro(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
+<span class="fc" id="L26">        super(nome, nic, genero, idade, fcr, atividade, objetivo, premios);</span>
 <span class="fc" id="L27">        this.antiguidade = antiguidade;</span>
 <span class="fc" id="L28">    }</span>
 
@@ -39,54 +39,64 @@ public class AtletaNaoPro extends Atleta{
     public String toString() {
 <span class="nc" id="L40">        return &quot;AtletaNaoPro{&quot; + &quot;antiguidade=&quot; + antiguidade + '}';</span>
     }
+    
+    public double obterPercAntiguidade(){
+<span class="pc bpc" id="L44" title="2 of 8 branches missed.">        return (antiguidade&gt;=minAntiguidade &amp;&amp; antiguidade&lt;=medAntiguidade) ? percMinAntiguidade : </span>
+                (antiguidade&gt;medAntiguidade &amp;&amp; antiguidade&lt;=maxAntiguidade) ? percMedAntiguidade : percMaxAntiguidade;
+    }
+
+    @Override
+    public double calcularValorMensal() {
+<span class="nc" id="L50">        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.</span>
+    }
 
     public static double getPercMinAntiguidade() {
-<span class="nc" id="L44">        return percMinAntiguidade;</span>
+<span class="nc" id="L54">        return percMinAntiguidade;</span>
     }
 
     public static void setPercMinAntiguidade(double percMinAntiguidade) {
-<span class="nc" id="L48">        AtletaNaoPro.percMinAntiguidade = percMinAntiguidade;</span>
-<span class="nc" id="L49">    }</span>
+<span class="nc" id="L58">        AtletaNaoPro.percMinAntiguidade = percMinAntiguidade;</span>
+<span class="nc" id="L59">    }</span>
 
     public static double getPercMedAntiguidade() {
-<span class="nc" id="L52">        return percMedAntiguidade;</span>
+<span class="nc" id="L62">        return percMedAntiguidade;</span>
     }
 
     public static void setPercMedAntiguidade(double percMedAntiguidade) {
-<span class="nc" id="L56">        AtletaNaoPro.percMedAntiguidade = percMedAntiguidade;</span>
-<span class="nc" id="L57">    }</span>
+<span class="nc" id="L66">        AtletaNaoPro.percMedAntiguidade = percMedAntiguidade;</span>
+<span class="nc" id="L67">    }</span>
 
     public static double getPercMaxAntiguidade() {
-<span class="nc" id="L60">        return percMaxAntiguidade;</span>
+<span class="nc" id="L70">        return percMaxAntiguidade;</span>
     }
 
     public static void setPercMaxAntiguidade(double percMaxAntiguidade) {
-<span class="nc" id="L64">        AtletaNaoPro.percMaxAntiguidade = percMaxAntiguidade;</span>
-<span class="nc" id="L65">    }</span>
+<span class="nc" id="L74">        AtletaNaoPro.percMaxAntiguidade = percMaxAntiguidade;</span>
+<span class="nc" id="L75">    }</span>
 
     public static int getMinAntiguidade() {
-<span class="nc" id="L68">        return minAntiguidade;</span>
+<span class="nc" id="L78">        return minAntiguidade;</span>
     }
 
     public static void setMinAntiguidade(int minAntiguidade) {
-<span class="nc" id="L72">        AtletaNaoPro.minAntiguidade = minAntiguidade;</span>
-<span class="nc" id="L73">    }</span>
+<span class="nc" id="L82">        AtletaNaoPro.minAntiguidade = minAntiguidade;</span>
+<span class="nc" id="L83">    }</span>
 
     public static int getMedAntiguidade() {
-<span class="nc" id="L76">        return medAntiguidade;</span>
+<span class="nc" id="L86">        return medAntiguidade;</span>
     }
 
     public static void setMedAntiguidade(int medAntiguidade) {
-<span class="nc" id="L80">        AtletaNaoPro.medAntiguidade = medAntiguidade;</span>
-<span class="nc" id="L81">    }</span>
+<span class="nc" id="L90">        AtletaNaoPro.medAntiguidade = medAntiguidade;</span>
+<span class="nc" id="L91">    }</span>
 
     public static int getMaxAntiguidade() {
-<span class="nc" id="L84">        return maxAntiguidade;</span>
+<span class="nc" id="L94">        return maxAntiguidade;</span>
     }
 
     public static void setMaxAntiguidade(int maxAntiguidade) {
-<span class="nc" id="L88">        AtletaNaoPro.maxAntiguidade = maxAntiguidade;</span>
-<span class="nc" id="L89">    }</span>
+<span class="nc" id="L98">        AtletaNaoPro.maxAntiguidade = maxAntiguidade;</span>
+<span class="nc" id="L99">    }</span>
 
 
     
