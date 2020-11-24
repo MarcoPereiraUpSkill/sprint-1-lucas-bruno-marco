@@ -22,8 +22,8 @@ public class AtletaNaoPro extends Atleta{
     private static int medAntiguidade = 10;
     private static int maxAntiguidade = 20;
 
-    public AtletaNaoPro(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo) {
-        super(nome, nic, genero, idade, fcr, atividade, objetivo);
+    public AtletaNaoPro(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
+        super(nome, nic, genero, idade, fcr, atividade, objetivo, premios);
         this.antiguidade = antiguidade;
     }
 
@@ -38,6 +38,16 @@ public class AtletaNaoPro extends Atleta{
     @Override
     public String toString() {
         return "AtletaNaoPro{" + "antiguidade=" + antiguidade + '}';
+    }
+    
+    public double obterPercAntiguidade(){
+        return (antiguidade>=minAntiguidade && antiguidade<=medAntiguidade) ? percMinAntiguidade : 
+                (antiguidade>medAntiguidade && antiguidade<=maxAntiguidade) ? percMedAntiguidade : percMaxAntiguidade;
+    }
+
+    @Override
+    public double calcularValorMensal() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public static double getPercMinAntiguidade() {

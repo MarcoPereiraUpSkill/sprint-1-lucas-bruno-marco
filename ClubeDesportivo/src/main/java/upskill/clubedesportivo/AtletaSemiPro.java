@@ -14,16 +14,21 @@ public class AtletaSemiPro extends AtletaNaoPro{
     private static final double PARCELAFIXA_POR_OMISSAO=0;
     private static final double PARCELAVARIAVEL_POR_OMISSAO=0;
     
-    private static double parcelaFixa=0;
+    private static double parcelaFixa=500;
     private static double parcelaVariavel=0;
 
-    public AtletaSemiPro(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo) {
-        super(antiguidade, nome, nic, genero, idade, fcr, atividade, objetivo);
+    public AtletaSemiPro(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
+        super(antiguidade, nome, nic, genero, idade, fcr, atividade, objetivo, premios);
     }
 
     @Override
     public String toString() {
         return "AtletaSemiPro{" + '}';
+    }
+    
+    @Override
+    public double calcularValorMensal(){
+        return parcelaFixa+(parcelaFixa*(obterPercAntiguidade()/100));
     }
 
     public static double getParcelaFixa() {

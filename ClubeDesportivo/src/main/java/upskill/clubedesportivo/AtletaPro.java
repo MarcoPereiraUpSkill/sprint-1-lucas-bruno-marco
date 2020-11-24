@@ -12,6 +12,8 @@ package upskill.clubedesportivo;
  */
 public class AtletaPro extends Atleta{
     private double parcelaFixa;
+    
+    //parcelaVariavel não está a ser usada
     private double parcelaVariavel;
     
     private static final double PARCELAFIXA_POR_OMISSAO=0;
@@ -19,8 +21,8 @@ public class AtletaPro extends Atleta{
     
     private static double percParcelaVariavel=20;
 
-    public AtletaPro(double parcelaFixa, double parcelaVariavel, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo) {
-        super(nome, nic, genero, idade, fcr, atividade, objetivo);
+    public AtletaPro(double parcelaFixa, double parcelaVariavel, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
+        super(nome, nic, genero, idade, fcr, atividade, objetivo, premios);
         this.parcelaFixa = parcelaFixa;
         this.parcelaVariavel = parcelaVariavel;
     }
@@ -45,7 +47,12 @@ public class AtletaPro extends Atleta{
     public String toString() {
         return "AtletaPro{" + "parcelaFixa=" + parcelaFixa + ", parcelaVariavel=" + parcelaVariavel + '}';
     }
-
+    
+    @Override
+    public double calcularValorMensal(){
+        return parcelaFixa+(getPremios()*(percParcelaVariavel/100));
+    }
+    
     public static double getPercParcelaVariavel() {
         return percParcelaVariavel;
     }

@@ -18,13 +18,19 @@ public class AtletaAmador extends AtletaNaoPro{
     private static double percParcelaVariavel=7;
     private static double valorMinimo=5;
 
-    public AtletaAmador(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo) {
-        super(antiguidade, nome, nic, genero, idade, fcr, atividade, objetivo);
+    public AtletaAmador(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
+        super(antiguidade, nome, nic, genero, idade, fcr, atividade, objetivo, premios);
     }
 
     @Override
     public String toString() {
         return "AtletaAmador{" + '}';
+    }
+    
+    @Override
+    public double calcularValorMensal(){
+        double valorMensal = (getPremios()*(obterPercAntiguidade()/100))+(getPremios()*(percParcelaVariavel/100));
+        return valorMensal<valorMinimo ? valorMinimo : valorMensal; 
     }
 
     public static double getParcelaFixa() {

@@ -9,7 +9,7 @@ package upskill.clubedesportivo;
  *
  * @author Vicious
  */
-public class Atleta {
+public abstract class Atleta {
     private String nome;
     private int nic;
     private String genero;
@@ -17,13 +17,15 @@ public class Atleta {
     private int fcr;
     private String atividade;
     private String objetivo;
+    private double premios;
     
     private static final String NOME_POR_OMISSAO="";
     private static final int NIC_POR_OMISSAO=0;
     private static final String GENERO_POR_OMISSAO="";
-    private static final int IDADE_POR_OMISSAO=1;
-    private static final int FCR_POR_OMISSAO=1;
+    private static final int IDADE_POR_OMISSAO=0;
+    private static final int FCR_POR_OMISSAO=0;
     private static final String ATIVIDADE_POR_OMISSAO = "";
+    private static final int PREMIOS_POR_OMISSAO=0;
     
     private static double fcmPadrao = 208.75;
     private static double fcmPadraoI = 0.73;
@@ -38,7 +40,7 @@ public class Atleta {
     private static String objetivoQueimaGordura="QueimaGordura";
     private static String objetivoCapacidadeCardio="CapacidadeCardio";
 
-    public Atleta(String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo) {
+    public Atleta(String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
         this.nome = nome;
         this.nic = nic;
         this.genero = genero;
@@ -46,6 +48,7 @@ public class Atleta {
         this.fcr = fcr;
         this.atividade = atividade;
         this.objetivo = objetivo;
+        this.premios = premios;
     }
 
     public String getNome() {
@@ -103,7 +106,15 @@ public class Atleta {
     public void setObjetivo(String objetivo) {
         this.objetivo = objetivo;
     }
-    
+
+    public double getPremios() {
+        return premios;
+    }
+
+    public void setPremios(double premios) {
+        this.premios = premios;
+    }
+
     @Override
     public String toString() {
         return "Atleta{" + "nome=" + nome + ", nic=" + nic + ", genero=" + genero + ", idade=" + idade + '}';
@@ -133,4 +144,6 @@ public class Atleta {
     public double calcularFCT(){
         return fcr+(obterIT()*(calcularFCM()-fcr));
     }
+    
+    public abstract double calcularValorMensal();
 }
