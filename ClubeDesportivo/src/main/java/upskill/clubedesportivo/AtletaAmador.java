@@ -17,9 +17,11 @@ public class AtletaAmador extends AtletaNaoPro{
     private static double parcelaVariavel=0;
     private static double percParcelaVariavel=7;
     private static double valorMinimo=5;
+    private static int qtdAtletaAmador=0;
 
     public AtletaAmador(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
         super(antiguidade, nome, nic, genero, idade, fcr, atividade, objetivo, premios);
+        qtdAtletaAmador++;
     }
 
     @Override
@@ -64,6 +66,11 @@ public class AtletaAmador extends AtletaNaoPro{
     public static void setValorMinimo(double valorMinimo) {
         AtletaAmador.valorMinimo = valorMinimo;
     }
+
+    public static int getQtdAtletaAmador() {
+        return qtdAtletaAmador;
+    }
+    
     
     
 }

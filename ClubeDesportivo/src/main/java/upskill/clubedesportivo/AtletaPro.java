@@ -20,11 +20,13 @@ public class AtletaPro extends Atleta{
     private static final double PARCELAVARIAVEL_POR_OMISSAO=0;
     
     private static double percParcelaVariavel=20;
+    private static int qtdAtletaPro=0;
 
     public AtletaPro(double parcelaFixa, double parcelaVariavel, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
         super(nome, nic, genero, idade, fcr, atividade, objetivo, premios);
         this.parcelaFixa = parcelaFixa;
         this.parcelaVariavel = parcelaVariavel;
+        qtdAtletaPro++;
     }
 
     public double getParcelaFixa() {
@@ -60,6 +62,11 @@ public class AtletaPro extends Atleta{
     public static void setPercParcelaVariavel(double percParcelaVariavel) {
         AtletaPro.percParcelaVariavel = percParcelaVariavel;
     }
+
+    public static int getQtdAtletaPro() {
+        return qtdAtletaPro;
+    }
+    
     
     
 }
