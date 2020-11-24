@@ -94,4 +94,5 @@ public class Atleta {
                 || atividade.equalsIgnoreCase(Atividade.NATACAO);
     }
     
+    
 }
