@@ -19,8 +19,8 @@ public class AtletaPro extends Atleta{
     
     private static double percParcelaVariavel=20;
 
-    public AtletaPro(double parcelaFixa, double parcelaVariavel, String nome, int nic, String genero, int idade, String atividade, int fcr) {
-        super(nome, nic, genero, idade, atividade, fcr);
+    public AtletaPro(double parcelaFixa, double parcelaVariavel, String nome, int nic, String genero, int idade, int fcr) {
+        super(nome, nic, genero, idade, fcr);
         this.parcelaFixa = parcelaFixa;
         this.parcelaVariavel = parcelaVariavel;
     }

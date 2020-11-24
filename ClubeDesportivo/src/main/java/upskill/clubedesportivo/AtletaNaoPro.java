@@ -22,8 +22,8 @@ public class AtletaNaoPro extends Atleta{
     private static int medAntiguidade = 10;
     private static int maxAntiguidade = 20;
 
-    public AtletaNaoPro(int antiguidade, String nome, int nic, String genero, int idade, String atividade, int fcr) {
-        super(nome, nic, genero, idade, atividade, fcr);
+    public AtletaNaoPro(int antiguidade, String nome, int nic, String genero, int idade, int fcr) {
+        super(nome, nic, genero, idade, fcr);
         this.antiguidade = antiguidade;
     }
 

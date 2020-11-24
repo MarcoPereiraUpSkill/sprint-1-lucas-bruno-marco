@@ -14,35 +14,30 @@ public class Atleta {
     private int nic;
     private String genero;
     private int idade;
-    private String atividade;
     private int fcr;
     
-    private static final String NOME_POR_OMISSAO="Sem nome";
+    private static final String NOME_POR_OMISSAO="";
     private static final int NIC_POR_OMISSAO=0;
-    private static final String GENERO_POR_OMISSAO="Masculino";
+    private static final String GENERO_POR_OMISSAO="";
     private static final int IDADE_POR_OMISSAO=1;
-    private static final String ATIVIDADE_POR_OMISSAO="";
     private static final int FCR_POR_OMISSAO=1;
     
     private static double fcmPadrao = 208.75;
     private static double fcmPadraoI = 0.73;
     private static double fcmCiclismoFem = 189;
     private static double fcmCiclismoMas = 202;
-    private static double fcmPadraoIFem = 0.56;
-    private static double fcmPadraoIMas = 0.72;
+    private static double fcmCiclismoIFem = 0.56;
+    private static double fcmCiclismoIMas = 0.72;
     private static double fcmNatacao = 204;
     private static double fcmNatacaoI = 1.7;
 
-    public Atleta(String nome, int nic, String genero, int idade, String atividade, int fcr) {
+    public Atleta(String nome, int nic, String genero, int idade, int fcr) {
         this.nome = nome;
         this.nic = nic;
         this.genero = genero;
         this.idade = idade;
-        this.atividade = atividade;
         this.fcr = fcr;
     }
-
-    
 
     public String getNome() {
         return nome;
@@ -74,14 +69,6 @@ public class Atleta {
 
     public void setIdade(int idade) {
         this.idade = idade;
-    }
-
-    public String getAtividade() {
-        return atividade;
-    }
-
-    public void setAtividade(String atividade) {
-        this.atividade = atividade;
     }
 
     public int getFcr() {
