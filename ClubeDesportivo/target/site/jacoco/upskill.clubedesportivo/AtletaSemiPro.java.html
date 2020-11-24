@@ -14,33 +14,38 @@ public class AtletaSemiPro extends AtletaNaoPro{
     private static final double PARCELAFIXA_POR_OMISSAO=0;
     private static final double PARCELAVARIAVEL_POR_OMISSAO=0;
     
-<span class="fc" id="L17">    private static double parcelaFixa=0;</span>
+<span class="fc" id="L17">    private static double parcelaFixa=500;</span>
 <span class="fc" id="L18">    private static double parcelaVariavel=0;</span>
 
-    public AtletaSemiPro(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo) {
-<span class="fc" id="L21">        super(antiguidade, nome, nic, genero, idade, fcr, atividade, objetivo);</span>
+    public AtletaSemiPro(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
+<span class="fc" id="L21">        super(antiguidade, nome, nic, genero, idade, fcr, atividade, objetivo, premios);</span>
 <span class="fc" id="L22">    }</span>
 
     @Override
     public String toString() {
 <span class="nc" id="L26">        return &quot;AtletaSemiPro{&quot; + '}';</span>
     }
+    
+    @Override
+    public double calcularValorMensal(){
+<span class="fc" id="L31">        return parcelaFixa+(parcelaFixa*(obterPercAntiguidade()/100));</span>
+    }
 
     public static double getParcelaFixa() {
-<span class="nc" id="L30">        return parcelaFixa;</span>
+<span class="nc" id="L35">        return parcelaFixa;</span>
     }
 
     public static void setParcelaFixa(double parcelaFixa) {
-<span class="nc" id="L34">        AtletaSemiPro.parcelaFixa = parcelaFixa;</span>
-<span class="nc" id="L35">    }</span>
+<span class="nc" id="L39">        AtletaSemiPro.parcelaFixa = parcelaFixa;</span>
+<span class="nc" id="L40">    }</span>
 
     public static double getParcelaVariavel() {
-<span class="nc" id="L38">        return parcelaVariavel;</span>
+<span class="nc" id="L43">        return parcelaVariavel;</span>
     }
 
     public static void setParcelaVariavel(double parcelaVariavel) {
-<span class="nc" id="L42">        AtletaSemiPro.parcelaVariavel = parcelaVariavel;</span>
-<span class="nc" id="L43">    }</span>
+<span class="nc" id="L47">        AtletaSemiPro.parcelaVariavel = parcelaVariavel;</span>
+<span class="nc" id="L48">    }</span>
 
     
     

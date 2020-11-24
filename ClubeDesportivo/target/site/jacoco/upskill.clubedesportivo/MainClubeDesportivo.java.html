@@ -17,21 +17,26 @@ package upskill.clubedesportivo;
     public static void main(String[] args) {
         
         // Criação de 3 objetos de cada uma das categorias(Pro,SemiPro,Amador) para serem
-        // posteriormente armazenados na instância ClubeDesportivo
+        // posteriormente armazenados na instância ClubeDesportivo.
 <span class="nc" id="L21">        Atleta[] atletas = new Atleta[3];</span>
         
         // Criação de registos de atletas apenas para teste. Informação terá de ser
         // introduzida pelo Utilizador
-<span class="nc" id="L25">        atletas[0] = new AtletaPro(600, 300, &quot;Carlos&quot;, 123456789, &quot;Masculino&quot;, 32, 70, &quot;corrida&quot;, &quot;QueimaGordura&quot;);</span>
-<span class="nc" id="L26">        atletas[1] = new AtletaSemiPro(7, &quot;Marta&quot;, 345678123, &quot;Feminino&quot;, 27, 65, &quot;ciclismo&quot;, &quot;CapacidadeCardio&quot;);</span>
-<span class="nc" id="L27">        atletas[2] = new AtletaAmador(22, &quot;Jorge&quot;, 543876098, &quot;Masculino&quot;, 40, 55, &quot;caminhada&quot;, &quot;QueimaGordura&quot;);</span>
+<span class="nc" id="L25">        atletas[0] = new AtletaPro(600, 300, &quot;Carlos&quot;, 123456789, &quot;Masculino&quot;, 32, 70, &quot;corrida&quot;, &quot;QueimaGordura&quot;, 1200);</span>
+<span class="nc" id="L26">        atletas[1] = new AtletaSemiPro(7, &quot;Marta&quot;, 345678123, &quot;Feminino&quot;, 27, 65, &quot;ciclismo&quot;, &quot;CapacidadeCardio&quot;, 800);</span>
+<span class="nc" id="L27">        atletas[2] = new AtletaAmador(22, &quot;Jorge&quot;, 543876098, &quot;Masculino&quot;, 40, 55, &quot;caminhada&quot;, &quot;QueimaGordura&quot;, 600);</span>
         
-        // Obter nome e FCM de cada atleta semiprofissional e amador. Falta obter FCT.
-<span class="nc bnc" id="L30" title="All 2 branches missed.">        for (int i = 0; i &lt; atletas.length; i++) {</span>
-<span class="nc bnc" id="L31" title="All 4 branches missed.">            if (atletas[i] instanceof AtletaSemiPro || atletas[i] instanceof AtletaAmador) </span>
-<span class="nc" id="L32">                System.out.format(&quot;Nome: %s, FCM: %s, FCT: %s%n&quot;,atletas[i].getNome(), atletas[i].calcularFCM(), atletas[i].calcularFCT());</span>
+        // Obter nome, FCM e FCT de cada atleta semiprofissional e amador.
+<span class="nc bnc" id="L30" title="All 2 branches missed.">        for (Atleta atleta : atletas) {</span>
+<span class="nc bnc" id="L31" title="All 4 branches missed.">            if (atleta instanceof AtletaSemiPro || atleta instanceof AtletaAmador) {</span>
+<span class="nc" id="L32">                System.out.format(&quot;Nome: %s, FCM: %s, FCT: %s%n&quot;, atleta.getNome(), atleta.calcularFCM(), atleta.calcularFCT());</span>
+            }
         }
-<span class="nc" id="L34">    }</span>
+        
+<span class="nc bnc" id="L36" title="All 2 branches missed.">        for (Atleta atleta : atletas){</span>
+<span class="nc" id="L37">            System.out.format(&quot;Nome: %s, Valor Mensal: %.2f%n&quot;, atleta.getNome(), atleta.calcularValorMensal());</span>
+        }
+<span class="nc" id="L39">    }</span>
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

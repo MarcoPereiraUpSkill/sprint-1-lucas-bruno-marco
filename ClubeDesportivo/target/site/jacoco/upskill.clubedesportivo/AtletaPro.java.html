@@ -12,47 +12,54 @@ package upskill.clubedesportivo;
  */
 public class AtletaPro extends Atleta{
     private double parcelaFixa;
+    
+    //parcelaVariavel não está a ser usada
     private double parcelaVariavel;
     
     private static final double PARCELAFIXA_POR_OMISSAO=0;
     private static final double PARCELAVARIAVEL_POR_OMISSAO=0;
     
-<span class="fc" id="L20">    private static double percParcelaVariavel=20;</span>
+<span class="fc" id="L22">    private static double percParcelaVariavel=20;</span>
 
-    public AtletaPro(double parcelaFixa, double parcelaVariavel, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo) {
-<span class="fc" id="L23">        super(nome, nic, genero, idade, fcr, atividade, objetivo);</span>
-<span class="fc" id="L24">        this.parcelaFixa = parcelaFixa;</span>
-<span class="fc" id="L25">        this.parcelaVariavel = parcelaVariavel;</span>
-<span class="fc" id="L26">    }</span>
+    public AtletaPro(double parcelaFixa, double parcelaVariavel, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
+<span class="fc" id="L25">        super(nome, nic, genero, idade, fcr, atividade, objetivo, premios);</span>
+<span class="fc" id="L26">        this.parcelaFixa = parcelaFixa;</span>
+<span class="fc" id="L27">        this.parcelaVariavel = parcelaVariavel;</span>
+<span class="fc" id="L28">    }</span>
 
     public double getParcelaFixa() {
-<span class="nc" id="L29">        return parcelaFixa;</span>
+<span class="nc" id="L31">        return parcelaFixa;</span>
     }
 
     public void setParcelaFixa(double parcelaFixa) {
-<span class="nc" id="L33">        this.parcelaFixa = parcelaFixa;</span>
-<span class="nc" id="L34">    }</span>
+<span class="nc" id="L35">        this.parcelaFixa = parcelaFixa;</span>
+<span class="nc" id="L36">    }</span>
 
     public double getParcelaVariavel() {
-<span class="nc" id="L37">        return parcelaVariavel;</span>
+<span class="nc" id="L39">        return parcelaVariavel;</span>
     }
 
     public void setParcelaVariavel(double parcelaVariavel) {
-<span class="nc" id="L41">        this.parcelaVariavel = parcelaVariavel;</span>
-<span class="nc" id="L42">    }</span>
+<span class="nc" id="L43">        this.parcelaVariavel = parcelaVariavel;</span>
+<span class="nc" id="L44">    }</span>
 
     @Override
     public String toString() {
-<span class="nc" id="L46">        return &quot;AtletaPro{&quot; + &quot;parcelaFixa=&quot; + parcelaFixa + &quot;, parcelaVariavel=&quot; + parcelaVariavel + '}';</span>
+<span class="nc" id="L48">        return &quot;AtletaPro{&quot; + &quot;parcelaFixa=&quot; + parcelaFixa + &quot;, parcelaVariavel=&quot; + parcelaVariavel + '}';</span>
     }
-
+    
+    @Override
+    public double calcularValorMensal(){
+<span class="fc" id="L53">        return parcelaFixa+(getPremios()*(percParcelaVariavel/100));</span>
+    }
+    
     public static double getPercParcelaVariavel() {
-<span class="nc" id="L50">        return percParcelaVariavel;</span>
+<span class="nc" id="L57">        return percParcelaVariavel;</span>
     }
 
     public static void setPercParcelaVariavel(double percParcelaVariavel) {
-<span class="nc" id="L54">        AtletaPro.percParcelaVariavel = percParcelaVariavel;</span>
-<span class="nc" id="L55">    }</span>
+<span class="nc" id="L61">        AtletaPro.percParcelaVariavel = percParcelaVariavel;</span>
+<span class="nc" id="L62">    }</span>
     
     
 }
