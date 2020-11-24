@@ -16,6 +16,7 @@ public class Atleta {
     private int idade;
     private int fcr;
     private String atividade;
+    private String objetivo;
     
     private static final String NOME_POR_OMISSAO="";
     private static final int NIC_POR_OMISSAO=0;
@@ -32,14 +33,19 @@ public class Atleta {
     private static double fcmCiclismoIMas = 0.72;
     private static double fcmNatacao = 204;
     private static double fcmNatacaoI = 1.7;
+    private static double itQueimaGordura = 0.6;
+    private static double itCapacidadeCardio = 0.75;
+    private static String objetivoQueimaGordura="QueimaGordura";
+    private static String objetivoCapacidadeCardio="CapacidadeCardio";
 
-    public Atleta(String nome, int nic, String genero, int idade, int fcr, String atividade) {
+    public Atleta(String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo) {
         this.nome = nome;
         this.nic = nic;
         this.genero = genero;
         this.idade = idade;
         this.fcr = fcr;
         this.atividade = atividade;
+        this.objetivo = objetivo;
     }
 
     public String getNome() {
@@ -82,6 +88,22 @@ public class Atleta {
         this.fcr = fcr;
     }
 
+    public String getAtividade() {
+        return atividade;
+    }
+
+    public void setAtividade(String atividade) {
+        this.atividade = atividade;
+    }
+
+    public String getObjetivo() {
+        return objetivo;
+    }
+
+    public void setObjetivo(String objetivo) {
+        this.objetivo = objetivo;
+    }
+    
     @Override
     public String toString() {
         return "Atleta{" + "nome=" + nome + ", nic=" + nic + ", genero=" + genero + ", idade=" + idade + '}';
@@ -94,9 +116,21 @@ public class Atleta {
                 || atividade.equalsIgnoreCase(Atividade.NATACAO);
     }
     
+    public boolean validarObjetivo(){
+        return objetivo.equalsIgnoreCase(objetivoQueimaGordura) || objetivo.equalsIgnoreCase(objetivoCapacidadeCardio);
+    }
+    
+    public double obterIT(){
+        return getObjetivo()==objetivoQueimaGordura ? itQueimaGordura : itCapacidadeCardio;
+    }
+    
     public double calcularFCM(){
         if (atividade == Atividade.CAMINHADA || atividade == Atividade.CORRIDA) return fcmPadrao - (fcmPadraoI*idade);
         if (atividade == Atividade.CICLISMO) return (genero.equalsIgnoreCase("Feminino")) ? fcmCiclismoFem - (fcmCiclismoIFem*idade) : fcmCiclismoMas - (fcmCiclismoIMas*idade);
         else return fcmNatacao - (fcmNatacaoI*idade);
+    }
+    
+    public double calcularFCT(){
+        return fcr+(obterIT()*(calcularFCM()-fcr));
     }
 }

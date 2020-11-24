@@ -18,8 +18,8 @@ public class AtletaAmador extends AtletaNaoPro{
     private static double percParcelaVariavel=7;
     private static double valorMinimo=5;
 
-    public AtletaAmador(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade) {
-        super(antiguidade, nome, nic, genero, idade, fcr, atividade);
+    public AtletaAmador(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo) {
+        super(antiguidade, nome, nic, genero, idade, fcr, atividade, objetivo);
     }
 
     @Override

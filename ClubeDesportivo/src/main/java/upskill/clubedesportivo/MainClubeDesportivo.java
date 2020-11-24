@@ -22,13 +22,14 @@ public class MainClubeDesportivo {
         
         // Criação de registos de atletas apenas para teste. Informação terá de ser
         // introduzida pelo Utilizador
-        atletas[0] = new AtletaPro(600, 300, "Carlos", 123456789, "Masculino", 32, 70, "corrida");
-        atletas[1] = new AtletaSemiPro(7, "Marta", 345678123, "Feminino", 27, 65, "ciclismo");
-        atletas[2] = new AtletaAmador(22, "Jorge", 543876098, "Masculino", 40, 55, "caminhada");
+        atletas[0] = new AtletaPro(600, 300, "Carlos", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura");
+        atletas[1] = new AtletaSemiPro(7, "Marta", 345678123, "Feminino", 27, 65, "ciclismo", "CapacidadeCardio");
+        atletas[2] = new AtletaAmador(22, "Jorge", 543876098, "Masculino", 40, 55, "caminhada", "QueimaGordura");
         
         // Obter nome e FCM de cada atleta semiprofissional e amador. Falta obter FCT.
         for (int i = 0; i < atletas.length; i++) {
-            if (atletas[i] instanceof AtletaSemiPro || atletas[i] instanceof AtletaAmador) System.out.format("Nome: %s, FCM: %s%n",atletas[i].getNome(), atletas[i].calcularFCM());
+            if (atletas[i] instanceof AtletaSemiPro || atletas[i] instanceof AtletaAmador) 
+                System.out.format("Nome: %s, FCM: %s, FCT: %s%n",atletas[i].getNome(), atletas[i].calcularFCM(), atletas[i].calcularFCT());
         }
     }
     
