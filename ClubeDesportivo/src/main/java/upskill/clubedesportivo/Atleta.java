@@ -94,5 +94,9 @@ public class Atleta {
                 || atividade.equalsIgnoreCase(Atividade.NATACAO);
     }
     
-    
+    public double calcularFCM(){
+        if (atividade == Atividade.CAMINHADA || atividade == Atividade.CORRIDA) return fcmPadrao - (fcmPadraoI*idade);
+        if (atividade == Atividade.CICLISMO) return (genero.equalsIgnoreCase("Feminino")) ? fcmCiclismoFem - (fcmCiclismoIFem*idade) : fcmCiclismoMas - (fcmCiclismoIMas*idade);
+        else return fcmNatacao - (fcmNatacaoI*idade);
+    }
 }
