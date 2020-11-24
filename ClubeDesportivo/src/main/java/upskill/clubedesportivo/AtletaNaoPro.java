@@ -5,16 +5,16 @@
  */
 package upskill.clubedesportivo;
 
-
 /**
  *
  * @author Vicious
  */
-public class AtletaNaoPro extends Atleta{
+public class AtletaNaoPro extends Atleta {
+
     private int antiguidade;
-    
-    private static final int ANTIGUIDADE_POR_OMISSAO=0;
-    
+
+    private static final int ANTIGUIDADE_POR_OMISSAO = 0;
+
     private static double percMinAntiguidade = 2;
     private static double percMedAntiguidade = 8;
     private static double percMaxAntiguidade = 20;
@@ -36,13 +36,30 @@ public class AtletaNaoPro extends Atleta{
     }
 
     @Override
+    public boolean equals(Object obj) {
+        if (!super.equals(obj)) {
+            return false;
+        }
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof Atleta)) {
+            return false;
+        }
+
+        AtletaNaoPro atletaNaoPro = (AtletaNaoPro) obj;
+
+        return Integer.compare(antiguidade, atletaNaoPro.getAntiguidade()) == 0;
+    }
+
+    @Override
     public String toString() {
         return "AtletaNaoPro{" + "antiguidade=" + antiguidade + '}';
     }
-    
-    public double obterPercAntiguidade(){
-        return (antiguidade>=minAntiguidade && antiguidade<=medAntiguidade) ? percMinAntiguidade : 
-                (antiguidade>medAntiguidade && antiguidade<=maxAntiguidade) ? percMedAntiguidade : percMaxAntiguidade;
+
+    public double obterPercAntiguidade() {
+        return (antiguidade >= minAntiguidade && antiguidade <= medAntiguidade) ? percMinAntiguidade
+                : (antiguidade > medAntiguidade && antiguidade <= maxAntiguidade) ? percMedAntiguidade : percMaxAntiguidade;
     }
 
     @Override
@@ -98,9 +115,4 @@ public class AtletaNaoPro extends Atleta{
         AtletaNaoPro.maxAntiguidade = maxAntiguidade;
     }
 
-
-    
-    
-    
-    
 }

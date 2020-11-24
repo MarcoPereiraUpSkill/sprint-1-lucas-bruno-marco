@@ -20,6 +20,17 @@ public class AtletaSemiPro extends AtletaNaoPro{
     public AtletaSemiPro(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
         super(antiguidade, nome, nic, genero, idade, fcr, atividade, objetivo, premios);
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (!super.equals(obj)) {
+            return false;
+        }
+        if (obj == this) {
+            return true;
+        }
+        return obj instanceof Atleta;
+    }
 
     @Override
     public String toString() {

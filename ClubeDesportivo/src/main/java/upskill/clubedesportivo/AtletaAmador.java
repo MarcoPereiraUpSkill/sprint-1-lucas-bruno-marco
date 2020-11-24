@@ -23,6 +23,17 @@ public class AtletaAmador extends AtletaNaoPro{
         super(antiguidade, nome, nic, genero, idade, fcr, atividade, objetivo, premios);
         qtdAtletaAmador++;
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (!super.equals(obj)) {
+            return false;
+        }
+        if (obj == this) {
+            return true;
+        }
+        return obj instanceof Atleta;
+    }
 
     @Override
     public String toString() {

@@ -114,6 +114,28 @@ public abstract class Atleta {
     public void setPremios(double premios) {
         this.premios = premios;
     }
+    
+    @Override
+    public boolean equals(Object obj){
+        if(obj == this){
+            return true;
+        }
+        
+        if(!(obj instanceof Atleta)){
+            return false;
+        }
+        
+        Atleta atleta = (Atleta) obj;
+        
+        return nome.compareTo(atleta.getNome()) == 0
+                && Integer.compare(nic, atleta.getNic()) == 0
+                && genero.compareTo(atleta.getGenero()) == 0
+                && Integer.compare(idade, atleta.getIdade()) == 0
+                && Integer.compare(fcr, atleta.getFcr()) == 0
+                && atividade.compareTo(atleta.getAtividade()) == 0
+                && objetivo.compareTo(atleta.getObjetivo()) == 0
+                && Double.compare(premios, atleta.getPremios()) == 0;
+    }
 
     @Override
     public String toString() {
