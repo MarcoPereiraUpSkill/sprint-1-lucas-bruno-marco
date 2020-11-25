@@ -9,7 +9,8 @@ package upskill.clubedesportivo;
  *
  * @author Vicious
  */
-public abstract class Atleta {
+public abstract class Atleta implements Comparable<Atleta> {
+
     private String nome;
     private int nic;
     private String genero;
@@ -18,17 +19,16 @@ public abstract class Atleta {
     private String atividade;
     private String objetivo;
     private double premios;
-    
-    private static final String NOME_POR_OMISSAO="";
-    private static final int NIC_POR_OMISSAO=0;
-    private static final String GENERO_POR_OMISSAO="";
-    private static final int IDADE_POR_OMISSAO=0;
-    private static final int FCR_POR_OMISSAO=0;
+
+    private static final String NOME_POR_OMISSAO = "";
+    private static final int NIC_POR_OMISSAO = 0;
+    private static final String GENERO_POR_OMISSAO = "";
+    private static final int IDADE_POR_OMISSAO = 0;
+    private static final int FCR_POR_OMISSAO = 0;
     private static final String ATIVIDADE_POR_OMISSAO = "";
     private static final String OBJETIVO_POR_OMISSAO = "";
-    private static final int PREMIOS_POR_OMISSAO=0;
-    
-    
+    private static final int PREMIOS_POR_OMISSAO = 0;
+
     private static double fcmPadrao = 208.75;
     private static double fcmPadraoI = 0.73;
     private static double fcmCiclismoFem = 189;
@@ -39,8 +39,8 @@ public abstract class Atleta {
     private static double fcmNatacaoI = 1.7;
     private static double itQueimaGordura = 0.6;
     private static double itCapacidadeCardio = 0.75;
-    private static String objetivoQueimaGordura="QueimaGordura";
-    private static String objetivoCapacidadeCardio="CapacidadeCardio";
+    private static String objetivoQueimaGordura = "QueimaGordura";
+    private static String objetivoCapacidadeCardio = "CapacidadeCardio";
 
     public Atleta(String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
         this.nome = nome;
@@ -52,7 +52,7 @@ public abstract class Atleta {
         this.objetivo = objetivo;
         this.premios = premios;
     }
-    
+
     public Atleta() {
         this.nome = NOME_POR_OMISSAO;
         this.nic = NIC_POR_OMISSAO;
@@ -63,10 +63,6 @@ public abstract class Atleta {
         this.objetivo = OBJETIVO_POR_OMISSAO;
         this.premios = PREMIOS_POR_OMISSAO;
     }
-
-    
-    
-    
 
     public String getNome() {
         return nome;
@@ -131,19 +127,19 @@ public abstract class Atleta {
     public void setPremios(double premios) {
         this.premios = premios;
     }
-    
+
     @Override
-    public boolean equals(Object obj){
-        if(obj == this){
+    public boolean equals(Object obj) {
+        if (obj == this) {
             return true;
         }
-        
-        if(!(obj instanceof Atleta)){
+
+        if (!(obj instanceof Atleta)) {
             return false;
         }
-        
+
         Atleta atleta = (Atleta) obj;
-        
+
         return nome.compareTo(atleta.getNome()) == 0
                 && Integer.compare(nic, atleta.getNic()) == 0
                 && genero.compareTo(atleta.getGenero()) == 0
@@ -158,31 +154,41 @@ public abstract class Atleta {
     public String toString() {
         return "Atleta{" + "nome=" + nome + ", nic=" + nic + ", genero=" + genero + ", idade=" + idade + '}';
     }
-          
-    public boolean validarAtividade (){
+
+    @Override
+    public int compareTo(Atleta atleta) {
+        return this.nome.compareTo(atleta.nome);
+    }
+
+    public boolean validarAtividade() {
         return atividade.equalsIgnoreCase(Atividade.CAMINHADA)
                 || atividade.equalsIgnoreCase(Atividade.CICLISMO)
                 || atividade.equalsIgnoreCase(Atividade.CORRIDA)
                 || atividade.equalsIgnoreCase(Atividade.NATACAO);
     }
-    
-    public boolean validarObjetivo(){
+
+    public boolean validarObjetivo() {
         return objetivo.equalsIgnoreCase(objetivoQueimaGordura) || objetivo.equalsIgnoreCase(objetivoCapacidadeCardio);
     }
-    
-    public double obterIT(){
-        return getObjetivo()==objetivoQueimaGordura ? itQueimaGordura : itCapacidadeCardio;
+
+    public double obterIT() {
+        return getObjetivo() == objetivoQueimaGordura ? itQueimaGordura : itCapacidadeCardio;
     }
-    
-    public double calcularFCM(){
-        if (atividade == Atividade.CAMINHADA || atividade == Atividade.CORRIDA) return fcmPadrao - (fcmPadraoI*idade);
-        if (atividade == Atividade.CICLISMO) return (genero.equalsIgnoreCase("Feminino")) ? fcmCiclismoFem - (fcmCiclismoIFem*idade) : fcmCiclismoMas - (fcmCiclismoIMas*idade);
-        else return fcmNatacao - (fcmNatacaoI*idade);
+
+    public double calcularFCM() {
+        if (atividade == Atividade.CAMINHADA || atividade == Atividade.CORRIDA) {
+            return fcmPadrao - (fcmPadraoI * idade);
+        }
+        if (atividade == Atividade.CICLISMO) {
+            return (genero.equalsIgnoreCase("Feminino")) ? fcmCiclismoFem - (fcmCiclismoIFem * idade) : fcmCiclismoMas - (fcmCiclismoIMas * idade);
+        } else {
+            return fcmNatacao - (fcmNatacaoI * idade);
+        }
     }
-    
-    public double calcularFCT(){
-        return fcr+(obterIT()*(calcularFCM()-fcr));
+
+    public double calcularFCT() {
+        return fcr + (obterIT() * (calcularFCM() - fcr));
     }
-    
+
     public abstract double calcularValorMensal();
 }

@@ -5,38 +5,116 @@
  */
 package upskill.clubedesportivo;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Upskills
  */
-<span class="nc" id="L12">public class MainClubeDesportivo {</span>
+<span class="nc" id="L14">public class MainClubeDesportivo {</span>
 
     /**
      * @param args the command line arguments
      */
+<span class="nc" id="L19">    private static Scanner ler = new Scanner(System.in);</span>
+    
     public static void main(String[] args) {
+<span class="nc" id="L22">        menu();</span>
         
         // Criação de 3 objetos de cada uma das categorias(Pro,SemiPro,Amador) para serem
         // posteriormente armazenados na instância ClubeDesportivo.
-<span class="nc" id="L21">        Atleta[] atletas = new Atleta[3];</span>
+<span class="nc" id="L26">        Atleta[] atletas = new Atleta[3];</span>
         
         // Criação de registos de atletas apenas para teste. Informação terá de ser
         // introduzida pelo Utilizador
-<span class="nc" id="L25">        atletas[0] = new AtletaPro(600, 300, &quot;Carlos&quot;, 123456789, &quot;Masculino&quot;, 32, 70, &quot;corrida&quot;, &quot;QueimaGordura&quot;, 1200);</span>
-<span class="nc" id="L26">        atletas[1] = new AtletaSemiPro(7, &quot;Marta&quot;, 345678123, &quot;Feminino&quot;, 27, 65, &quot;ciclismo&quot;, &quot;CapacidadeCardio&quot;, 800);</span>
-<span class="nc" id="L27">        atletas[2] = new AtletaAmador(22, &quot;Jorge&quot;, 543876098, &quot;Masculino&quot;, 40, 55, &quot;caminhada&quot;, &quot;QueimaGordura&quot;, 600);</span>
+<span class="nc" id="L30">        atletas[0] = new AtletaPro(600, 300, &quot;Carlos&quot;, 123456789, &quot;Masculino&quot;, 32, 70, &quot;corrida&quot;, &quot;QueimaGordura&quot;, 1200);</span>
+<span class="nc" id="L31">        atletas[1] = new AtletaSemiPro(7, &quot;Marta&quot;, 345678123, &quot;Feminino&quot;, 27, 65, &quot;ciclismo&quot;, &quot;CapacidadeCardio&quot;, 800);</span>
+<span class="nc" id="L32">        atletas[2] = new AtletaAmador(22, &quot;Jorge&quot;, 543876098, &quot;Masculino&quot;, 40, 55, &quot;caminhada&quot;, &quot;QueimaGordura&quot;, 600);</span>
         
         // Obter nome, FCM e FCT de cada atleta semiprofissional e amador.
-<span class="nc bnc" id="L30" title="All 2 branches missed.">        for (Atleta atleta : atletas) {</span>
-<span class="nc bnc" id="L31" title="All 4 branches missed.">            if (atleta instanceof AtletaSemiPro || atleta instanceof AtletaAmador) {</span>
-<span class="nc" id="L32">                System.out.format(&quot;Nome: %s, FCM: %s, FCT: %s%n&quot;, atleta.getNome(), atleta.calcularFCM(), atleta.calcularFCT());</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">        for (Atleta atleta : atletas) {</span>
+<span class="nc bnc" id="L36" title="All 4 branches missed.">            if (atleta instanceof AtletaSemiPro || atleta instanceof AtletaAmador) {</span>
+<span class="nc" id="L37">                System.out.format(&quot;Nome: %s, FCM: %s, FCT: %s%n&quot;, atleta.getNome(), atleta.calcularFCM(), atleta.calcularFCT());</span>
             }
         }
-        
-<span class="nc bnc" id="L36" title="All 2 branches missed.">        for (Atleta atleta : atletas){</span>
-<span class="nc" id="L37">            System.out.format(&quot;Nome: %s, Valor Mensal: %.2f%n&quot;, atleta.getNome(), atleta.calcularValorMensal());</span>
+        // Obter nome e valor a pagar a cada atleta
+<span class="nc bnc" id="L41" title="All 2 branches missed.">        for (Atleta atleta : atletas){</span>
+<span class="nc" id="L42">            System.out.format(&quot;Nome: %s, Valor Mensal: %.2f%n&quot;, atleta.getNome(), atleta.calcularValorMensal());</span>
         }
-<span class="nc" id="L39">    }</span>
+        //Apresentar quantidade de instâncias de atletas amadores e profissionais sem percorrer o contentor
+//        System.out.println(&quot;Quantidade de instâncias de atletas amadores: &quot;+AtletaAmador.getQtdAtletaAmador());
+//        System.out.println(&quot;Quantidade de instâncias de atletas profissionais: &quot;+AtletaPro.getQtdAtletaPro());
+         
+      
+<span class="nc" id="L49">    }</span>
     
+    private static void menu(){
+<span class="nc" id="L52">        int op=0;</span>
+<span class="nc" id="L53">        boolean sair=false;</span>
+<span class="nc bnc" id="L54" title="All 2 branches missed.">        while (op!=7){</span>
+<span class="nc" id="L55">            System.out.println(&quot;########## Menu ##########&quot;);</span>
+<span class="nc" id="L56">            System.out.println(&quot;1.Inserir novo atleta&quot;);</span>
+<span class="nc" id="L57">            System.out.println(&quot;2.Listar atletas&quot;);</span>
+<span class="nc" id="L58">            System.out.println(&quot;3.Apresentar valor a pagar ao atleta&quot;);</span>
+<span class="nc" id="L59">            System.out.println(&quot;4.Apresentar valor total de todos os atletas&quot;);</span>
+<span class="nc" id="L60">            System.out.println(&quot;5.Calcular FCM&quot;);</span>
+<span class="nc" id="L61">            System.out.println(&quot;6.Calcular FCT&quot;);</span>
+<span class="nc" id="L62">            System.out.println(&quot;7.Sair&quot;);</span>
+            do{
+<span class="nc" id="L64">                System.out.println(&quot;Introduza opção:&quot;);</span>
+<span class="nc" id="L65">                op = Integer.valueOf(ler.nextLine());</span>
+<span class="nc bnc" id="L66" title="All 4 branches missed.">                if (op &lt; 1 &amp;&amp; op &gt; 7) System.out.println(&quot;Opção incorreta!&quot;);</span>
+
+<span class="nc bnc" id="L68" title="All 4 branches missed.">            }while(op &lt; 1 &amp;&amp; op &gt; 7);</span>
+            
+<span class="nc bnc" id="L70" title="All 8 branches missed.">            switch (op) {</span>
+
+<span class="nc" id="L72">                case 1: inserirAtleta();</span>
+<span class="nc" id="L73">                        break;</span>
+<span class="nc" id="L74">                case 2: break;</span>
+<span class="nc" id="L75">                case 3: break;</span>
+<span class="nc" id="L76">                case 4: break;</span>
+<span class="nc" id="L77">                case 5: break;</span>
+<span class="nc" id="L78">                case 6: break;</span>
+<span class="nc" id="L79">                case 7: break;</span>
+                default:
+            }
+        }      
+<span class="nc" id="L83">    }</span>
+
+    private static void inserirAtleta() {
+<span class="nc" id="L86">        Atleta[] atleta = new Atleta[1];</span>
+        int op;
+        String op2;
+        do{
+<span class="nc" id="L90">            System.out.println(&quot;Introduza categoria do atleta\n(1-Profissional|2-SemiProfissional|3-Amador): &quot;);</span>
+<span class="nc" id="L91">            op = Integer.valueOf(ler.nextLine());</span>
+<span class="nc bnc" id="L92" title="All 4 branches missed.">        }while(op&lt;1 || op&gt;3);</span>
+        
+        
+<span class="nc bnc" id="L95" title="All 2 branches missed.">        if (op==1)  atleta[0] = new AtletaPro();</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">        if (op==2)  atleta[0] = new AtletaSemiPro();</span>
+<span class="nc bnc" id="L97" title="All 2 branches missed.">        if (op==3)  atleta[0] = new AtletaAmador();</span>
+        
+<span class="nc" id="L99">        System.out.println(&quot;Introduza nome do atleta: &quot;);</span>
+<span class="nc" id="L100">        atleta[0].setNome(ler.nextLine());</span>
+<span class="nc" id="L101">        System.out.println(&quot;Introduza Número de Identificação Civil: &quot;);</span>
+<span class="nc" id="L102">        atleta[0].setNic(Integer.valueOf(ler.nextLine()));</span>
+        do{
+<span class="nc" id="L104">            System.out.println(&quot;Introduza género do atleta(Masculino,Feminino): &quot;);</span>
+<span class="nc" id="L105">            atleta[0].setGenero(ler.nextLine());</span>
+<span class="nc bnc" id="L106" title="All 4 branches missed.">        }while(!atleta[0].getGenero().equalsIgnoreCase(&quot;masculino&quot;) &amp;&amp; !atleta[0].getGenero().equalsIgnoreCase(&quot;feminino&quot;));</span>
+<span class="nc" id="L107">        System.out.println(&quot;Introduza Idade: &quot;);</span>
+<span class="nc" id="L108">        atleta[0].setIdade(Integer.valueOf(ler.nextLine()));</span>
+<span class="nc" id="L109">        System.out.println(&quot;Introduza FCR: &quot;);</span>
+<span class="nc" id="L110">        atleta[0].setFcr(Integer.valueOf(ler.nextLine()));</span>
+//        do{
+//            System.out.println(&quot;Introduza Atividade Associada: &quot;);
+//            atleta[0].setAtividade(Integer.valueOf(ler.nextLine()));
+//        }(while !Atleta.val)
+        
+        
+        
+<span class="nc" id="L118">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
