@@ -93,7 +93,7 @@ public class AtletaPro extends Atleta implements IRS {
 
     @Override
     public String toString() {
-        return "AtletaPro{" + "parcelaFixa=" + parcelaFixa + '}';
+        return String.format("Atleta profissional: nome: %s, parcelaFixa: %.2f", super.getNome(), parcelaFixa);
     }
 
     /**

@@ -58,7 +58,7 @@ public class ClubeDesportivo {
 
     @Override
     public String toString() {
-        return "ClubeDesportivo{" + "nome=" + nome + ", data=" + data + ", atletas=" + atletas + '}';
+        return String.format("Clube Desportivo: nome: %s, data: %d", nome, data);
     }
 
     @Override

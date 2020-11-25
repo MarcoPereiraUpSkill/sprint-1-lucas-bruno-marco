@@ -49,7 +49,7 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
 
     @Override
     public String toString() {
-        return "AtletaSemiPro{" + '}';
+        return String.format("Atleta Semi Profissional: nome: %s", super.getNome());
     }
     
     /**

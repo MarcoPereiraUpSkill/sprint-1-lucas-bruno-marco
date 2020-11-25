@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: upskill.clubedesportivo.AtletaAmadorTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
-=======
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.18 sec
->>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec

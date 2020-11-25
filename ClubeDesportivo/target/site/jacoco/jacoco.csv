@@ -1,22 +1,10 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-<<<<<<< HEAD
 ClubeDesportivo,upskill.clubedesportivo,ClubeDesportivo,85,98,7,7,24,27,12,12,7,10
-ClubeDesportivo,upskill.clubedesportivo,AtletaAmador,28,60,1,5,15,13,10,6,9,4
-ClubeDesportivo,upskill.clubedesportivo,OrdenarCategoriaModalidadeNome,0,45,0,6,0,8,0,5,0,2
-ClubeDesportivo,upskill.clubedesportivo,Atleta,91,194,11,19,29,39,21,19,10,15
-ClubeDesportivo,upskill.clubedesportivo,OrdenarPremios,0,9,0,0,0,2,0,2,0,2
-ClubeDesportivo,upskill.clubedesportivo,AtletaPro,43,60,3,5,14,14,10,6,7,5
-ClubeDesportivo,upskill.clubedesportivo,MainClubeDesportivo,388,0,22,0,58,0,14,0,3,0
-ClubeDesportivo,upskill.clubedesportivo,AtletaNaoPro,57,76,5,11,26,17,20,8,15,5
-ClubeDesportivo,upskill.clubedesportivo,AtletaSemiPro,22,30,3,1,10,6,7,4,5,4
-=======
-ClubeDesportivo,upskill.clubedesportivo,ClubeDesportivo,162,21,14,0,44,7,22,2,15,2
 ClubeDesportivo,upskill.clubedesportivo,AtletaAmador,26,62,0,6,14,14,9,7,9,4
-ClubeDesportivo,upskill.clubedesportivo,OrdenarCategoriaModalidadeNome,45,0,6,0,8,0,5,0,2,0
-ClubeDesportivo,upskill.clubedesportivo,Atleta,93,192,9,21,28,40,20,20,11,14
-ClubeDesportivo,upskill.clubedesportivo,OrdenarPremios,9,0,0,0,2,0,2,0,2,0
+ClubeDesportivo,upskill.clubedesportivo,OrdenarCategoriaModalidadeNome,0,45,0,6,0,8,0,5,0,2
+ClubeDesportivo,upskill.clubedesportivo,Atleta,87,198,9,21,27,41,19,21,10,15
+ClubeDesportivo,upskill.clubedesportivo,OrdenarPremios,0,9,0,0,0,2,0,2,0,2
 ClubeDesportivo,upskill.clubedesportivo,AtletaPro,39,64,1,7,12,16,8,8,7,5
 ClubeDesportivo,upskill.clubedesportivo,MainClubeDesportivo,388,0,22,0,58,0,14,0,3,0
 ClubeDesportivo,upskill.clubedesportivo,AtletaNaoPro,53,80,3,13,24,19,18,10,15,5
-ClubeDesportivo,upskill.clubedesportivo,AtletaSemiPro,28,24,4,0,12,4,8,3,6,3
->>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
+ClubeDesportivo,upskill.clubedesportivo,AtletaSemiPro,22,30,3,1,10,6,7,4,5,4

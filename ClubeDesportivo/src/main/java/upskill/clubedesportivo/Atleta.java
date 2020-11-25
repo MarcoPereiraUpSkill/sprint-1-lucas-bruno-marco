@@ -226,7 +226,7 @@ public abstract class Atleta implements Comparable<Atleta> {
 
     @Override
     public String toString() {
-        return "Atleta{" + "nome=" + nome + ", nic=" + nic + ", genero=" + genero + ", idade=" + idade + '}';
+        return String.format("Atleta: nome: %s, nic: %d, genero: %s, idade: %d", nome, nic, genero, idade);
     }
 
     @Override
