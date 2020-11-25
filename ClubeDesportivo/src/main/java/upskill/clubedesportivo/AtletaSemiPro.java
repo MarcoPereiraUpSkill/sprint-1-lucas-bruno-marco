@@ -23,6 +23,16 @@ public class AtletaSemiPro extends AtletaNaoPro{
     
     public AtletaSemiPro() {
         super();
+        
+    @Override
+    public boolean equals(Object obj) {
+        if (!super.equals(obj)) {
+            return false;
+        }
+        if (obj == this) {
+            return true;
+        }
+        return obj instanceof Atleta;
     }
 
     @Override
