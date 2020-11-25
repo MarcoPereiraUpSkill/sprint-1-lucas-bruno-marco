@@ -39,8 +39,8 @@ public abstract class Atleta {
     private static double fcmNatacaoI = 1.7;
     private static double itQueimaGordura = 0.6;
     private static double itCapacidadeCardio = 0.75;
-    private static String objetivoQueimaGordura="QueimaGordura";
-    private static String objetivoCapacidadeCardio="CapacidadeCardio";
+    private static String objetivoQueimaGordura="queimaGordura";
+    private static String objetivoCapacidadeCardio="capacidadeCardio";
 
     public Atleta(String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
         this.nome = nome;
@@ -157,6 +157,10 @@ public abstract class Atleta {
     @Override
     public String toString() {
         return "Atleta{" + "nome=" + nome + ", nic=" + nic + ", genero=" + genero + ", idade=" + idade + '}';
+    }
+    
+    public boolean validarGenero(){
+        return genero.equalsIgnoreCase("masculino") || objetivo.equalsIgnoreCase("feminino");
     }
           
     public boolean validarAtividade (){

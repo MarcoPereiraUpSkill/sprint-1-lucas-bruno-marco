@@ -108,12 +108,15 @@ public class MainClubeDesportivo {
         atleta[0].setIdade(Integer.valueOf(ler.nextLine()));
         System.out.println("Introduza FCR: ");
         atleta[0].setFcr(Integer.valueOf(ler.nextLine()));
-//        do{
-//            System.out.println("Introduza Atividade Associada: ");
-//            atleta[0].setAtividade(Integer.valueOf(ler.nextLine()));
-//        }(while !Atleta.val)
-        
-        
-        
+        do{
+            System.out.println("Introduza Atividade Associada: ");
+            atleta[0].setAtividade(ler.nextLine());
+        }while (!atleta[0].validarAtividade());
+        do{
+            System.out.println("Introduza Objetivo(QueimaGordura,CapacidadeCardio): ");
+            atleta[0].setObjetivo(ler.nextLine());
+        }while (!atleta[0].validarObjetivo()); 
+        System.out.println("Introduza Valor Prémios: ");
+        atleta[0].setPremios(Integer.valueOf(ler.nextLine()));
     }
 }
