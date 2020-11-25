@@ -18,8 +18,7 @@ public class MainClubeDesportivo {
      */
     private static Scanner ler = new Scanner(System.in);
     
-    public static void main(String[] args) {
-        menu();
+    public static void main(String[] args) {        
         
         // Criação de 3 objetos de cada uma das categorias(Pro,SemiPro,Amador) para serem
         // posteriormente armazenados na instância ClubeDesportivo.
@@ -41,82 +40,92 @@ public class MainClubeDesportivo {
         for (Atleta atleta : atletas){
             System.out.format("Nome: %s, Valor Mensal: %.2f%n", atleta.getNome(), atleta.calcularValorMensal());
         }
+        
         //Apresentar quantidade de instâncias de atletas amadores e profissionais sem percorrer o contentor
-//        System.out.println("Quantidade de instâncias de atletas amadores: "+AtletaAmador.getQtdAtletaAmador());
-//        System.out.println("Quantidade de instâncias de atletas profissionais: "+AtletaPro.getQtdAtletaPro());
-         
-      
-    }
-    
-    private static void menu(){
-        int op=0;
-        boolean sair=false;
-        while (op!=7){
-            System.out.println("########## Menu ##########");
-            System.out.println("1.Inserir novo atleta");
-            System.out.println("2.Listar atletas");
-            System.out.println("3.Apresentar valor a pagar ao atleta");
-            System.out.println("4.Apresentar valor total de todos os atletas");
-            System.out.println("5.Calcular FCM");
-            System.out.println("6.Calcular FCT");
-            System.out.println("7.Sair");
-            do{
-                System.out.println("Introduza opção:");
-                op = Integer.valueOf(ler.nextLine());
-                if (op < 1 && op > 7) System.out.println("Opção incorreta!");
-
-            }while(op < 1 && op > 7);
-            
-            switch (op) {
-
-                case 1: inserirAtleta();
-                        break;
-                case 2: break;
-                case 3: break;
-                case 4: break;
-                case 5: break;
-                case 6: break;
-                case 7: break;
-                default:
-            }
-        }      
-    }
-
-    private static void inserirAtleta() {
-        Atleta[] atleta = new Atleta[1];
-        int op;
-        String op2;
-        do{
-            System.out.println("Introduza categoria do atleta\n(1-Profissional|2-SemiProfissional|3-Amador): ");
-            op = Integer.valueOf(ler.nextLine());
-        }while(op<1 || op>3);
+        System.out.println("Quantidade de instâncias de atletas amadores: "+AtletaAmador.getQtdAtletaAmador());
+        System.out.println("Quantidade de instâncias de atletas profissionais: "+AtletaPro.getQtdAtletaPro());
         
         
-        if (op==1)  atleta[0] = new AtletaPro();
-        if (op==2)  atleta[0] = new AtletaSemiPro();
-        if (op==3)  atleta[0] = new AtletaAmador();
-        
-        System.out.println("Introduza nome do atleta: ");
-        atleta[0].setNome(ler.nextLine());
-        System.out.println("Introduza Número de Identificação Civil: ");
-        atleta[0].setNic(Integer.valueOf(ler.nextLine()));
-        do{
-            System.out.println("Introduza género do atleta(Masculino,Feminino): ");
-            atleta[0].setGenero(ler.nextLine());
-        }while(!atleta[0].getGenero().equalsIgnoreCase("masculino") && !atleta[0].getGenero().equalsIgnoreCase("feminino"));
-        System.out.println("Introduza Idade: ");
-        atleta[0].setIdade(Integer.valueOf(ler.nextLine()));
-        System.out.println("Introduza FCR: ");
-        atleta[0].setFcr(Integer.valueOf(ler.nextLine()));
-        do{
-            System.out.println("Introduza Atividade Associada: ");
-            atleta[0].setAtividade(ler.nextLine());
-        }while (!atleta[0].validarAtividade());
-        do{
-            System.out.println("Introduza Objetivo(QueimaGordura,CapacidadeCardio): ");
-            atleta[0].setObjetivo(ler.nextLine());
-        }while (!atleta[0].validarObjetivo()); 
-        System.out.println("Introduza Valor Prémios: ");
-        atleta[0].setPremios(Integer.valueOf(ler.nextLine()));
+        //Calcular e apresentar valor total a pagar a cada tipo de atleta (Profissional, SemiProfissional, Amador)
+        // Calcular e apresentar valor total de todos os atletas
+        double totalPro=0, totalSemiPro=0, totalAmador=0;
+        for (Atleta atleta : atletas){
+            if (atleta instanceof AtletaPro)    totalPro+=atleta.calcularValorMensal();
+            if (atleta instanceof AtletaSemiPro)    totalSemiPro+=atleta.calcularValorMensal();
+            if (atleta instanceof AtletaAmador)    totalAmador+=atleta.calcularValorMensal();
+        }
+        System.out.format("Valor Total Profissionais: %.2f%nValor Total SemiProfissionais: %.2f%n"
+                + "Valor Total Amadores: %.2f%nValor Total Atletas: %.2f", totalPro, totalSemiPro, totalAmador, totalPro+totalSemiPro+totalAmador);
     }
+//    private static void menu(){
+//        int op=0;
+//        boolean sair=false;
+//        while (op!=7){
+//            System.out.println("########## Menu ##########");
+//            System.out.println("1.Inserir novo atleta");
+//            System.out.println("2.Listar atletas");
+//            System.out.println("3.Apresentar valor a pagar ao atleta");
+//            System.out.println("4.Apresentar valor total de todos os atletas");
+//            System.out.println("5.Calcular FCM");
+//            System.out.println("6.Calcular FCT");
+//            System.out.println("7.Sair");
+//            do{
+//                System.out.println("Introduza opção:");
+//                op = Integer.valueOf(ler.nextLine());
+//                if (op < 1 && op > 7) System.out.println("Opção incorreta!");
+//
+//            }while(op < 1 && op > 7);
+//            
+//            switch (op) {
+//
+//                case 1: inserirAtleta();
+//                        break;
+//                case 2: break;
+//                case 3: break;
+//                case 4: break;
+//                case 5: break;
+//                case 6: break;
+//                case 7: break;
+//                default:
+//            }
+//        }      
+//    }
+
+//    private static void inserirAtleta() {
+//        Atleta[] atleta = new Atleta[1];
+//        int op;
+//        String op2;
+//        do{
+//            System.out.println("Introduza categoria do atleta\n(1-Profissional|2-SemiProfissional|3-Amador): ");
+//            op = Integer.valueOf(ler.nextLine());
+//        }while(op<1 || op>3);
+//        
+//        
+//        if (op==1)  atleta[0] = new AtletaPro();
+//        if (op==2)  atleta[0] = new AtletaSemiPro();
+//        if (op==3)  atleta[0] = new AtletaAmador();
+//        
+//        System.out.println("Introduza nome do atleta: ");
+//        atleta[0].setNome(ler.nextLine());
+//        System.out.println("Introduza Número de Identificação Civil: ");
+//        atleta[0].setNic(Integer.valueOf(ler.nextLine()));
+//        do{
+//            System.out.println("Introduza género do atleta(Masculino,Feminino): ");
+//            atleta[0].setGenero(ler.nextLine());
+//        }while(!atleta[0].getGenero().equalsIgnoreCase("masculino") && !atleta[0].getGenero().equalsIgnoreCase("feminino"));
+//        System.out.println("Introduza Idade: ");
+//        atleta[0].setIdade(Integer.valueOf(ler.nextLine()));
+//        System.out.println("Introduza FCR: ");
+//        atleta[0].setFcr(Integer.valueOf(ler.nextLine()));
+//        do{
+//            System.out.println("Introduza Atividade Associada: ");
+//            atleta[0].setAtividade(ler.nextLine());
+//        }while (!atleta[0].validarAtividade());
+//        do{
+//            System.out.println("Introduza Objetivo(QueimaGordura,CapacidadeCardio): ");
+//            atleta[0].setObjetivo(ler.nextLine());
+//        }while (!atleta[0].validarObjetivo()); 
+//        System.out.println("Introduza Valor Prémios: ");
+//        atleta[0].setPremios(Integer.valueOf(ler.nextLine()));
+//    }
 }
