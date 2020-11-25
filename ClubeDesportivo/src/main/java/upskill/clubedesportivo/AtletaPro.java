@@ -9,7 +9,7 @@ package upskill.clubedesportivo;
  *
  * @author Vicious
  */
-public class AtletaPro extends Atleta {
+public class AtletaPro extends Atleta implements IRS{
 
     private double parcelaFixa;
 

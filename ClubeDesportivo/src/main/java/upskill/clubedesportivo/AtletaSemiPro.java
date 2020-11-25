@@ -9,7 +9,7 @@ package upskill.clubedesportivo;
  *
  * @author Vicious
  */
-public class AtletaSemiPro extends AtletaNaoPro{
+public class AtletaSemiPro extends AtletaNaoPro implements IRS{
     
     private static final double PARCELAFIXA_POR_OMISSAO=0;
     private static final double PARCELAVARIAVEL_POR_OMISSAO=0;
