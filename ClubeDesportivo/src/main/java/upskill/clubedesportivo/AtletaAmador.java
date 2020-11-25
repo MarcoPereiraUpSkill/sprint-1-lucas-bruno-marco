@@ -23,6 +23,11 @@ public class AtletaAmador extends AtletaNaoPro{
         super(antiguidade, nome, nic, genero, idade, fcr, atividade, objetivo, premios);
         qtdAtletaAmador++;
     }
+    
+    public AtletaAmador() {
+        super();
+        qtdAtletaAmador++;
+    }
 
     @Override
     public String toString() {

@@ -28,6 +28,13 @@ public class AtletaPro extends Atleta{
         this.parcelaVariavel = parcelaVariavel;
         qtdAtletaPro++;
     }
+    
+    public AtletaPro() {
+        super();
+        this.parcelaFixa = PARCELAFIXA_POR_OMISSAO;
+        this.parcelaVariavel = PARCELAVARIAVEL_POR_OMISSAO;
+        qtdAtletaPro++;
+    }
 
     public double getParcelaFixa() {
         return parcelaFixa;

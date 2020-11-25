@@ -26,6 +26,11 @@ public class AtletaNaoPro extends Atleta{
         super(nome, nic, genero, idade, fcr, atividade, objetivo, premios);
         this.antiguidade = antiguidade;
     }
+    
+    public AtletaNaoPro() {
+        super();
+        this.antiguidade = ANTIGUIDADE_POR_OMISSAO;
+    }
 
     public int getAntiguidade() {
         return antiguidade;

@@ -25,7 +25,9 @@ public abstract class Atleta {
     private static final int IDADE_POR_OMISSAO=0;
     private static final int FCR_POR_OMISSAO=0;
     private static final String ATIVIDADE_POR_OMISSAO = "";
+    private static final String OBJETIVO_POR_OMISSAO = "";
     private static final int PREMIOS_POR_OMISSAO=0;
+    
     
     private static double fcmPadrao = 208.75;
     private static double fcmPadraoI = 0.73;
@@ -50,6 +52,21 @@ public abstract class Atleta {
         this.objetivo = objetivo;
         this.premios = premios;
     }
+    
+    public Atleta() {
+        this.nome = NOME_POR_OMISSAO;
+        this.nic = NIC_POR_OMISSAO;
+        this.genero = GENERO_POR_OMISSAO;
+        this.idade = IDADE_POR_OMISSAO;
+        this.fcr = FCR_POR_OMISSAO;
+        this.atividade = ATIVIDADE_POR_OMISSAO;
+        this.objetivo = OBJETIVO_POR_OMISSAO;
+        this.premios = PREMIOS_POR_OMISSAO;
+    }
+
+    
+    
+    
 
     public String getNome() {
         return nome;
