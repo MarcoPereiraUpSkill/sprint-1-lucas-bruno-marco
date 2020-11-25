@@ -1,9 +1,10 @@
 package upskill.clubedesportivo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 
-public class ClubeDesportivo{
+public class ClubeDesportivo {
 
     private String nome;
     private Date data;
@@ -81,6 +82,36 @@ public class ClubeDesportivo{
 
     public void inserirAtleta(Atleta atleta) {
         atletas.add(atleta);
+    }
+
+    public ArrayList<Atleta> ordenarAlfabeticamenteNome() {
+        Collections.sort(atletas);
+        return atletas;
+    }
+
+    public ArrayList<Atleta> ordenarInversamentePremios() {
+        OrdenarPremios ordenarPremios = new OrdenarPremios();
+        Collections.sort(atletas, ordenarPremios.reversed());
+
+        return atletas;
+    }
+
+    public ArrayList<Atleta> ordenarCategoriaModalidadeNome() {
+        OrdenarCategoriaModalidadeNome ordenarCategoriaModalidadeNome = new OrdenarCategoriaModalidadeNome();
+        Collections.sort(atletas, ordenarCategoriaModalidadeNome);
+
+        return atletas;
+    }
+
+    public double calcularTotalIRS() {
+        double valorTotalIRS = 0;
+        for (Atleta atleta : atletas) {
+            if (atleta instanceof IRS) {
+                valorTotalIRS += ((IRS) atleta).calcularIRS();
+            }
+        }
+
+        return valorTotalIRS;
     }
 
 }

@@ -66,36 +66,37 @@ public class MainClubeDesportivo {
         System.out.println("Valor a pagar a atletas amadores: " + valorAmador);
         System.out.println();
 
-        //Retornar o nome do clube
+        System.out.println("###### Obter nome do clube ######");
         System.out.println("Nome do clube: " + vizela.getNome());
+        System.out.println();
 
         //Inserir um novo atleta no contentor
         vizela.inserirAtleta(new AtletaPro(400, 350, "Marco", 345452889, "Masculino", 21, 68, "corrida", "QueimaGordura", 2400));
 
-        //Retornar uma lista de atletas, ordenada alfabeticamente por nome
-        Collections.sort(vizela.getAtletas());
-        for (Atleta atleta : vizela.getAtletas()) {
+        System.out.println("###### Lista de atletas ordenadas alfabeticamente por nome ######");
+        for (Atleta atleta : vizela.ordenarAlfabeticamenteNome()) {
             System.out.format("Nome: %s%n", atleta.getNome());
         }
         System.out.println();
 
         //Retornar uma lista de atletas, ordenada inversamente pelo valor dos prémios
-        OrdenarPremios ordenarPremios = new OrdenarPremios();
-        Collections.sort(vizela.getAtletas(), ordenarPremios.reversed());
-        for (Atleta atleta : vizela.getAtletas()) {
+        System.out.println("###### Lista de atletas ordenadas inversamente por prémios ######");
+        for (Atleta atleta : vizela.ordenarInversamentePremios()) {
             System.out.format("Nome: %s, Premios: %.2f%n", atleta.getNome(), atleta.getPremios());
         }
         System.out.println();
 
         //Retornar o valor total dos atletas, para efeito de IRS
-        double valorTotalIRS = 0;
-        for (Atleta atleta : vizela.getAtletas()) {
-            if (atleta instanceof IRS) {
-                valorTotalIRS += ((IRS) atleta).calcularIRS();
-            }
-        }
-        System.out.println("Valor total a pagar, para efeitos de IRS: " + valorTotalIRS);
+        System.out.println("###### Calcular valor total dos atletas, para efeitos de IRS ######");
+        System.out.println("IRS: " + vizela.calcularTotalIRS());
+        System.out.println();
 
+        
+        //Retornar uma lista de atletas do clube, ordenada alfabeticamente por categoria, modalidade e nome
+        System.out.println("###### Retornar uma lista de atletas do clube, ordenada alfabeticamente por categoria, modalidade e nome #####");
+        for(Atleta atleta : vizela.ordenarCategoriaModalidadeNome()) {
+            System.out.format("Categoria: %s, Modalidade: %s, Nome: %s%n", atleta.getClass().getName(), atleta.getAtividade(), atleta.getNome());
+        }
     }
 
     private static void menu() {

@@ -202,6 +202,8 @@ public abstract class Atleta implements Comparable<Atleta> {
     public void setObjetivo(String objetivo) {
         this.objetivo = objetivo;
     }
+    
+    
 
     /**
      *
