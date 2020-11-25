@@ -10,14 +10,11 @@ package upskill.clubedesportivo;
  *
  * @author Vicious
  */
-public class AtletaAmador extends AtletaNaoPro{
-    private static final double PARCELAVARIAVEL_POR_OMISSAO=0;
-    
-<span class="fc" id="L16">    private static double parcelaFixa=0;</span>
-<span class="fc" id="L17">    private static double parcelaVariavel=0;</span>
-<span class="fc" id="L18">    private static double percParcelaVariavel=7;</span>
-<span class="fc" id="L19">    private static double valorMinimo=5;</span>
-<span class="fc" id="L20">    private static int qtdAtletaAmador=0;</span>
+public class AtletaAmador extends AtletaNaoPro{   
+<span class="fc" id="L14">    private static double parcelaFixa=0;</span>
+<span class="fc" id="L15">    private static double percParcelaVariavel=7;</span>
+<span class="fc" id="L16">    private static double valorMinimo=5;</span>
+<span class="fc" id="L17">    private static int qtdAtletaAmador=0;</span>
 
     /**
      *
@@ -32,32 +29,32 @@ public class AtletaAmador extends AtletaNaoPro{
      * @param premios Prémios arrecadados pelo atleta durante um mês.
      */
     public AtletaAmador(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
-<span class="fc" id="L35">        super(antiguidade, nome, nic, genero, idade, fcr, atividade, objetivo, premios);</span>
-<span class="fc" id="L36">        qtdAtletaAmador++;</span>
-<span class="fc" id="L37">    }</span>
+<span class="fc" id="L32">        super(antiguidade, nome, nic, genero, idade, fcr, atividade, objetivo, premios);</span>
+<span class="fc" id="L33">        qtdAtletaAmador++;</span>
+<span class="fc" id="L34">    }</span>
     
     /**
      *
      */
     public AtletaAmador() {
-<span class="nc" id="L43">        super();</span>
-<span class="nc" id="L44">        qtdAtletaAmador++;</span>
-<span class="nc" id="L45">    }</span>
+<span class="nc" id="L40">        super();</span>
+<span class="nc" id="L41">        qtdAtletaAmador++;</span>
+<span class="nc" id="L42">    }</span>
 
     @Override
     public boolean equals(Object obj) {
-<span class="fc bfc" id="L49" title="All 2 branches covered.">        if (!super.equals(obj)) {</span>
-<span class="fc" id="L50">            return false;</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        if (!super.equals(obj)) {</span>
+<span class="fc" id="L47">            return false;</span>
         }
-<span class="pc bpc" id="L52" title="1 of 2 branches missed.">        if (obj == this) {</span>
-<span class="nc" id="L53">            return true;</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">        if (obj == this) {</span>
+<span class="fc" id="L50">            return true;</span>
         }
-<span class="fc" id="L55">        return obj instanceof Atleta;</span>
+<span class="fc" id="L52">        return obj instanceof AtletaAmador;</span>
     }
 
     @Override
     public String toString() {
-<span class="nc" id="L60">        return &quot;AtletaAmador{&quot; + '}';</span>
+<span class="nc" id="L57">        return &quot;AtletaAmador{&quot; + '}';</span>
     }
     
     /**
@@ -66,8 +63,8 @@ public class AtletaAmador extends AtletaNaoPro{
      */
     @Override
     public double calcularValorMensal(){
-<span class="fc" id="L69">        double valorMensal = (getPremios()*(obterPercAntiguidade()/100))+(getPremios()*(percParcelaVariavel/100));</span>
-<span class="fc bfc" id="L70" title="All 2 branches covered.">        return valorMensal&lt;valorMinimo ? valorMinimo : valorMensal; </span>
+<span class="fc" id="L66">        double valorMensal = (getPremios()*(obterPercAntiguidade()/100))+(getPremios()*(percParcelaVariavel/100));</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">        return valorMensal&lt;valorMinimo ? valorMinimo : valorMensal; </span>
     }
 
     /**
@@ -75,72 +72,58 @@ public class AtletaAmador extends AtletaNaoPro{
      * @return Parcela Fixa
      */
     public static double getParcelaFixa() {
-<span class="nc" id="L78">        return parcelaFixa;</span>
+<span class="nc" id="L75">        return parcelaFixa;</span>
     }
-
-    /**
-     *
-     * @param parcelaFixa Parcela Fixa
-     */
-    public static void setParcelaFixa(double parcelaFixa) {
-<span class="nc" id="L86">        AtletaAmador.parcelaFixa = parcelaFixa;</span>
-<span class="nc" id="L87">    }</span>
-
-    /**
-     *
-     * @return Parcela Variável
-     */
-    public static double getParcelaVariavel() {
-<span class="nc" id="L94">        return parcelaVariavel;</span>
-    }
-
-    /**
-     *
-     * @param parcelaVariavel Parcela Variável
-     */
-    public static void setParcelaVariavel(double parcelaVariavel) {
-<span class="nc" id="L102">        AtletaAmador.parcelaVariavel = parcelaVariavel;</span>
-<span class="nc" id="L103">    }</span>
-
+    
     /**
      *
      * @return Percentagem Parcela Variável
      */
     public static double getPercParcelaVariavel() {
-<span class="nc" id="L110">        return percParcelaVariavel;</span>
+<span class="nc" id="L83">        return percParcelaVariavel;</span>
     }
+    
+    /**
+     *
+     * @return Valor mínimo que o atleta tem de receber caso o valor mensal seja inferior ao mesmo
+     */
+    public static double getValorMinimo() {
+<span class="nc" id="L91">        return valorMinimo;</span>
+    }
+    
+    /**
+     *
+     * @return Quantidade de instâncias de Atletas Amadores
+     */
+    public static int getQtdAtletaAmador() {
+<span class="nc" id="L99">        return qtdAtletaAmador;</span>
+    }
+    
+    /**
+     *
+     * @param parcelaFixa Parcela Fixa
+     */
+    public static void setParcelaFixa(double parcelaFixa) {
+<span class="nc" id="L107">        AtletaAmador.parcelaFixa = parcelaFixa;</span>
+<span class="nc" id="L108">    }</span>
 
     /**
      *
      * @param percParcelaVariavel Percentagem Parcela Variável
      */
     public static void setPercParcelaVariavel(double percParcelaVariavel) {
-<span class="nc" id="L118">        AtletaAmador.percParcelaVariavel = percParcelaVariavel;</span>
-<span class="nc" id="L119">    }</span>
-
-    /**
-     *
-     * @return Valor mínimo que o atleta tem de receber caso o valor mensal seja inferior ao mesmo
-     */
-    public static double getValorMinimo() {
-<span class="nc" id="L126">        return valorMinimo;</span>
-    }
+<span class="nc" id="L115">        AtletaAmador.percParcelaVariavel = percParcelaVariavel;</span>
+<span class="nc" id="L116">    }</span>
 
     /**
      *
      * @param valorMinimo Valor mínimo que o atleta tem de receber caso o valor mensal seja inferior ao mesmo
      */
     public static void setValorMinimo(double valorMinimo) {
-<span class="nc" id="L134">        AtletaAmador.valorMinimo = valorMinimo;</span>
-<span class="nc" id="L135">    }</span>
+<span class="nc" id="L123">        AtletaAmador.valorMinimo = valorMinimo;</span>
+<span class="nc" id="L124">    }</span>
 
-    /**
-     *
-     * @return Quantidade de instâncias de Atletas Amadores
-     */
-    public static int getQtdAtletaAmador() {
-<span class="nc" id="L142">        return qtdAtletaAmador;</span>
-    }
+    
     
     
     

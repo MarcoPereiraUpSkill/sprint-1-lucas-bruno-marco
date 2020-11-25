@@ -80,29 +80,5 @@ public class AtletaAmadorTest {
         double result = instance.calcularValorMensal();
         assertEquals(expResult, result, 0.0);
     }
-    
-    /**
-     * Test of equals method, of class Atleta.
-     */
-    @Test
-    public void testEquals() {
-        Atleta instance = new AtletaAmador(22, "Jorge", 543876098, "Masculino", 35, 55, "natação", "QueimaGordura", 700);
-        Atleta instance2 = new AtletaAmador(22, "Jorge", 543876098, "Masculino", 35, 55, "natação", "QueimaGordura", 700);
-        boolean expResult = true;
-        boolean result = instance.equals(instance2);
-        assertEquals(expResult, result);
-    }
-    
-    /**
-     * Test of equals method, of class Atleta.
-     */
-    @Test
-    public void testEqualsInvalido() {
-        Atleta instance = new AtletaAmador(22, "Jorge", 543876098, "Masculino", 35, 55, "natação", "QueimaGordura", 700);
-        Atleta instance2 = new AtletaAmador(21, "Carla", 543876097, "Feminino", 32, 60, "caminhada", "CapacidadeCardio", 600);
-        boolean expResult = false;
-        boolean result = instance.equals(instance2);
-        assertEquals(expResult, result);
-    }
 
 }
