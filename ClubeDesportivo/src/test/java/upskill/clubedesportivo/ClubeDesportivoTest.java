@@ -6,7 +6,6 @@
 package upskill.clubedesportivo;
 
 import java.util.ArrayList;
-import java.util.Date;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;

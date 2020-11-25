@@ -115,12 +115,11 @@ public class AtletaTest {
     @Test
     public void testEquals() {
         Atleta instance = new AtletaAmador(22, "Jorge", 543876098, "Masculino", 35, 55, "natação", "QueimaGordura", 700);
-        Atleta instance2 = new AtletaAmador(22, "Jorge", 543876098, "Masculino", 35, 55, "natação", "QueimaGordura", 700);
         boolean expResult = true;
-        boolean result = instance.equals(instance2);
+        boolean result = instance.equals(instance);
         assertEquals(expResult, result);
     }
-    
+       
     /**
      * Test of equals method, of class Atleta.
      */

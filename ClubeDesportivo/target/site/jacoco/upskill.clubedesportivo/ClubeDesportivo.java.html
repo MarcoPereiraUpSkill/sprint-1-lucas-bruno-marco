@@ -33,6 +33,7 @@ public class ClubeDesportivo {
 <span class="nc" id="L33">    }</span>
 
     public String getNome() {
+<<<<<<< HEAD
 <span class="fc" id="L36">        return nome;</span>
     }
 
@@ -42,6 +43,17 @@ public class ClubeDesportivo {
 
     public ArrayList&lt;Atleta&gt; getAtletas() {
 <span class="fc" id="L44">        return atletas;</span>
+=======
+<span class="nc" id="L36">        return nome;</span>
+    }
+
+    public Date getData() {
+<span class="nc" id="L40">        return data;</span>
+    }
+
+    public ArrayList&lt;Atleta&gt; getAtletas() {
+<span class="nc" id="L44">        return atletas;</span>
+>>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
     }
 
     public void setNome(String nome) {
@@ -63,6 +75,7 @@ public class ClubeDesportivo {
 
     @Override
     public boolean equals(Object obj) {
+<<<<<<< HEAD
 <span class="pc bpc" id="L66" title="1 of 2 branches missed.">         if (obj == this) {</span>
 <span class="nc" id="L67">            return true;</span>
         }
@@ -98,10 +111,48 @@ public class ClubeDesportivo {
 <span class="fc" id="L98">        Collections.sort(atletas, ordenarCategoriaModalidadeNome);</span>
 
 <span class="fc" id="L100">        return atletas;</span>
+=======
+<span class="nc bnc" id="L66" title="All 2 branches missed.">         if (obj == this) {</span>
+<span class="nc" id="L67">            return true;</span>
+        }
+<span class="nc bnc" id="L69" title="All 2 branches missed.">        if (!(obj instanceof ClubeDesportivo)) {</span>
+<span class="nc" id="L70">            return false;</span>
+        }
+
+<span class="nc" id="L73">        ClubeDesportivo clubeDesportivo = (ClubeDesportivo) obj;</span>
+
+<span class="nc bnc" id="L75" title="All 2 branches missed.">        return nome.compareTo(clubeDesportivo.getNome()) == 0</span>
+<span class="nc bnc" id="L76" title="All 2 branches missed.">                &amp;&amp; data.compareTo(clubeDesportivo.getData()) == 0</span>
+<span class="nc bnc" id="L77" title="All 2 branches missed.">                &amp;&amp; atletas.equals(clubeDesportivo.getAtletas());</span>
+    }
+
+    public void inserirAtleta(Atleta atleta) {
+<span class="nc" id="L81">        atletas.add(atleta);</span>
+<span class="nc" id="L82">    }</span>
+
+    public ArrayList&lt;Atleta&gt; ordenarAlfabeticamenteNome() {
+<span class="nc" id="L85">        Collections.sort(atletas);</span>
+<span class="nc" id="L86">        return atletas;</span>
+    }
+
+    public ArrayList&lt;Atleta&gt; ordenarInversamentePremios() {
+<span class="nc" id="L90">        OrdenarPremios ordenarPremios = new OrdenarPremios();</span>
+<span class="nc" id="L91">        Collections.sort(atletas, ordenarPremios.reversed());</span>
+
+<span class="nc" id="L93">        return atletas;</span>
+    }
+
+    public ArrayList&lt;Atleta&gt; ordenarCategoriaModalidadeNome() {
+<span class="nc" id="L97">        OrdenarCategoriaModalidadeNome ordenarCategoriaModalidadeNome = new OrdenarCategoriaModalidadeNome();</span>
+<span class="nc" id="L98">        Collections.sort(atletas, ordenarCategoriaModalidadeNome);</span>
+
+<span class="nc" id="L100">        return atletas;</span>
+>>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
     }
 
     public double calcularTotalIRS() {
 <span class="nc" id="L104">        double valorTotalIRS = 0;</span>
+<<<<<<< HEAD
         
 <span class="nc bnc" id="L106" title="All 2 branches missed.">        for (Atleta atleta : atletas) {</span>
 <span class="nc bnc" id="L107" title="All 2 branches missed.">            if (atleta instanceof IRS) {</span>
@@ -110,6 +161,15 @@ public class ClubeDesportivo {
 <span class="nc" id="L110">        }</span>
 
 <span class="nc" id="L112">        return valorTotalIRS;</span>
+=======
+<span class="nc bnc" id="L105" title="All 2 branches missed.">        for (Atleta atleta : atletas) {</span>
+<span class="nc bnc" id="L106" title="All 2 branches missed.">            if (atleta instanceof IRS) {</span>
+<span class="nc" id="L107">                valorTotalIRS += ((IRS) atleta).calcularIRS();</span>
+            }
+<span class="nc" id="L109">        }</span>
+
+<span class="nc" id="L111">        return valorTotalIRS;</span>
+>>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
     }
 
 }

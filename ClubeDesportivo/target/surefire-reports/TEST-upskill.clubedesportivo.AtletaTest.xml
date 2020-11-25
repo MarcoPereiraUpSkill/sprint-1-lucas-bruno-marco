@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<<<<<<< HEAD
 <testsuite tests="8" failures="0" name="upskill.clubedesportivo.AtletaTest" time="0.002" errors="0" skipped="0">
+=======
+<testsuite tests="8" failures="0" name="upskill.clubedesportivo.AtletaTest" time="0" errors="0" skipped="0">
+>>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_261\jre\bin"/>
@@ -66,6 +70,7 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testEquals" time="0"/>
+<<<<<<< HEAD
   <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCMCiclismoFeminino" time="0.001"/>
   <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCMNatacao" time="0"/>
   <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCMCiclismoMasculino" time="0"/>
@@ -73,4 +78,13 @@
   <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testObterIT" time="0.001"/>
   <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCT" time="0"/>
   <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testEqualsInvalido" time="0"/>
+=======
+  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCMCiclismoFeminino" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCMCiclismoMasculino" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCMCaminhadaCorrida" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCMNatacao" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testEqualsInvalido" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCT" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testObterIT" time="0"/>
+>>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
 </testsuite>

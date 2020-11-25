@@ -12,7 +12,11 @@ package upskill.clubedesportivo;
 public class AtletaPro extends Atleta implements IRS {
 
     private double parcelaFixa;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
     /**
      *
      * @param percParcelaVariavel Percentagem usada sobre o valor mensal de
@@ -44,26 +48,45 @@ public class AtletaPro extends Atleta implements IRS {
      * @param premios Prémios arrecadados pelo atleta durante um mês.
      */
     public AtletaPro(double parcelaFixa, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
+<<<<<<< HEAD
 <span class="fc" id="L47">        super(nome, nic, genero, idade, fcr, atividade, objetivo, premios);</span>
 <span class="fc" id="L48">        this.parcelaFixa = parcelaFixa;</span>
 <span class="fc" id="L49">        qtdAtletaPro++;</span>
 <span class="fc" id="L50">    }</span>
 
+=======
+<span class="fc" id="L41">        super(nome, nic, genero, idade, fcr, atividade, objetivo, premios);</span>
+<span class="fc" id="L42">        this.parcelaFixa = parcelaFixa;</span>
+<span class="fc" id="L43">        qtdAtletaPro++;</span>
+<span class="fc" id="L44">    }</span>
+    
+>>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
     /**
      *
      */
     public AtletaPro() {
+<<<<<<< HEAD
 <span class="nc" id="L56">        super();</span>
 <span class="nc" id="L57">        this.parcelaFixa = PARCELAFIXA_POR_OMISSAO;</span>
 <span class="nc" id="L58">        qtdAtletaPro++;</span>
 <span class="nc" id="L59">    }</span>
+=======
+<span class="nc" id="L50">        super();</span>
+<span class="nc" id="L51">        this.parcelaFixa = PARCELAFIXA_POR_OMISSAO;</span>
+<span class="nc" id="L52">        qtdAtletaPro++;</span>
+<span class="nc" id="L53">    }</span>
+>>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
 
     /**
      *
      * @return Parcela Fixa
      */
     public double getParcelaFixa() {
+<<<<<<< HEAD
 <span class="fc" id="L66">        return parcelaFixa;</span>
+=======
+<span class="fc" id="L60">        return parcelaFixa;</span>
+>>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
     }
 
     /**
@@ -71,6 +94,7 @@ public class AtletaPro extends Atleta implements IRS {
      * @param parcelaFixa Parcela Fixa
      */
     public void setParcelaFixa(double parcelaFixa) {
+<<<<<<< HEAD
 <span class="nc" id="L74">        this.parcelaFixa = parcelaFixa;</span>
 <span class="nc" id="L75">    }</span>
 
@@ -89,11 +113,35 @@ public class AtletaPro extends Atleta implements IRS {
 <span class="fc" id="L89">        AtletaPro atletaPro = (AtletaPro) obj;</span>
 
 <span class="pc bpc" id="L91" title="1 of 2 branches missed.">        return Double.compare(parcelaFixa, atletaPro.getParcelaFixa()) == 0;</span>
+=======
+<span class="nc" id="L68">        this.parcelaFixa = parcelaFixa;</span>
+<span class="nc" id="L69">    }</span>
+
+    @Override
+    public boolean equals(Object obj) {
+<span class="fc bfc" id="L73" title="All 2 branches covered.">        if (!super.equals(obj)) {</span>
+<span class="fc" id="L74">            return false;</span>
+        }
+<span class="fc bfc" id="L76" title="All 2 branches covered.">        if (obj == this) {</span>
+<span class="fc" id="L77">            return true;</span>
+        }
+<span class="fc bfc" id="L79" title="All 2 branches covered.">        if (!(obj instanceof AtletaPro)) {</span>
+<span class="fc" id="L80">            return false;</span>
+        }
+
+<span class="fc" id="L83">        AtletaPro atletaPro = (AtletaPro) obj;</span>
+        
+<span class="pc bpc" id="L85" title="1 of 2 branches missed.">        return Double.compare(parcelaFixa, atletaPro.getParcelaFixa()) == 0;</span>
+>>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
     }
 
     @Override
     public String toString() {
+<<<<<<< HEAD
 <span class="nc" id="L96">        return &quot;AtletaPro{&quot; + &quot;parcelaFixa=&quot; + parcelaFixa + '}';</span>
+=======
+<span class="nc" id="L90">        return &quot;AtletaPro{&quot; + &quot;parcelaFixa=&quot; + parcelaFixa + '}';</span>
+>>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
     }
 
     /**
@@ -103,7 +151,11 @@ public class AtletaPro extends Atleta implements IRS {
      */
     @Override
     public double calcularValorMensal() {
+<<<<<<< HEAD
 <span class="fc" id="L106">        return parcelaFixa + (getPremios() * (percParcelaVariavel / 100));</span>
+=======
+<span class="fc" id="L99">        return parcelaFixa + (getPremios() * (percParcelaVariavel / 100));</span>
+>>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
     }
 
     /**
@@ -111,8 +163,13 @@ public class AtletaPro extends Atleta implements IRS {
      * @return Valor a descontar para IRS
      */
     @Override
+<<<<<<< HEAD
     public double calcularIRS() {
 <span class="nc" id="L115">        return parcelaFixa * (taxaIRS / 100);</span>
+=======
+    public double calcularIRS(){
+<span class="nc" id="L108">     return parcelaFixa*(double)(IRS.taxaIRS/100);</span>
+>>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
     }
 
     /**
@@ -120,6 +177,7 @@ public class AtletaPro extends Atleta implements IRS {
      * @return Percentagem da Parcela Variável
      */
     public static double getPercParcelaVariavel() {
+<<<<<<< HEAD
 <span class="nc" id="L123">        return percParcelaVariavel;</span>
     }
 
@@ -131,13 +189,32 @@ public class AtletaPro extends Atleta implements IRS {
 <span class="nc" id="L131">        return qtdAtletaPro;</span>
     }
 
+=======
+<span class="nc" id="L116">        return percParcelaVariavel;</span>
+    }
+    
+>>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
+    /**
+     *
+     * @param percParcelaVariavel Percentagem da Parcela Variável
+     */
+<<<<<<< HEAD
+    public static void setPercParcelaVariavel(double percParcelaVariavel) {
+<span class="nc" id="L139">        AtletaPro.percParcelaVariavel = percParcelaVariavel;</span>
+<span class="nc" id="L140">    }</span>
+=======
+    public static int getQtdAtletaPro() {
+<span class="nc" id="L124">        return qtdAtletaPro;</span>
+    }
+    
     /**
      *
      * @param percParcelaVariavel Percentagem da Parcela Variável
      */
     public static void setPercParcelaVariavel(double percParcelaVariavel) {
-<span class="nc" id="L139">        AtletaPro.percParcelaVariavel = percParcelaVariavel;</span>
-<span class="nc" id="L140">    }</span>
+<span class="nc" id="L132">        AtletaPro.percParcelaVariavel = percParcelaVariavel;</span>
+<span class="nc" id="L133">    }</span>
+>>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

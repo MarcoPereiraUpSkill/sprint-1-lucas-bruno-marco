@@ -73,7 +73,7 @@ public class AtletaNaoProTest {
         double result = instance.obterPercAntiguidade();
         assertEquals(expResult, result, 0.0);
     }
-    
+
     /**
      * Test of equals method, of class Atleta.
      */
@@ -92,7 +92,7 @@ public class AtletaNaoProTest {
     @Test
     public void testEqualsInvalido() {
         Atleta instance = new AtletaAmador(22, "Jorge", 543876098, "Masculino", 35, 55, "natação", "QueimaGordura", 700);
-        Atleta instance2 = new AtletaSemiPro(21, "Carla", 543876097, "Feminino", 32, 60, "caminhada", "CapacidadeCardio", 600);
+        Atleta instance2 = new AtletaPro(22, "Jorge", 543876098, "Masculino", 35, 55, "natação", "QueimaGordura", 700);
         boolean expResult = false;
         boolean result = instance.equals(instance2);
         assertEquals(expResult, result);
