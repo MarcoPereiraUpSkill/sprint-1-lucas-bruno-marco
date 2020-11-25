@@ -10,11 +10,8 @@ package upskill.clubedesportivo;
  *
  * @author Vicious
  */
-public class AtletaAmador extends AtletaNaoPro{
-    private static final double PARCELAVARIAVEL_POR_OMISSAO=0;
-    
+public class AtletaAmador extends AtletaNaoPro{   
     private static double parcelaFixa=0;
-    private static double parcelaVariavel=0;
     private static double percParcelaVariavel=7;
     private static double valorMinimo=5;
     private static int qtdAtletaAmador=0;
@@ -52,7 +49,7 @@ public class AtletaAmador extends AtletaNaoPro{
         if (obj == this) {
             return true;
         }
-        return obj instanceof Atleta;
+        return obj instanceof AtletaAmador;
     }
 
     @Override
@@ -77,37 +74,37 @@ public class AtletaAmador extends AtletaNaoPro{
     public static double getParcelaFixa() {
         return parcelaFixa;
     }
-
-    /**
-     *
-     * @param parcelaFixa Parcela Fixa
-     */
-    public static void setParcelaFixa(double parcelaFixa) {
-        AtletaAmador.parcelaFixa = parcelaFixa;
-    }
-
-    /**
-     *
-     * @return Parcela Variável
-     */
-    public static double getParcelaVariavel() {
-        return parcelaVariavel;
-    }
-
-    /**
-     *
-     * @param parcelaVariavel Parcela Variável
-     */
-    public static void setParcelaVariavel(double parcelaVariavel) {
-        AtletaAmador.parcelaVariavel = parcelaVariavel;
-    }
-
+    
     /**
      *
      * @return Percentagem Parcela Variável
      */
     public static double getPercParcelaVariavel() {
         return percParcelaVariavel;
+    }
+    
+    /**
+     *
+     * @return Valor mínimo que o atleta tem de receber caso o valor mensal seja inferior ao mesmo
+     */
+    public static double getValorMinimo() {
+        return valorMinimo;
+    }
+    
+    /**
+     *
+     * @return Quantidade de instâncias de Atletas Amadores
+     */
+    public static int getQtdAtletaAmador() {
+        return qtdAtletaAmador;
+    }
+    
+    /**
+     *
+     * @param parcelaFixa Parcela Fixa
+     */
+    public static void setParcelaFixa(double parcelaFixa) {
+        AtletaAmador.parcelaFixa = parcelaFixa;
     }
 
     /**
@@ -120,27 +117,13 @@ public class AtletaAmador extends AtletaNaoPro{
 
     /**
      *
-     * @return Valor mínimo que o atleta tem de receber caso o valor mensal seja inferior ao mesmo
-     */
-    public static double getValorMinimo() {
-        return valorMinimo;
-    }
-
-    /**
-     *
      * @param valorMinimo Valor mínimo que o atleta tem de receber caso o valor mensal seja inferior ao mesmo
      */
     public static void setValorMinimo(double valorMinimo) {
         AtletaAmador.valorMinimo = valorMinimo;
     }
 
-    /**
-     *
-     * @return Quantidade de instâncias de Atletas Amadores
-     */
-    public static int getQtdAtletaAmador() {
-        return qtdAtletaAmador;
-    }
+    
     
     
     

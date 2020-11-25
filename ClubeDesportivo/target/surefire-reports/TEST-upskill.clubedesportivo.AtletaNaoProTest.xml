@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="upskill.clubedesportivo.AtletaNaoProTest" time="0" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="upskill.clubedesportivo.AtletaNaoProTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_261\jre\bin"/>
@@ -35,6 +35,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="skipTests" value="false"/>
     <property name="os.version" value="10.0"/>
     <property name="library.jansi.path" value="C:\Program Files\NetBeans-12.1\netbeans\java\maven\bin\..\lib\jansi-native"/>
     <property name="user.home" value="C:\Users\marco"/>
@@ -47,7 +48,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_261\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.1\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -DskipTests=false -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.1\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 clean verify"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -64,7 +65,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testObterPercAntiguidadeMax" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testEquals" time="0"/>
   <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testObterPercAntiguidadeMin" time="0"/>
   <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testObterPercAntiguidadeMed" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testObterPercAntiguidadeMax" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testEqualsInvalido" time="0"/>
 </testsuite>

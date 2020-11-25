@@ -10,12 +10,8 @@ package upskill.clubedesportivo;
  * @author Vicious
  */
 public class AtletaSemiPro extends AtletaNaoPro implements IRS{
-    
-    private static final double PARCELAFIXA_POR_OMISSAO=0;
-    private static final double PARCELAVARIAVEL_POR_OMISSAO=0;
-    
+   
     private static double parcelaFixa=500;
-    private static double parcelaVariavel=0;
 
     /**
      *
@@ -48,7 +44,7 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
         if (obj == this) {
             return true;
         }
-        return obj instanceof Atleta;
+        return obj instanceof AtletaSemiPro;
     }
 
     @Override
@@ -71,7 +67,7 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
      */
     @Override
     public double calcularIRS(){
-     return parcelaFixa*(double)(IRS.taxaIRS/100);
+     return parcelaFixa*(taxaIRS/100);
     }
 
     /**
@@ -89,24 +85,5 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
     public static void setParcelaFixa(double parcelaFixa) {
         AtletaSemiPro.parcelaFixa = parcelaFixa;
     }
-
-    /**
-     *
-     * @return Parcela Variável
-     */
-    public static double getParcelaVariavel() {
-        return parcelaVariavel;
-    }
-
-    /**
-     *
-     * @param parcelaVariavel Parcela Variável
-     */
-    public static void setParcelaVariavel(double parcelaVariavel) {
-        AtletaSemiPro.parcelaVariavel = parcelaVariavel;
-    }
-
-    
-    
-    
+  
 }

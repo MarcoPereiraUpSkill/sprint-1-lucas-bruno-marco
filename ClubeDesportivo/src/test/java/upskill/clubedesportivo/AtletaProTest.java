@@ -42,7 +42,7 @@ public class AtletaProTest {
      */
     @Test
     public void testCalcularValorMensal() {
-        AtletaPro instance = new AtletaPro(600, 300, "Carlos", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 1200);
+        AtletaPro instance = new AtletaPro(600, "Carlos", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 1200);
         double expResult = 840;
         double result = instance.calcularValorMensal();
         assertEquals(expResult, result, 0.0);

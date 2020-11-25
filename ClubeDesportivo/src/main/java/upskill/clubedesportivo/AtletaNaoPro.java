@@ -9,7 +9,7 @@ package upskill.clubedesportivo;
  *
  * @author Vicious
  */
-public class AtletaNaoPro extends Atleta {
+public abstract class AtletaNaoPro extends Atleta {
 
     private int antiguidade;
 
@@ -71,7 +71,7 @@ public class AtletaNaoPro extends Atleta {
         if (obj == this) {
             return true;
         }
-        if (!(obj instanceof Atleta)) {
+        if (!(obj instanceof AtletaNaoPro)) {
             return false;
         }
 
@@ -96,36 +96,59 @@ public class AtletaNaoPro extends Atleta {
 
     /**
      *
-     * @return Método chamado pelas subclasses AtletaSemiPro e AtletaAmador para calcular
-     * o valor mensal a pagar aos atletas SemiProfissionais e Amadores
-     */
-    @Override
-    public double calcularValorMensal() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    /**
-     *
      * @return Percentagem mediante o intervalo de antiguidade de [5,10] anos
      */
     public static double getPercMinAntiguidade() {
         return percMinAntiguidade;
     }
-
-    /**
-     *
-     * @param percMinAntiguidade Percentagem mediante o intervalo de antiguidade de [5,10] anos
-     */
-    public static void setPercMinAntiguidade(double percMinAntiguidade) {
-        AtletaNaoPro.percMinAntiguidade = percMinAntiguidade;
-    }
-
+    
     /**
      *
      * @return Percentagem mediante o intervalo de antiguidade de ]10,20] anos
      */
     public static double getPercMedAntiguidade() {
         return percMedAntiguidade;
+    }
+    
+    /**
+     *
+     * @return Percentagem mediante antiguidades superiores a 20 anos
+     */
+    public static double getPercMaxAntiguidade() {
+        return percMaxAntiguidade;
+    }
+    
+    /**
+     *
+     * @return Valor que determina o intervalo mínimo da primeira percentagem da Tabela 
+     */
+    public static int getMinAntiguidade() {
+        return minAntiguidade;
+    }
+    
+    /**
+     *
+     * @return Valor que determina o intervalo máximo da primeira percentagem da Tabela e
+     * o intervalo mínimo da segunda tabela
+     */
+    public static int getMedAntiguidade() {
+        return medAntiguidade;
+    }
+    
+    /**
+     *
+     * @return Valor que determina o intervalo mínimo da terceira percentagem da Tabela 
+     */
+    public static int getMaxAntiguidade() {
+        return maxAntiguidade;
+    }
+    
+    /**
+     *
+     * @param percMinAntiguidade Percentagem mediante o intervalo de antiguidade de [5,10] anos
+     */
+    public static void setPercMinAntiguidade(double percMinAntiguidade) {
+        AtletaNaoPro.percMinAntiguidade = percMinAntiguidade;
     }
 
     /**
@@ -138,26 +161,10 @@ public class AtletaNaoPro extends Atleta {
 
     /**
      *
-     * @return Percentagem mediante antiguidades superiores a 20 anos
-     */
-    public static double getPercMaxAntiguidade() {
-        return percMaxAntiguidade;
-    }
-
-    /**
-     *
      * @param percMaxAntiguidade Percentagem mediante antiguidades superiores a 20 anos
      */
     public static void setPercMaxAntiguidade(double percMaxAntiguidade) {
         AtletaNaoPro.percMaxAntiguidade = percMaxAntiguidade;
-    }
-
-    /**
-     *
-     * @return Valor que determina o intervalo mínimo da primeira percentagem da Tabela 
-     */
-    public static int getMinAntiguidade() {
-        return minAntiguidade;
     }
 
     /**
@@ -170,28 +177,11 @@ public class AtletaNaoPro extends Atleta {
 
     /**
      *
-     * @return Valor que determina o intervalo máximo da primeira percentagem da Tabela e
-     * o intervalo mínimo da segunda tabela
-     */
-    public static int getMedAntiguidade() {
-        return medAntiguidade;
-    }
-
-    /**
-     *
      * @param medAntiguidade Valor que determina o intervalo máximo da primeira percentagem da Tabela e
      * o intervalo mínimo da segunda tabela
      */
     public static void setMedAntiguidade(int medAntiguidade) {
         AtletaNaoPro.medAntiguidade = medAntiguidade;
-    }
-
-    /**
-     *
-     * @return Valor que determina o intervalo mínimo da terceira percentagem da Tabela 
-     */
-    public static int getMaxAntiguidade() {
-        return maxAntiguidade;
     }
 
     /**

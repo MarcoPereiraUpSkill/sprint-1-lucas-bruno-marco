@@ -19,120 +19,60 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author marco
  */
 public class ClubeDesportivoTest {
-    
+
     public ClubeDesportivoTest() {
     }
-    
+
     @BeforeAll
     public static void setUpClass() {
     }
-    
+
     @AfterAll
     public static void tearDownClass() {
     }
-    
+
     @BeforeEach
     public void setUp() {
     }
-    
+
     @AfterEach
     public void tearDown() {
     }
 
     /**
-     * Test of getData method, of class ClubeDesportivo.
+     * Test of equals method, of class ClubeDesportivo same instance.
      */
     @Test
-    public void testGetData() {
-        System.out.println("getData");
-        ClubeDesportivo instance = new ClubeDesportivo();
-        Date expResult = null;
-        Date result = instance.getData();
+    public void testEqualsSameInstance() {
+        Object obj = new ClubeDesportivo("PortoFC");
+        ClubeDesportivo instance = new ClubeDesportivo("PortoFC");
+        boolean expResult = true;
+        boolean result = instance.equals(obj);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
-     * Test of getAtletas method, of class ClubeDesportivo.
+     * Test of equals method, of class ClubeDesportivo different class.
      */
     @Test
-    public void testGetAtletas() {
-        System.out.println("getAtletas");
-        ClubeDesportivo instance = new ClubeDesportivo();
-        ArrayList<Atleta> expResult = null;
-        ArrayList<Atleta> result = instance.getAtletas();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setNome method, of class ClubeDesportivo.
-     */
-    @Test
-    public void testSetNome() {
-        System.out.println("setNome");
-        String nome = "";
-        ClubeDesportivo instance = new ClubeDesportivo();
-        instance.setNome(nome);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setData method, of class ClubeDesportivo.
-     */
-    @Test
-    public void testSetData() {
-        System.out.println("setData");
-        Date data = null;
-        ClubeDesportivo instance = new ClubeDesportivo();
-        instance.setData(data);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setAtletas method, of class ClubeDesportivo.
-     */
-    @Test
-    public void testSetAtletas() {
-        System.out.println("setAtletas");
-        ArrayList<Atleta> atletas = null;
-        ClubeDesportivo instance = new ClubeDesportivo();
-        instance.setAtletas(atletas);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of toString method, of class ClubeDesportivo.
-     */
-    @Test
-    public void testToString() {
-        System.out.println("toString");
-        ClubeDesportivo instance = new ClubeDesportivo();
-        String expResult = "";
-        String result = instance.toString();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of equals method, of class ClubeDesportivo.
-     */
-    @Test
-    public void testEquals() {
-        System.out.println("equals");
-        Object obj = null;
-        ClubeDesportivo instance = new ClubeDesportivo();
+    public void testEqualsDifClass() {
+        Object obj = new AtletaPro(600, "Carlos", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 1200);
+        ClubeDesportivo instance = new ClubeDesportivo("PortoFC");
         boolean expResult = false;
         boolean result = instance.equals(obj);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of equals method, of class ClubeDesportivo different attributes.
+     */
+    @Test
+    public void testEqualsDifAtt() {
+        Object obj = new ClubeDesportivo("VizelaFC");
+        ClubeDesportivo instance = new ClubeDesportivo("FC Porto");
+        boolean expResult = false;
+        boolean result = instance.equals(obj);
+        assertEquals(expResult, result);
     }
 
     /**
@@ -140,12 +80,14 @@ public class ClubeDesportivoTest {
      */
     @Test
     public void testInserirAtleta() {
-        System.out.println("inserirAtleta");
-        Atleta atleta = null;
-        ClubeDesportivo instance = new ClubeDesportivo();
+        Atleta atleta = new AtletaPro(600, "Carlos", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 1200);
+        ClubeDesportivo instance = new ClubeDesportivo("FC Porto");
         instance.inserirAtleta(atleta);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        ArrayList<Atleta> result = instance.getAtletas();
+        ArrayList<Atleta> expResult = new ArrayList<>();
+        expResult.add(atleta);
+
+        result.equals(expResult);
     }
 
     /**
@@ -153,13 +95,21 @@ public class ClubeDesportivoTest {
      */
     @Test
     public void testOrdenarAlfabeticamenteNome() {
-        System.out.println("ordenarAlfabeticamenteNome");
-        ClubeDesportivo instance = new ClubeDesportivo();
-        ArrayList<Atleta> expResult = null;
+        ArrayList<Atleta> expResult = new ArrayList<>();
+
+        expResult.add(new AtletaPro(600, "Carlos", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 1200));
+        expResult.add(new AtletaPro(600, "Diana", 123456789, "Feminino", 32, 70, "natacao", "QueimaGordura", 1200));
+        expResult.add(new AtletaPro(600, "Miguel", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 1200));
+
+        ClubeDesportivo instance = new ClubeDesportivo("FC Porto");
+
+        instance.inserirAtleta(new AtletaPro(600, "Diana", 123456789, "Feminino", 32, 70, "natacao", "QueimaGordura", 1200));
+        instance.inserirAtleta(new AtletaPro(600, "Carlos", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 1200));
+        instance.inserirAtleta(new AtletaPro(600, "Miguel", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 1200));
+
         ArrayList<Atleta> result = instance.ordenarAlfabeticamenteNome();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
+        expResult.equals(result);
     }
 
     /**
@@ -167,13 +117,21 @@ public class ClubeDesportivoTest {
      */
     @Test
     public void testOrdenarInversamentePremios() {
-        System.out.println("ordenarInversamentePremios");
-        ClubeDesportivo instance = new ClubeDesportivo();
-        ArrayList<Atleta> expResult = null;
+        ArrayList<Atleta> expResult = new ArrayList<>();
+
+        expResult.add(new AtletaPro(600, "Carlos", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 2400));
+        expResult.add(new AtletaPro(600, "Diana", 123456789, "Feminino", 32, 70, "natacao", "QueimaGordura", 1200));
+        expResult.add(new AtletaPro(600, "Miguel", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 600));
+
+        ClubeDesportivo instance = new ClubeDesportivo("FC Porto");
+
+        instance.inserirAtleta(new AtletaPro(600, "Diana", 123456789, "Feminino", 32, 70, "natacao", "QueimaGordura", 1200));
+        instance.inserirAtleta(new AtletaPro(600, "Carlos", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 2400));
+        instance.inserirAtleta(new AtletaPro(600, "Miguel", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 600));
+
         ArrayList<Atleta> result = instance.ordenarInversamentePremios();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
+        expResult.equals(result);
     }
 
     /**
@@ -181,27 +139,68 @@ public class ClubeDesportivoTest {
      */
     @Test
     public void testOrdenarCategoriaModalidadeNome() {
-        System.out.println("ordenarCategoriaModalidadeNome");
-        ClubeDesportivo instance = new ClubeDesportivo();
-        ArrayList<Atleta> expResult = null;
-        ArrayList<Atleta> result = instance.ordenarCategoriaModalidadeNome();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+        ArrayList<Atleta> expResult = new ArrayList<>();
 
-    /**
-     * Test of calcularTotalIRS method, of class ClubeDesportivo.
-     */
-    @Test
-    public void testCalcularTotalIRS() {
-        System.out.println("calcularTotalIRS");
-        ClubeDesportivo instance = new ClubeDesportivo();
-        double expResult = 0.0;
-        double result = instance.calcularTotalIRS();
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        expResult.add(new AtletaAmador(600, "Daniel", 123456789, "Masculino", 32, 70, "ciclismo", "QueimaGordura", 600));
+        expResult.add(new AtletaAmador(600, "Flávia", 123456789, "Feminino", 32, 70, "ciclismo", "QueimaGordura", 600));
+        expResult.add(new AtletaAmador(600, "Ana", 123456789, "Feminino", 32, 70, "corrida", "QueimaGordura", 2400));
+        expResult.add(new AtletaAmador(600, "Carlos", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 600));
+        expResult.add(new AtletaAmador(600, "Miguel", 123456789, "Masculino", 32, 70, "natacao", "QueimaGordura", 1200));
+        expResult.add(new AtletaAmador(600, "Rui", 123456789, "Masculino", 32, 70, "natacao", "QueimaGordura", 1200));
+
+        expResult.add(new AtletaPro(600, "Daniel", 123456789, "Masculino", 32, 70, "ciclismo", "QueimaGordura", 600));
+        expResult.add(new AtletaPro(600, "Flávia", 123456789, "Feminino", 32, 70, "ciclismo", "QueimaGordura", 600));
+        expResult.add(new AtletaPro(600, "Ana", 123456789, "Feminino", 32, 70, "corrida", "QueimaGordura", 2400));
+        expResult.add(new AtletaPro(600, "Carlos", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 600));
+        expResult.add(new AtletaPro(600, "Miguel", 123456789, "Masculino", 32, 70, "natacao", "QueimaGordura", 1200));
+        expResult.add(new AtletaPro(600, "Rui", 123456789, "Masculino", 32, 70, "natacao", "QueimaGordura", 1200));
+
+        expResult.add(new AtletaSemiPro(7, "João", 345678123, "Masculino", 27, 65, "ciclismo", "CapacidadeCardio", 800));
+        expResult.add(new AtletaSemiPro(7, "José", 345678123, "Masculino", 27, 65, "ciclismo", "CapacidadeCardio", 800));
+        expResult.add(new AtletaSemiPro(7, "Bruno", 345678123, "Masculino", 27, 65, "corrida", "CapacidadeCardio", 800));
+        expResult.add(new AtletaSemiPro(7, "Diogo", 345678123, "Masculino", 27, 65, "corrida", "CapacidadeCardio", 800));
+        expResult.add(new AtletaSemiPro(7, "Maria", 345678123, "Feminino", 27, 65, "natacao", "CapacidadeCardio", 800));
+        expResult.add(new AtletaSemiPro(7, "Tozé", 345678123, "Masculino", 27, 65, "natacao", "CapacidadeCardio", 800));
+
+        ClubeDesportivo instance = new ClubeDesportivo("FC Porto");
+
+        instance.inserirAtleta(new AtletaPro(600, "Daniel", 123456789, "Masculino", 32, 70, "ciclismo", "QueimaGordura", 600));
+        instance.inserirAtleta(new AtletaPro(600, "Flávia", 123456789, "Feminino", 32, 70, "ciclismo", "QueimaGordura", 600));
+        instance.inserirAtleta(new AtletaAmador(600, "Carlos", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 600));
+        instance.inserirAtleta(new AtletaSemiPro(7, "Tozé", 345678123, "Masculino", 27, 65, "natacao", "CapacidadeCardio", 800));
+        instance.inserirAtleta(new AtletaAmador(600, "Flávia", 123456789, "Feminino", 32, 70, "ciclismo", "QueimaGordura", 600));
+        instance.inserirAtleta(new AtletaSemiPro(7, "João", 345678123, "Masculino", 27, 65, "ciclismo", "CapacidadeCardio", 800));
+        instance.inserirAtleta(new AtletaAmador(600, "Daniel", 123456789, "Masculino", 32, 70, "ciclismo", "QueimaGordura", 600));
+        instance.inserirAtleta(new AtletaAmador(600, "Ana", 123456789, "Feminino", 32, 70, "corrida", "QueimaGordura", 2400));
+        instance.inserirAtleta(new AtletaPro(600, "Ana", 123456789, "Feminino", 32, 70, "corrida", "QueimaGordura", 2400));
+        instance.inserirAtleta(new AtletaAmador(600, "Miguel", 123456789, "Masculino", 32, 70, "natacao", "QueimaGordura", 1200));
+        instance.inserirAtleta(new AtletaSemiPro(7, "Bruno", 345678123, "Masculino", 27, 65, "corrida", "CapacidadeCardio", 800));
+        instance.inserirAtleta(new AtletaSemiPro(7, "José", 345678123, "Masculino", 27, 65, "ciclismo", "CapacidadeCardio", 800));
+        instance.inserirAtleta(new AtletaPro(600, "Carlos", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 600));
+        instance.inserirAtleta(new AtletaSemiPro(7, "Diogo", 345678123, "Masculino", 27, 65, "corrida", "CapacidadeCardio", 800));
+        instance.inserirAtleta(new AtletaPro(600, "Miguel", 123456789, "Masculino", 32, 70, "natacao", "QueimaGordura", 1200));
+        instance.inserirAtleta(new AtletaSemiPro(7, "Maria", 345678123, "Feminino", 27, 65, "natacao", "CapacidadeCardio", 800));
+        instance.inserirAtleta(new AtletaAmador(600, "Rui", 123456789, "Masculino", 32, 70, "natacao", "QueimaGordura", 1200));
+        instance.inserirAtleta(new AtletaPro(600, "Rui", 123456789, "Masculino", 32, 70, "natacao", "QueimaGordura", 1200));
+
+        ArrayList<Atleta> result = instance.ordenarCategoriaModalidadeNome();
+
+        expResult.equals(result);
     }
-    
+//
+//    /**
+//     * Test of calcularTotalIRS method, of class ClubeDesportivo.
+//     */
+//    @Test
+//    public void testCalcularTotalIRS() {
+//        ClubeDesportivo instance = new ClubeDesportivo("Arouca FC");
+//
+//        instance.inserirAtleta(new AtletaPro(600, "Daniel", 123456789, "Masculino", 32, 70, "ciclismo", "QueimaGordura", 600));
+//
+//        double expResult = 60;
+//        double result = instance.calcularTotalIRS();
+//        
+//        assertEquals(expResult, result);
+//    }
+
 }

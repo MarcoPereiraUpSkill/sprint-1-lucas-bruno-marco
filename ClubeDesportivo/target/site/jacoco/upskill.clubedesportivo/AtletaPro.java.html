@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AtletaPro.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ClubeDesportivo</a> &gt; <a href="index.source.html" class="el_package">upskill.clubedesportivo</a> &gt; <span class="el_source">AtletaPro.java</span></div><h1>AtletaPro.java</h1><pre class="source lang-java linenums">/*
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AtletaPro.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ClubeDesportivo</a> &gt; <a href="index.source.html" class="el_package">upskill.clubedesportivo</a> &gt; <span class="el_source">AtletaPro.java</span></div><h1>AtletaPro.java</h1><pre class="source lang-java linenums">/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -9,94 +9,135 @@ package upskill.clubedesportivo;
  *
  * @author Vicious
  */
-public class AtletaPro extends Atleta {
+public class AtletaPro extends Atleta implements IRS {
 
     private double parcelaFixa;
 
-    //parcelaVariavel não está a ser usada
-    private double parcelaVariavel;
-
+    /**
+     *
+     * @param percParcelaVariavel Percentagem usada sobre o valor mensal de
+     * prémios para cálculo da parcela variável
+     * @param qtdAtletaPro Contador de instâncias de Atletas Profissionais
+     */
     private static final double PARCELAFIXA_POR_OMISSAO = 0;
-    private static final double PARCELAVARIAVEL_POR_OMISSAO = 0;
 
-<span class="fc" id="L22">    private static double percParcelaVariavel = 20;</span>
-<span class="fc" id="L23">    private static int qtdAtletaPro = 0;</span>
+<span class="fc" id="L24">    private static double percParcelaVariavel = 20;</span>
+<span class="fc" id="L25">    private static int qtdAtletaPro = 0;</span>
 
-    public AtletaPro(double parcelaFixa, double parcelaVariavel, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
-<span class="fc" id="L26">        super(nome, nic, genero, idade, fcr, atividade, objetivo, premios);</span>
-<span class="fc" id="L27">        this.parcelaFixa = parcelaFixa;</span>
-<span class="fc" id="L28">        this.parcelaVariavel = parcelaVariavel;</span>
-<span class="fc" id="L29">        qtdAtletaPro++;</span>
-<span class="fc" id="L30">    }</span>
-    
+    /**
+     *
+     * @param parcelaFixa Parcela fixa, diferente entre atletas Profissionais,
+     * usada para calcular o valor a receber ao fim do mês
+     * @param parcelaVariavel Parcela variável dependente do valor mensal
+     * arrecadado em prémios, usada para calcular o valor a receber ao fim do
+     * mês
+     * @param nome Nome do atleta.
+     * @param nic Número de identificação civil do atleta.
+     * @param genero Género do atleta.
+     * @param idade Idade do atleta.
+     * @param fcr Frequência cardíaca em repouso, valor que representa o número
+     * de batimentos cardíacos em repouso durante 1 minuto.
+     * @param atividade Atividade associada ao atleta: caminhada, corrida,
+     * ciclismo ou natação.
+     * @param objetivo Objetivo do atleta: queima de gordura ou capacidade
+     * cardiorrespiratória. Determina IT(Intensidade de Treino).
+     * @param premios Prémios arrecadados pelo atleta durante um mês.
+     */
+    public AtletaPro(double parcelaFixa, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
+<span class="fc" id="L47">        super(nome, nic, genero, idade, fcr, atividade, objetivo, premios);</span>
+<span class="fc" id="L48">        this.parcelaFixa = parcelaFixa;</span>
+<span class="fc" id="L49">        qtdAtletaPro++;</span>
+<span class="fc" id="L50">    }</span>
+
+    /**
+     *
+     */
     public AtletaPro() {
-<span class="nc" id="L33">        super();</span>
-<span class="nc" id="L34">        this.parcelaFixa = PARCELAFIXA_POR_OMISSAO;</span>
-<span class="nc" id="L35">        this.parcelaVariavel = PARCELAVARIAVEL_POR_OMISSAO;</span>
-<span class="nc" id="L36">        qtdAtletaPro++;</span>
-<span class="nc" id="L37">    }</span>
+<span class="nc" id="L56">        super();</span>
+<span class="nc" id="L57">        this.parcelaFixa = PARCELAFIXA_POR_OMISSAO;</span>
+<span class="nc" id="L58">        qtdAtletaPro++;</span>
+<span class="nc" id="L59">    }</span>
 
+    /**
+     *
+     * @return Parcela Fixa
+     */
     public double getParcelaFixa() {
-<span class="nc" id="L40">        return parcelaFixa;</span>
+<span class="fc" id="L66">        return parcelaFixa;</span>
     }
 
+    /**
+     *
+     * @param parcelaFixa Parcela Fixa
+     */
     public void setParcelaFixa(double parcelaFixa) {
-<span class="nc" id="L44">        this.parcelaFixa = parcelaFixa;</span>
-<span class="nc" id="L45">    }</span>
-
-    public double getParcelaVariavel() {
-<span class="nc" id="L48">        return parcelaVariavel;</span>
-    }
-
-    public void setParcelaVariavel(double parcelaVariavel) {
-<span class="nc" id="L52">        this.parcelaVariavel = parcelaVariavel;</span>
-<span class="nc" id="L53">    }</span>
+<span class="nc" id="L74">        this.parcelaFixa = parcelaFixa;</span>
+<span class="nc" id="L75">    }</span>
 
     @Override
     public boolean equals(Object obj) {
-<span class="nc bnc" id="L57" title="All 2 branches missed.">        if (!super.equals(obj)) {</span>
-<span class="nc" id="L58">            return false;</span>
+<span class="fc bfc" id="L79" title="All 2 branches covered.">        if (!super.equals(obj)) {</span>
+<span class="fc" id="L80">            return false;</span>
         }
-<span class="nc bnc" id="L60" title="All 2 branches missed.">        if (obj == this) {</span>
-<span class="nc" id="L61">            return true;</span>
+<span class="pc bpc" id="L82" title="1 of 2 branches missed.">        if (obj == this) {</span>
+<span class="nc" id="L83">            return true;</span>
         }
-<span class="nc bnc" id="L63" title="All 2 branches missed.">        if (!(obj instanceof Atleta)) {</span>
-<span class="nc" id="L64">            return false;</span>
+<span class="pc bpc" id="L85" title="1 of 2 branches missed.">        if (!(obj instanceof AtletaPro)) {</span>
+<span class="nc" id="L86">            return false;</span>
         }
 
-<span class="nc" id="L67">        AtletaPro atletaPro = (AtletaPro) obj;</span>
-        
-<span class="nc bnc" id="L69" title="All 2 branches missed.">        return Double.compare(parcelaFixa, atletaPro.getParcelaFixa()) == 0</span>
-<span class="nc bnc" id="L70" title="All 2 branches missed.">                &amp;&amp; Double.compare(parcelaVariavel, atletaPro.getParcelaVariavel()) == 0;</span>
+<span class="fc" id="L89">        AtletaPro atletaPro = (AtletaPro) obj;</span>
+
+<span class="pc bpc" id="L91" title="1 of 2 branches missed.">        return Double.compare(parcelaFixa, atletaPro.getParcelaFixa()) == 0;</span>
     }
 
     @Override
     public String toString() {
-<span class="nc" id="L75">        return &quot;AtletaPro{&quot; + &quot;parcelaFixa=&quot; + parcelaFixa + &quot;, parcelaVariavel=&quot; + parcelaVariavel + '}';</span>
+<span class="nc" id="L96">        return &quot;AtletaPro{&quot; + &quot;parcelaFixa=&quot; + parcelaFixa + '}';</span>
     }
 
+    /**
+     *
+     * @return Valor mensal a pagar ao atleta, dependente de uma parcela fixa e
+     * outra variável
+     */
     @Override
     public double calcularValorMensal() {
-<span class="fc" id="L80">        return parcelaFixa + (getPremios() * (percParcelaVariavel / 100));</span>
-    }
-    
-    public double calcularIRS(){
-<span class="nc" id="L84">     return parcelaFixa*(IRS.taxaIRS/100);</span>
+<span class="fc" id="L106">        return parcelaFixa + (getPremios() * (percParcelaVariavel / 100));</span>
     }
 
+    /**
+     *
+     * @return Valor a descontar para IRS
+     */
+    @Override
+    public double calcularIRS() {
+<span class="nc" id="L115">        return parcelaFixa * (taxaIRS / 100);</span>
+    }
+
+    /**
+     *
+     * @return Percentagem da Parcela Variável
+     */
     public static double getPercParcelaVariavel() {
-<span class="nc" id="L88">        return percParcelaVariavel;</span>
+<span class="nc" id="L123">        return percParcelaVariavel;</span>
     }
 
-    public static void setPercParcelaVariavel(double percParcelaVariavel) {
-<span class="nc" id="L92">        AtletaPro.percParcelaVariavel = percParcelaVariavel;</span>
-<span class="nc" id="L93">    }</span>
-
+    /**
+     *
+     * @return Quantidade de instâncias de Atletas Profissionais
+     */
     public static int getQtdAtletaPro() {
-<span class="nc" id="L96">        return qtdAtletaPro;</span>
+<span class="nc" id="L131">        return qtdAtletaPro;</span>
     }
-    
-    
+
+    /**
+     *
+     * @param percParcelaVariavel Percentagem da Parcela Variável
+     */
+    public static void setPercParcelaVariavel(double percParcelaVariavel) {
+<span class="nc" id="L139">        AtletaPro.percParcelaVariavel = percParcelaVariavel;</span>
+<span class="nc" id="L140">    }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

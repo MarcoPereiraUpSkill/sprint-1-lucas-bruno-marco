@@ -63,13 +63,10 @@ public class ClubeDesportivo {
 
     @Override
     public boolean equals(Object obj) {
-        if (!super.equals(obj)) {
-            return false;
-        }
-        if (obj == this) {
+         if (obj == this) {
             return true;
         }
-        if (!(obj instanceof Atleta)) {
+        if (!(obj instanceof ClubeDesportivo)) {
             return false;
         }
 
@@ -105,9 +102,10 @@ public class ClubeDesportivo {
 
     public double calcularTotalIRS() {
         double valorTotalIRS = 0;
+        
         for (Atleta atleta : atletas) {
             if (atleta instanceof IRS) {
-                valorTotalIRS += ((IRS) atleta).calcularIRS();
+                valorTotalIRS = valorTotalIRS + ((IRS) atleta).calcularIRS();
             }
         }
 
