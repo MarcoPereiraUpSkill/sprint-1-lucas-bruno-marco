@@ -45,6 +45,10 @@ public class AtletaSemiPro extends AtletaNaoPro{
     public double calcularValorMensal(){
         return parcelaFixa+(parcelaFixa*(obterPercAntiguidade()/100));
     }
+    
+    public double calcularIRS(){
+     return parcelaFixa*(IRS.taxaIRS/100);
+    }
 
     public static double getParcelaFixa() {
         return parcelaFixa;
