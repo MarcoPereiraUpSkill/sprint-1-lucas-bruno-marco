@@ -115,7 +115,7 @@ public class AtletaPro extends Atleta implements IRS{
 
     /**
      *
-     * @return Valor mensal a pagar ao atleta
+     * @return Valor mensal a pagar ao atleta, dependente de uma parcela fixa e outra variável
      */
     @Override
     public double calcularValorMensal() {
