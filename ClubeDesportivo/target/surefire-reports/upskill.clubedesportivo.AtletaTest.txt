@@ -1,26 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: upskill.clubedesportivo.AtletaTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
-=======
-Tests run: 10, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec <<< FAILURE!
-upskill.clubedesportivo.AtletaTest.testObterIT()  Time elapsed: 0.002 sec  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <0.6> but was: <0.75>
-	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
-	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:81)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:993)
-	at upskill.clubedesportivo.AtletaTest.testObterIT(AtletaTest.java:93)
-
-upskill.clubedesportivo.AtletaTest.testCalcularFCT()  Time elapsed: 0 sec  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <108.7> but was: <122.125>
-	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
-	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:81)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:993)
-	at upskill.clubedesportivo.AtletaTest.testCalcularFCT(AtletaTest.java:153)
-
->>>>>>> 5265c7ad5f3dfc76376cea9308c4ba50aedcd243
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec

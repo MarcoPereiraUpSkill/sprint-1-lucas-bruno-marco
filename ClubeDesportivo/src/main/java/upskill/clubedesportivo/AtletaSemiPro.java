@@ -9,7 +9,7 @@ package upskill.clubedesportivo;
  *
  * @author Vicious
  */
-public class AtletaSemiPro extends AtletaNaoPro{
+public class AtletaSemiPro extends AtletaNaoPro implements IRS{
     
     private static final double PARCELAFIXA_POR_OMISSAO=0;
     private static final double PARCELAVARIAVEL_POR_OMISSAO=0;
@@ -46,8 +46,9 @@ public class AtletaSemiPro extends AtletaNaoPro{
         return parcelaFixa+(parcelaFixa*(obterPercAntiguidade()/100));
     }
     
+    @Override
     public double calcularIRS(){
-     return parcelaFixa*(IRS.taxaIRS/100);
+     return parcelaFixa*(double)(IRS.taxaIRS/100);
     }
 
     public static double getParcelaFixa() {

@@ -9,7 +9,7 @@ package upskill.clubedesportivo;
  *
  * @author Vicious
  */
-public class AtletaPro extends Atleta {
+public class AtletaPro extends Atleta implements IRS{
 
     private double parcelaFixa;
 
@@ -80,8 +80,9 @@ public class AtletaPro extends Atleta {
         return parcelaFixa + (getPremios() * (percParcelaVariavel / 100));
     }
     
+    @Override
     public double calcularIRS(){
-     return parcelaFixa*(IRS.taxaIRS/100);
+     return parcelaFixa*(double)(IRS.taxaIRS/100);
     }
 
     public static double getPercParcelaVariavel() {

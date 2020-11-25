@@ -79,18 +79,24 @@ public class AtletaPro extends Atleta {
     public double calcularValorMensal() {
 <span class="fc" id="L80">        return parcelaFixa + (getPremios() * (percParcelaVariavel / 100));</span>
     }
+    
+    public double calcularIRS(){
+<span class="nc" id="L84">     return parcelaFixa*(IRS.taxaIRS/100);</span>
+    }
 
     public static double getPercParcelaVariavel() {
-<span class="nc" id="L84">        return percParcelaVariavel;</span>
+<span class="nc" id="L88">        return percParcelaVariavel;</span>
     }
 
     public static void setPercParcelaVariavel(double percParcelaVariavel) {
-<span class="nc" id="L88">        AtletaPro.percParcelaVariavel = percParcelaVariavel;</span>
-<span class="nc" id="L89">    }</span>
+<span class="nc" id="L92">        AtletaPro.percParcelaVariavel = percParcelaVariavel;</span>
+<span class="nc" id="L93">    }</span>
 
     public static int getQtdAtletaPro() {
-<span class="nc" id="L92">        return qtdAtletaPro;</span>
+<span class="nc" id="L96">        return qtdAtletaPro;</span>
     }
+    
+    
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

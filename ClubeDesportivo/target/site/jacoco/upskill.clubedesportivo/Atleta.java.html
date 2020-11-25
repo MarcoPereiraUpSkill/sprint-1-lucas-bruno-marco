@@ -9,7 +9,8 @@ package upskill.clubedesportivo;
  *
  * @author Vicious
  */
-public abstract class Atleta {
+public abstract class Atleta implements Comparable&lt;Atleta&gt; {
+
     private String nome;
     private int nic;
     private String genero;
@@ -18,17 +19,16 @@ public abstract class Atleta {
     private String atividade;
     private String objetivo;
     private double premios;
-    
-    private static final String NOME_POR_OMISSAO=&quot;&quot;;
-    private static final int NIC_POR_OMISSAO=0;
-    private static final String GENERO_POR_OMISSAO=&quot;&quot;;
-    private static final int IDADE_POR_OMISSAO=0;
-    private static final int FCR_POR_OMISSAO=0;
+
+    private static final String NOME_POR_OMISSAO = &quot;&quot;;
+    private static final int NIC_POR_OMISSAO = 0;
+    private static final String GENERO_POR_OMISSAO = &quot;&quot;;
+    private static final int IDADE_POR_OMISSAO = 0;
+    private static final int FCR_POR_OMISSAO = 0;
     private static final String ATIVIDADE_POR_OMISSAO = &quot;&quot;;
     private static final String OBJETIVO_POR_OMISSAO = &quot;&quot;;
-    private static final int PREMIOS_POR_OMISSAO=0;
-    
-    
+    private static final int PREMIOS_POR_OMISSAO = 0;
+
 <span class="fc" id="L32">    private static double fcmPadrao = 208.75;</span>
 <span class="fc" id="L33">    private static double fcmPadraoI = 0.73;</span>
 <span class="fc" id="L34">    private static double fcmCiclismoFem = 189;</span>
@@ -39,151 +39,162 @@ public abstract class Atleta {
 <span class="fc" id="L39">    private static double fcmNatacaoI = 1.7;</span>
 <span class="fc" id="L40">    private static double itQueimaGordura = 0.6;</span>
 <span class="fc" id="L41">    private static double itCapacidadeCardio = 0.75;</span>
-<span class="fc" id="L42">    private static String objetivoQueimaGordura=&quot;QueimaGordura&quot;;</span>
-<span class="fc" id="L43">    private static String objetivoCapacidadeCardio=&quot;CapacidadeCardio&quot;;</span>
 
-<span class="fc" id="L45">    public Atleta(String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {</span>
-<span class="fc" id="L46">        this.nome = nome;</span>
-<span class="fc" id="L47">        this.nic = nic;</span>
-<span class="fc" id="L48">        this.genero = genero;</span>
-<span class="fc" id="L49">        this.idade = idade;</span>
-<span class="fc" id="L50">        this.fcr = fcr;</span>
-<span class="fc" id="L51">        this.atividade = atividade;</span>
-<span class="fc" id="L52">        this.objetivo = objetivo;</span>
-<span class="fc" id="L53">        this.premios = premios;</span>
-<span class="fc" id="L54">    }</span>
-    
-<span class="nc" id="L56">    public Atleta() {</span>
-<span class="nc" id="L57">        this.nome = NOME_POR_OMISSAO;</span>
-<span class="nc" id="L58">        this.nic = NIC_POR_OMISSAO;</span>
-<span class="nc" id="L59">        this.genero = GENERO_POR_OMISSAO;</span>
-<span class="nc" id="L60">        this.idade = IDADE_POR_OMISSAO;</span>
-<span class="nc" id="L61">        this.fcr = FCR_POR_OMISSAO;</span>
-<span class="nc" id="L62">        this.atividade = ATIVIDADE_POR_OMISSAO;</span>
-<span class="nc" id="L63">        this.objetivo = OBJETIVO_POR_OMISSAO;</span>
-<span class="nc" id="L64">        this.premios = PREMIOS_POR_OMISSAO;</span>
-<span class="nc" id="L65">    }</span>
+<span class="fc" id="L43">    private static String objetivoQueimaGordura = &quot;QueimaGordura&quot;;</span>
+<span class="fc" id="L44">    private static String objetivoCapacidadeCardio = &quot;CapacidadeCardio&quot;;</span>
 
-    
-    
-    
+<span class="fc" id="L46">    public Atleta(String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {</span>
+<span class="fc" id="L47">        this.nome = nome;</span>
+<span class="fc" id="L48">        this.nic = nic;</span>
+<span class="fc" id="L49">        this.genero = genero;</span>
+<span class="fc" id="L50">        this.idade = idade;</span>
+<span class="fc" id="L51">        this.fcr = fcr;</span>
+<span class="fc" id="L52">        this.atividade = atividade;</span>
+<span class="fc" id="L53">        this.objetivo = objetivo;</span>
+<span class="fc" id="L54">        this.premios = premios;</span>
+<span class="fc" id="L55">    }</span>
+
+<span class="nc" id="L57">    public Atleta() {</span>
+<span class="nc" id="L58">        this.nome = NOME_POR_OMISSAO;</span>
+<span class="nc" id="L59">        this.nic = NIC_POR_OMISSAO;</span>
+<span class="nc" id="L60">        this.genero = GENERO_POR_OMISSAO;</span>
+<span class="nc" id="L61">        this.idade = IDADE_POR_OMISSAO;</span>
+<span class="nc" id="L62">        this.fcr = FCR_POR_OMISSAO;</span>
+<span class="nc" id="L63">        this.atividade = ATIVIDADE_POR_OMISSAO;</span>
+<span class="nc" id="L64">        this.objetivo = OBJETIVO_POR_OMISSAO;</span>
+<span class="nc" id="L65">        this.premios = PREMIOS_POR_OMISSAO;</span>
+<span class="nc" id="L66">    }</span>
 
     public String getNome() {
-<span class="nc" id="L72">        return nome;</span>
+<span class="nc" id="L69">        return nome;</span>
     }
 
     public void setNome(String nome) {
-<span class="nc" id="L76">        this.nome = nome;</span>
-<span class="nc" id="L77">    }</span>
+<span class="nc" id="L73">        this.nome = nome;</span>
+<span class="nc" id="L74">    }</span>
 
     public int getNic() {
-<span class="nc" id="L80">        return nic;</span>
+<span class="nc" id="L77">        return nic;</span>
     }
 
     public void setNic(int nic) {
-<span class="nc" id="L84">        this.nic = nic;</span>
-<span class="nc" id="L85">    }</span>
+<span class="nc" id="L81">        this.nic = nic;</span>
+<span class="nc" id="L82">    }</span>
 
     public String getGenero() {
-<span class="nc" id="L88">        return genero;</span>
+<span class="nc" id="L85">        return genero;</span>
     }
 
     public void setGenero(String genero) {
-<span class="nc" id="L92">        this.genero = genero;</span>
-<span class="nc" id="L93">    }</span>
+<span class="nc" id="L89">        this.genero = genero;</span>
+<span class="nc" id="L90">    }</span>
 
     public int getIdade() {
-<span class="nc" id="L96">        return idade;</span>
+<span class="nc" id="L93">        return idade;</span>
     }
 
     public void setIdade(int idade) {
-<span class="nc" id="L100">        this.idade = idade;</span>
-<span class="nc" id="L101">    }</span>
+<span class="nc" id="L97">        this.idade = idade;</span>
+<span class="nc" id="L98">    }</span>
 
     public int getFcr() {
-<span class="nc" id="L104">        return fcr;</span>
+<span class="nc" id="L101">        return fcr;</span>
     }
 
     public void setFcr(int fcr) {
-<span class="nc" id="L108">        this.fcr = fcr;</span>
-<span class="nc" id="L109">    }</span>
+<span class="nc" id="L105">        this.fcr = fcr;</span>
+<span class="nc" id="L106">    }</span>
 
     public String getAtividade() {
-<span class="nc" id="L112">        return atividade;</span>
+<span class="nc" id="L109">        return atividade;</span>
     }
 
     public void setAtividade(String atividade) {
-<span class="nc" id="L116">        this.atividade = atividade;</span>
-<span class="nc" id="L117">    }</span>
+<span class="nc" id="L113">        this.atividade = atividade;</span>
+<span class="nc" id="L114">    }</span>
 
     public String getObjetivo() {
-<span class="fc" id="L120">        return objetivo;</span>
+<span class="fc" id="L117">        return objetivo;</span>
     }
 
     public void setObjetivo(String objetivo) {
-<span class="nc" id="L124">        this.objetivo = objetivo;</span>
-<span class="nc" id="L125">    }</span>
+<span class="nc" id="L121">        this.objetivo = objetivo;</span>
+<span class="nc" id="L122">    }</span>
 
     public double getPremios() {
-<span class="fc" id="L128">        return premios;</span>
+<span class="fc" id="L125">        return premios;</span>
     }
 
     public void setPremios(double premios) {
-<span class="nc" id="L132">        this.premios = premios;</span>
-<span class="nc" id="L133">    }</span>
-    
+<span class="nc" id="L129">        this.premios = premios;</span>
+<span class="nc" id="L130">    }</span>
+
     @Override
-    public boolean equals(Object obj){
-<span class="nc bnc" id="L137" title="All 2 branches missed.">        if(obj == this){</span>
-<span class="nc" id="L138">            return true;</span>
+    public boolean equals(Object obj) {
+<span class="nc bnc" id="L134" title="All 2 branches missed.">        if (obj == this) {</span>
+<span class="nc" id="L135">            return true;</span>
         }
-        
-<span class="nc bnc" id="L141" title="All 2 branches missed.">        if(!(obj instanceof Atleta)){</span>
-<span class="nc" id="L142">            return false;</span>
+
+<span class="nc bnc" id="L138" title="All 2 branches missed.">        if (!(obj instanceof Atleta)) {</span>
+<span class="nc" id="L139">            return false;</span>
         }
-        
-<span class="nc" id="L145">        Atleta atleta = (Atleta) obj;</span>
-        
-<span class="nc bnc" id="L147" title="All 2 branches missed.">        return nome.compareTo(atleta.getNome()) == 0</span>
-<span class="nc bnc" id="L148" title="All 2 branches missed.">                &amp;&amp; Integer.compare(nic, atleta.getNic()) == 0</span>
-<span class="nc bnc" id="L149" title="All 2 branches missed.">                &amp;&amp; genero.compareTo(atleta.getGenero()) == 0</span>
-<span class="nc bnc" id="L150" title="All 2 branches missed.">                &amp;&amp; Integer.compare(idade, atleta.getIdade()) == 0</span>
-<span class="nc bnc" id="L151" title="All 2 branches missed.">                &amp;&amp; Integer.compare(fcr, atleta.getFcr()) == 0</span>
-<span class="nc bnc" id="L152" title="All 2 branches missed.">                &amp;&amp; atividade.compareTo(atleta.getAtividade()) == 0</span>
-<span class="nc bnc" id="L153" title="All 2 branches missed.">                &amp;&amp; objetivo.compareTo(atleta.getObjetivo()) == 0</span>
-<span class="nc bnc" id="L154" title="All 2 branches missed.">                &amp;&amp; Double.compare(premios, atleta.getPremios()) == 0;</span>
+
+<span class="nc" id="L142">        Atleta atleta = (Atleta) obj;</span>
+
+<span class="nc bnc" id="L144" title="All 2 branches missed.">        return nome.compareTo(atleta.getNome()) == 0</span>
+<span class="nc bnc" id="L145" title="All 2 branches missed.">                &amp;&amp; Integer.compare(nic, atleta.getNic()) == 0</span>
+<span class="nc bnc" id="L146" title="All 2 branches missed.">                &amp;&amp; genero.compareTo(atleta.getGenero()) == 0</span>
+<span class="nc bnc" id="L147" title="All 2 branches missed.">                &amp;&amp; Integer.compare(idade, atleta.getIdade()) == 0</span>
+<span class="nc bnc" id="L148" title="All 2 branches missed.">                &amp;&amp; Integer.compare(fcr, atleta.getFcr()) == 0</span>
+<span class="nc bnc" id="L149" title="All 2 branches missed.">                &amp;&amp; atividade.compareTo(atleta.getAtividade()) == 0</span>
+<span class="nc bnc" id="L150" title="All 2 branches missed.">                &amp;&amp; objetivo.compareTo(atleta.getObjetivo()) == 0</span>
+<span class="nc bnc" id="L151" title="All 2 branches missed.">                &amp;&amp; Double.compare(premios, atleta.getPremios()) == 0;</span>
     }
 
     @Override
     public String toString() {
-<span class="nc" id="L159">        return &quot;Atleta{&quot; + &quot;nome=&quot; + nome + &quot;, nic=&quot; + nic + &quot;, genero=&quot; + genero + &quot;, idade=&quot; + idade + '}';</span>
+<span class="nc" id="L156">        return &quot;Atleta{&quot; + &quot;nome=&quot; + nome + &quot;, nic=&quot; + nic + &quot;, genero=&quot; + genero + &quot;, idade=&quot; + idade + '}';</span>
+    }
+
+    @Override
+    public int compareTo(Atleta atleta) {
+<span class="nc" id="L161">        return this.nome.compareTo(atleta.nome);</span>
+    }
+    
+    public boolean validarGenero(){
+<span class="nc bnc" id="L165" title="All 4 branches missed.">        return genero.equalsIgnoreCase(&quot;masculino&quot;) || objetivo.equalsIgnoreCase(&quot;feminino&quot;);</span>
     }
           
     public boolean validarAtividade (){
-<span class="pc bpc" id="L163" title="1 of 2 branches missed.">        return atividade.equalsIgnoreCase(Atividade.CAMINHADA)</span>
-<span class="pc bpc" id="L164" title="1 of 2 branches missed.">                || atividade.equalsIgnoreCase(Atividade.CICLISMO)</span>
-<span class="fc bfc" id="L165" title="All 2 branches covered.">                || atividade.equalsIgnoreCase(Atividade.CORRIDA)</span>
-<span class="pc bpc" id="L166" title="1 of 2 branches missed.">                || atividade.equalsIgnoreCase(Atividade.NATACAO);</span>
+<span class="pc bpc" id="L169" title="1 of 2 branches missed.">        return atividade.equalsIgnoreCase(Atividade.CAMINHADA)</span>
+<span class="pc bpc" id="L170" title="1 of 2 branches missed.">                || atividade.equalsIgnoreCase(Atividade.CICLISMO)</span>
+<span class="fc bfc" id="L171" title="All 2 branches covered.">                || atividade.equalsIgnoreCase(Atividade.CORRIDA)</span>
+<span class="pc bpc" id="L172" title="1 of 2 branches missed.">                || atividade.equalsIgnoreCase(Atividade.NATACAO);</span>
     }
-    
-    public boolean validarObjetivo(){
-<span class="pc bpc" id="L170" title="1 of 4 branches missed.">        return objetivo.equalsIgnoreCase(objetivoQueimaGordura) || objetivo.equalsIgnoreCase(objetivoCapacidadeCardio);</span>
+
+    public boolean validarObjetivo() {
+<span class="pc bpc" id="L176" title="1 of 4 branches missed.">        return objetivo.equalsIgnoreCase(objetivoQueimaGordura) || objetivo.equalsIgnoreCase(objetivoCapacidadeCardio);</span>
     }
-    
-    public double obterIT(){
-<span class="pc bpc" id="L174" title="1 of 2 branches missed.">        return getObjetivo()==objetivoQueimaGordura ? itQueimaGordura : itCapacidadeCardio;</span>
+
+    public double obterIT() {
+<span class="pc bpc" id="L180" title="1 of 2 branches missed.">        return getObjetivo() == objetivoQueimaGordura ? itQueimaGordura : itCapacidadeCardio;</span>
     }
-    
-    public double calcularFCM(){
-<span class="pc bpc" id="L178" title="1 of 4 branches missed.">        if (atividade == Atividade.CAMINHADA || atividade == Atividade.CORRIDA) return fcmPadrao - (fcmPadraoI*idade);</span>
-<span class="fc bfc" id="L179" title="All 4 branches covered.">        if (atividade == Atividade.CICLISMO) return (genero.equalsIgnoreCase(&quot;Feminino&quot;)) ? fcmCiclismoFem - (fcmCiclismoIFem*idade) : fcmCiclismoMas - (fcmCiclismoIMas*idade);</span>
-<span class="fc" id="L180">        else return fcmNatacao - (fcmNatacaoI*idade);</span>
+
+    public double calcularFCM() {
+<span class="pc bpc" id="L184" title="1 of 4 branches missed.">        if (atividade == Atividade.CAMINHADA || atividade == Atividade.CORRIDA) {</span>
+<span class="fc" id="L185">            return fcmPadrao - (fcmPadraoI * idade);</span>
+        }
+<span class="fc bfc" id="L187" title="All 2 branches covered.">        if (atividade == Atividade.CICLISMO) {</span>
+<span class="fc bfc" id="L188" title="All 2 branches covered.">            return (genero.equalsIgnoreCase(&quot;Feminino&quot;)) ? fcmCiclismoFem - (fcmCiclismoIFem * idade) : fcmCiclismoMas - (fcmCiclismoIMas * idade);</span>
+        } else {
+<span class="fc" id="L190">            return fcmNatacao - (fcmNatacaoI * idade);</span>
+        }
     }
-    
-    public double calcularFCT(){
-<span class="fc" id="L184">        return fcr+(obterIT()*(calcularFCM()-fcr));</span>
+
+    public double calcularFCT() {
+<span class="fc" id="L195">        return fcr + (obterIT() * (calcularFCM() - fcr));</span>
     }
-    
+
     public abstract double calcularValorMensal();
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

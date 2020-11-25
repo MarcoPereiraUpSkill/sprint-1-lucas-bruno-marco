@@ -55,9 +55,11 @@ public class MainClubeDesportivo {
                 valorPro += atleta.calcularValorMensal();
             } else if (atleta instanceof AtletaSemiPro) {
                 valorSemiPro += atleta.calcularValorMensal();
-            } else if(atleta instanceof AtletaAmador) {
+            } else if (atleta instanceof AtletaAmador) {
                 valorAmador += atleta.calcularValorMensal();
-            } else return;
+            } else {
+                return;
+            }
         }
         System.out.println("Valor a pagar a atletas profissionais: " + valorPro);
         System.out.println("Valor a pagar a atletas semiprofissionais: " + valorSemiPro);
@@ -66,24 +68,34 @@ public class MainClubeDesportivo {
 
         //Retornar o nome do clube
         System.out.println("Nome do clube: " + vizela.getNome());
-        
+
         //Inserir um novo atleta no contentor
         vizela.inserirAtleta(new AtletaPro(400, 350, "Marco", 345452889, "Masculino", 21, 68, "corrida", "QueimaGordura", 2400));
-        
+
         //Retornar uma lista de atletas, ordenada alfabeticamente por nome
         Collections.sort(vizela.getAtletas());
         for (Atleta atleta : vizela.getAtletas()) {
             System.out.format("Nome: %s%n", atleta.getNome());
         }
         System.out.println();
-        
+
         //Retornar uma lista de atletas, ordenada inversamente pelo valor dos prémios
         OrdenarPremios ordenarPremios = new OrdenarPremios();
         Collections.sort(vizela.getAtletas(), ordenarPremios.reversed());
         for (Atleta atleta : vizela.getAtletas()) {
             System.out.format("Nome: %s, Premios: %.2f%n", atleta.getNome(), atleta.getPremios());
         }
-        
+        System.out.println();
+
+        //Retornar o valor total dos atletas, para efeito de IRS
+        double valorTotalIRS = 0;
+        for (Atleta atleta : vizela.getAtletas()) {
+            if (atleta instanceof IRS) {
+                valorTotalIRS += ((IRS) atleta).calcularIRS();
+            }
+        }
+        System.out.println("Valor total a pagar, para efeitos de IRS: " + valorTotalIRS);
+
     }
 
     private static void menu() {
@@ -164,10 +176,9 @@ public class MainClubeDesportivo {
 //            System.out.println("Introduza Atividade Associada: ");
 //            atleta[0].setAtividade(Integer.valueOf(ler.nextLine()));
 //        }(while !Atleta.val)
+}
 
-    }
-   
-        //Apresentar quantidade de instâncias de atletas amadores e profissionais sem percorrer o contentor
+//Apresentar quantidade de instâncias de atletas amadores e profissionais sem percorrer o contentor
 //        System.out.println("Quantidade de instâncias de atletas amadores: "+AtletaAmador.getQtdAtletaAmador());
 //        System.out.println("Quantidade de instâncias de atletas profissionais: "+AtletaPro.getQtdAtletaPro());
 //        
@@ -216,7 +227,6 @@ public class MainClubeDesportivo {
 //            }
 //        }      
 //    }
-
 //    private static void inserirAtleta() {
 //        Atleta[] atleta = new Atleta[1];
 //        int op;
