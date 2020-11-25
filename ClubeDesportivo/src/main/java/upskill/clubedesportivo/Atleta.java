@@ -39,6 +39,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     private static double fcmNatacaoI = 1.7;
     private static double itQueimaGordura = 0.6;
     private static double itCapacidadeCardio = 0.75;
+
     private static String objetivoQueimaGordura = "QueimaGordura";
     private static String objetivoCapacidadeCardio = "CapacidadeCardio";
 
@@ -159,8 +160,12 @@ public abstract class Atleta implements Comparable<Atleta> {
     public int compareTo(Atleta atleta) {
         return this.nome.compareTo(atleta.nome);
     }
-
-    public boolean validarAtividade() {
+    
+    public boolean validarGenero(){
+        return genero.equalsIgnoreCase("masculino") || objetivo.equalsIgnoreCase("feminino");
+    }
+          
+    public boolean validarAtividade (){
         return atividade.equalsIgnoreCase(Atividade.CAMINHADA)
                 || atividade.equalsIgnoreCase(Atividade.CICLISMO)
                 || atividade.equalsIgnoreCase(Atividade.CORRIDA)

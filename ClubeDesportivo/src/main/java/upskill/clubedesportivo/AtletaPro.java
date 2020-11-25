@@ -79,6 +79,10 @@ public class AtletaPro extends Atleta {
     public double calcularValorMensal() {
         return parcelaFixa + (getPremios() * (percParcelaVariavel / 100));
     }
+    
+    public double calcularIRS(){
+     return parcelaFixa*(IRS.taxaIRS/100);
+    }
 
     public static double getPercParcelaVariavel() {
         return percParcelaVariavel;
@@ -91,5 +95,7 @@ public class AtletaPro extends Atleta {
     public static int getQtdAtletaPro() {
         return qtdAtletaPro;
     }
+    
+    
 
 }

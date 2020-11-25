@@ -28,7 +28,7 @@ public class AtletaAmador extends AtletaNaoPro{
         super();
         qtdAtletaAmador++;
     }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (!super.equals(obj)) {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\marco\OneDrive\Ambiente de Trabalho\sprint-1-lucas-bruno-marco\ClubeDesportivo\src\main\java\upskill\clubedesportivo\AtletaAmador.java
 C:\Users\marco\OneDrive\Ambiente de Trabalho\sprint-1-lucas-bruno-marco\ClubeDesportivo\src\main\java\upskill\clubedesportivo\Atividade.java
 C:\Users\marco\OneDrive\Ambiente de Trabalho\sprint-1-lucas-bruno-marco\ClubeDesportivo\src\main\java\upskill\clubedesportivo\Atleta.java
@@ -6,3 +7,12 @@ C:\Users\marco\OneDrive\Ambiente de Trabalho\sprint-1-lucas-bruno-marco\ClubeDes
 C:\Users\marco\OneDrive\Ambiente de Trabalho\sprint-1-lucas-bruno-marco\ClubeDesportivo\src\main\java\upskill\clubedesportivo\AtletaSemiPro.java
 C:\Users\marco\OneDrive\Ambiente de Trabalho\sprint-1-lucas-bruno-marco\ClubeDesportivo\src\main\java\upskill\clubedesportivo\ClubeDesportivo.java
 C:\Users\marco\OneDrive\Ambiente de Trabalho\sprint-1-lucas-bruno-marco\ClubeDesportivo\src\main\java\upskill\clubedesportivo\MainClubeDesportivo.java
+=======
+C:\Users\Vicious\Documents\Git\sprint-1-lucas-bruno-marco\ClubeDesportivo\src\main\java\upskill\clubedesportivo\Atividade.java
+C:\Users\Vicious\Documents\Git\sprint-1-lucas-bruno-marco\ClubeDesportivo\src\main\java\upskill\clubedesportivo\AtletaNaoPro.java
+C:\Users\Vicious\Documents\Git\sprint-1-lucas-bruno-marco\ClubeDesportivo\src\main\java\upskill\clubedesportivo\AtletaAmador.java
+C:\Users\Vicious\Documents\Git\sprint-1-lucas-bruno-marco\ClubeDesportivo\src\main\java\upskill\clubedesportivo\Atleta.java
+C:\Users\Vicious\Documents\Git\sprint-1-lucas-bruno-marco\ClubeDesportivo\src\main\java\upskill\clubedesportivo\AtletaSemiPro.java
+C:\Users\Vicious\Documents\Git\sprint-1-lucas-bruno-marco\ClubeDesportivo\src\main\java\upskill\clubedesportivo\AtletaPro.java
+C:\Users\Vicious\Documents\Git\sprint-1-lucas-bruno-marco\ClubeDesportivo\src\main\java\upskill\clubedesportivo\MainClubeDesportivo.java
+>>>>>>> 5265c7ad5f3dfc76376cea9308c4ba50aedcd243
