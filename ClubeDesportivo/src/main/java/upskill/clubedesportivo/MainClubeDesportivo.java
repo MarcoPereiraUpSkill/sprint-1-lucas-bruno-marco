@@ -29,7 +29,7 @@ public class MainClubeDesportivo {
         vizela.inserirAtleta(new AtletaSemiPro(7, "Marta", 345678123, "Feminino", 27, 65, "ciclismo", "CapacidadeCardio", 800));
         vizela.inserirAtleta(new AtletaAmador(22, "Jorge", 543876098, "Masculino", 40, 55, "caminhada", "QueimaGordura", 600));
 
-        //Obter nome, FCM e FCT de cada atleta semiprofissional e amador.
+        System.out.println("###### Obter nome, FCM e FCT de cada atleta semiprofissional e amador ######");
         for (Atleta atleta : vizela.getAtletas()) {
             if (atleta instanceof AtletaSemiPro || atleta instanceof AtletaAmador) {
                 System.out.format("Nome: %s, FCM: %s, FCT: %s%n", atleta.getNome(), atleta.calcularFCM(), atleta.calcularFCT());
@@ -37,18 +37,18 @@ public class MainClubeDesportivo {
         }
         System.out.println();
 
-        // Obter nome e valor a pagar a cada atleta
+        System.out.println("###### Obter nome e valor a pagar a cada atleta ######");
         for (Atleta atleta : vizela.getAtletas()) {
             System.out.format("Nome: %s, Valor Mensal: %.2f%n", atleta.getNome(), atleta.calcularValorMensal());
         }
         System.out.println();
 
-        //Apresentar quantidade de instâncias de atletas amadores e profissionais sem percorrer o contentor
+        System.out.println("###### Apresentar quantidade de instâncias de atletas amadores e profissionais sem percorrer o contentor ######");
         System.out.println("Quantidade de instâncias de atletas amadores: " + AtletaAmador.getQtdAtletaAmador());
         System.out.println("Quantidade de instâncias de atletas profissionais: " + AtletaPro.getQtdAtletaPro());
         System.out.println();
 
-        //Calcular e apresentar o valor total a pagar a cada tipo de atleta
+        System.out.println("###### Calcular e apresentar o valor a pagar a cada tipo de atleta ######");
         double valorPro = 0, valorSemiPro = 0, valorAmador = 0;
         for (Atleta atleta : vizela.getAtletas()) {
             if (atleta instanceof AtletaPro) {
@@ -91,11 +91,10 @@ public class MainClubeDesportivo {
         System.out.println("IRS: " + vizela.calcularTotalIRS());
         System.out.println();
 
-        
         //Retornar uma lista de atletas do clube, ordenada alfabeticamente por categoria, modalidade e nome
         System.out.println("###### Retornar uma lista de atletas do clube, ordenada alfabeticamente por categoria, modalidade e nome #####");
-        for(Atleta atleta : vizela.ordenarCategoriaModalidadeNome()) {
-            System.out.format("Categoria: %s, Modalidade: %s, Nome: %s%n", atleta.getClass().getName(), atleta.getAtividade(), atleta.getNome());
+        for (Atleta atleta : vizela.ordenarCategoriaModalidadeNome()) {
+            System.out.format("Categoria: %s, Modalidade: %s, Nome: %s%n", atleta.getClass().getSimpleName(), atleta.getAtividade(), atleta.getNome());
         }
     }
 
