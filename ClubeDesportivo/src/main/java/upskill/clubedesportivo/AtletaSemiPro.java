@@ -17,10 +17,25 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
     private static double parcelaFixa=500;
     private static double parcelaVariavel=0;
 
+    /**
+     *
+     * @param antiguidade
+     * @param nome
+     * @param nic
+     * @param genero
+     * @param idade
+     * @param fcr
+     * @param atividade
+     * @param objetivo
+     * @param premios
+     */
     public AtletaSemiPro(int antiguidade, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
         super(antiguidade, nome, nic, genero, idade, fcr, atividade, objetivo, premios);
     }
     
+    /**
+     *
+     */
     public AtletaSemiPro() {
         super();
     }
@@ -41,28 +56,52 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
         return "AtletaSemiPro{" + '}';
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public double calcularValorMensal(){
         return parcelaFixa+(parcelaFixa*(obterPercAntiguidade()/100));
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public double calcularIRS(){
      return parcelaFixa*(double)(IRS.taxaIRS/100);
     }
 
+    /**
+     *
+     * @return
+     */
     public static double getParcelaFixa() {
         return parcelaFixa;
     }
 
+    /**
+     *
+     * @param parcelaFixa
+     */
     public static void setParcelaFixa(double parcelaFixa) {
         AtletaSemiPro.parcelaFixa = parcelaFixa;
     }
 
+    /**
+     *
+     * @return
+     */
     public static double getParcelaVariavel() {
         return parcelaVariavel;
     }
 
+    /**
+     *
+     * @param parcelaVariavel
+     */
     public static void setParcelaVariavel(double parcelaVariavel) {
         AtletaSemiPro.parcelaVariavel = parcelaVariavel;
     }

@@ -10,7 +10,7 @@ package upskill.clubedesportivo;
  * @author Vicious
  */
 public abstract class Atleta implements Comparable<Atleta> {
-
+    
     private String nome;
     private int nic;
     private String genero;
@@ -28,7 +28,18 @@ public abstract class Atleta implements Comparable<Atleta> {
     private static final String ATIVIDADE_POR_OMISSAO = "";
     private static final String OBJETIVO_POR_OMISSAO = "";
     private static final int PREMIOS_POR_OMISSAO = 0;
-
+    
+    /**
+     *
+     * @param fcmPadrao Valor para cálculo de FCM em atleta de qualquer género, com atividades Caminhada ou Corrida (fcmPadrao-(fcmPadraoI*idade))
+     * @param fcmPadraoI Valor para cálculo de FCM em atleta de qualquer género, com atividades Caminhada ou Corrida (fcmPadrao-(fcmPadraoI*idade))
+     * @param fcmCiclismoFem Valor para cálculo de FCM em atleta feminina, com atividade Ciclismo (fcmCiclismoFem-(fcmCiclismoIFem*idade))
+     * @param fcmCiclismoIFem Valor para cálculo de FCM em atleta feminina, com atividade Ciclismo (fcmCiclismoFem-(fcmCiclismoIFem*idade))
+     * @param fcmNatacao Valor para cálculo de FCM em atleta de qualquer género, com atividade Natação (fcmNatacao-(fcmNatacaoI*idade))
+     * @param fcmNatacaoI Valor para cálculo de FCM em atleta de qualquer género, com atividade Natação (fcmNatacao-(fcmNatacaoI*idade))
+     * @param itQueimaGordura Valor associado ao objetivo Queima de Gordura
+     * @param itCapacidadeCardio Valor associado ao objetivo Capacidade Cardiorrespiratórioa
+     */
     private static double fcmPadrao = 208.75;
     private static double fcmPadraoI = 0.73;
     private static double fcmCiclismoFem = 189;
@@ -39,10 +50,22 @@ public abstract class Atleta implements Comparable<Atleta> {
     private static double fcmNatacaoI = 1.7;
     private static double itQueimaGordura = 0.6;
     private static double itCapacidadeCardio = 0.75;
-
+    
+    // variáveis não necessárias se não houver validação de objetivo
     private static String objetivoQueimaGordura = "QueimaGordura";
     private static String objetivoCapacidadeCardio = "CapacidadeCardio";
 
+    /**
+     *
+     * @param nome Nome do atleta.
+     * @param nic Número de identificação civil do atleta.
+     * @param genero Género do atleta.
+     * @param idade Idade do atleta.
+     * @param fcr Frequência cardíaca em repouso, valor que representa o número de batimentos cardíacos em repouso durante 1 minuto.
+     * @param atividade Atividade associada ao atleta: caminhada, corrida, ciclismo ou natação.
+     * @param objetivo Objetivo do atleta: queima de gordura ou capacidade cardiorrespiratória. Determina IT(Intensidade de Treino).
+     * @param premios Prémios arrecadados pelo atleta durante um mês.
+     */
     public Atleta(String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
         this.nome = nome;
         this.nic = nic;
@@ -54,6 +77,9 @@ public abstract class Atleta implements Comparable<Atleta> {
         this.premios = premios;
     }
 
+    /**
+     *
+     */
     public Atleta() {
         this.nome = NOME_POR_OMISSAO;
         this.nic = NIC_POR_OMISSAO;
@@ -65,66 +91,130 @@ public abstract class Atleta implements Comparable<Atleta> {
         this.premios = PREMIOS_POR_OMISSAO;
     }
 
+    /**
+     *
+     * @return Nome do atleta
+     */
     public String getNome() {
         return nome;
     }
 
+    /**
+     *
+     * @param nome Nome do atleta
+     */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
+    /**
+     *
+     * @return Número de Identificação Civil
+     */
     public int getNic() {
         return nic;
     }
 
+    /**
+     *
+     * @param nic Número de Identificação Civil
+     */
     public void setNic(int nic) {
         this.nic = nic;
     }
 
+    /**
+     *
+     * @return Género do atleta
+     */
     public String getGenero() {
         return genero;
     }
 
+    /**
+     *
+     * @param genero Género do atleta
+     */
     public void setGenero(String genero) {
         this.genero = genero;
     }
 
+    /**
+     *
+     * @return Idade do atleta
+     */
     public int getIdade() {
         return idade;
     }
 
+    /**
+     *
+     * @param idade Idade do atleta
+     */
     public void setIdade(int idade) {
         this.idade = idade;
     }
 
+    /**
+     *
+     * @return FCR(Frequência Cardíaca em Repouso)
+     */
     public int getFcr() {
         return fcr;
     }
 
+    /**
+     *
+     * @param fcr FCR(Frequência Cardíaca em Repouso)
+     */
     public void setFcr(int fcr) {
         this.fcr = fcr;
     }
 
+    /**
+     *
+     * @return Atividade associada ao atleta
+     */
     public String getAtividade() {
         return atividade;
     }
 
+    /**
+     *
+     * @param atividade Atividade associada ao atleta
+     */
     public void setAtividade(String atividade) {
         this.atividade = atividade;
     }
 
+    /**
+     *
+     * @return Objetivo do atleta
+     */
     public String getObjetivo() {
         return objetivo;
     }
 
+    /**
+     *
+     * @param objetivo Objetivo do atleta
+     */
     public void setObjetivo(String objetivo) {
         this.objetivo = objetivo;
     }
 
+    /**
+     *
+     * @return Prémios do atleta durante um mês
+     */
     public double getPremios() {
         return premios;
     }
 
+    /**
+     *
+     * @param premios Prémios do atleta durante um mês
+     */
     public void setPremios(double premios) {
         this.premios = premios;
     }
@@ -161,10 +251,18 @@ public abstract class Atleta implements Comparable<Atleta> {
         return this.nome.compareTo(atleta.nome);
     }
     
+    /**
+     *
+     * @return
+     */
     public boolean validarGenero(){
         return genero.equalsIgnoreCase("masculino") || objetivo.equalsIgnoreCase("feminino");
     }
           
+    /**
+     *
+     * @return
+     */
     public boolean validarAtividade (){
         return atividade.equalsIgnoreCase(Atividade.CAMINHADA)
                 || atividade.equalsIgnoreCase(Atividade.CICLISMO)
@@ -172,14 +270,27 @@ public abstract class Atleta implements Comparable<Atleta> {
                 || atividade.equalsIgnoreCase(Atividade.NATACAO);
     }
 
+    /**
+     *
+     * @return
+     */
     public boolean validarObjetivo() {
         return objetivo.equalsIgnoreCase(objetivoQueimaGordura) || objetivo.equalsIgnoreCase(objetivoCapacidadeCardio);
     }
 
+    /**
+     *
+     * @return Valor de IT(Intensidade do Treino) mediante objetivo do atleta
+     * Retorna valor de itQueimaGordura se o objetivo do atleta for QueimaGordura, senão retorna valor de itCapacidadeCardio
+     */
     public double obterIT() {
         return getObjetivo() == objetivoQueimaGordura ? itQueimaGordura : itCapacidadeCardio;
     }
 
+    /**
+     *
+     * @return valor FCM(Frequência Cardíaca Máxima) mediante Tabela de cálculo FCM
+     */
     public double calcularFCM() {
         if (atividade == Atividade.CAMINHADA || atividade == Atividade.CORRIDA) {
             return fcmPadrao - (fcmPadraoI * idade);
@@ -191,9 +302,17 @@ public abstract class Atleta implements Comparable<Atleta> {
         }
     }
 
+    /**
+     *
+     * @return valor FCT(Frequência Cardíaca de Trabalho) usando a fórmula FCT = FCR+[IT*(FCM-FCR)]
+     */
     public double calcularFCT() {
         return fcr + (obterIT() * (calcularFCM() - fcr));
     }
 
+    /**
+     *
+     * @return método abstrato para calcular valor mensal nas categorias AtletaPro, AtletaSemiPro e AtletaAmador
+     */
     public abstract double calcularValorMensal();
 }
