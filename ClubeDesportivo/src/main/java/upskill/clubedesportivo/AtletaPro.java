@@ -12,9 +12,6 @@ package upskill.clubedesportivo;
 public class AtletaPro extends Atleta implements IRS{
 
     private double parcelaFixa;
-
-    //parcelaVariavel não está a ser usada
-    private double parcelaVariavel;
     
     /**
      *
@@ -23,7 +20,6 @@ public class AtletaPro extends Atleta implements IRS{
      */
 
     private static final double PARCELAFIXA_POR_OMISSAO = 0;
-    private static final double PARCELAVARIAVEL_POR_OMISSAO = 0;
 
     private static double percParcelaVariavel = 20;
     private static int qtdAtletaPro = 0;
@@ -41,10 +37,9 @@ public class AtletaPro extends Atleta implements IRS{
      * @param objetivo Objetivo do atleta: queima de gordura ou capacidade cardiorrespiratória. Determina IT(Intensidade de Treino).
      * @param premios Prémios arrecadados pelo atleta durante um mês.
      */
-    public AtletaPro(double parcelaFixa, double parcelaVariavel, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
+    public AtletaPro(double parcelaFixa, String nome, int nic, String genero, int idade, int fcr, String atividade, String objetivo, double premios) {
         super(nome, nic, genero, idade, fcr, atividade, objetivo, premios);
         this.parcelaFixa = parcelaFixa;
-        this.parcelaVariavel = parcelaVariavel;
         qtdAtletaPro++;
     }
     
@@ -54,7 +49,6 @@ public class AtletaPro extends Atleta implements IRS{
     public AtletaPro() {
         super();
         this.parcelaFixa = PARCELAFIXA_POR_OMISSAO;
-        this.parcelaVariavel = PARCELAVARIAVEL_POR_OMISSAO;
         qtdAtletaPro++;
     }
 
@@ -74,22 +68,6 @@ public class AtletaPro extends Atleta implements IRS{
         this.parcelaFixa = parcelaFixa;
     }
 
-    /**
-     *
-     * @return Parcela Variável
-     */
-    public double getParcelaVariavel() {
-        return parcelaVariavel;
-    }
-
-    /**
-     *
-     * @param parcelaVariavel Parcela Variável
-     */
-    public void setParcelaVariavel(double parcelaVariavel) {
-        this.parcelaVariavel = parcelaVariavel;
-    }
-
     @Override
     public boolean equals(Object obj) {
         if (!super.equals(obj)) {
@@ -98,19 +76,18 @@ public class AtletaPro extends Atleta implements IRS{
         if (obj == this) {
             return true;
         }
-        if (!(obj instanceof Atleta)) {
+        if (!(obj instanceof AtletaPro)) {
             return false;
         }
 
         AtletaPro atletaPro = (AtletaPro) obj;
         
-        return Double.compare(parcelaFixa, atletaPro.getParcelaFixa()) == 0
-                && Double.compare(parcelaVariavel, atletaPro.getParcelaVariavel()) == 0;
+        return Double.compare(parcelaFixa, atletaPro.getParcelaFixa()) == 0;
     }
 
     @Override
     public String toString() {
-        return "AtletaPro{" + "parcelaFixa=" + parcelaFixa + ", parcelaVariavel=" + parcelaVariavel + '}';
+        return "AtletaPro{" + "parcelaFixa=" + parcelaFixa + '}';
     }
 
     /**
@@ -138,15 +115,7 @@ public class AtletaPro extends Atleta implements IRS{
     public static double getPercParcelaVariavel() {
         return percParcelaVariavel;
     }
-
-    /**
-     *
-     * @param percParcelaVariavel Percentagem da Parcela Variável
-     */
-    public static void setPercParcelaVariavel(double percParcelaVariavel) {
-        AtletaPro.percParcelaVariavel = percParcelaVariavel;
-    }
-
+    
     /**
      *
      * @return Quantidade de instâncias de Atletas Profissionais
@@ -155,6 +124,12 @@ public class AtletaPro extends Atleta implements IRS{
         return qtdAtletaPro;
     }
     
-    
+    /**
+     *
+     * @param percParcelaVariavel Percentagem da Parcela Variável
+     */
+    public static void setPercParcelaVariavel(double percParcelaVariavel) {
+        AtletaPro.percParcelaVariavel = percParcelaVariavel;
+    }
 
 }

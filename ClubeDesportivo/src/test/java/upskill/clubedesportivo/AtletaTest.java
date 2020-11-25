@@ -38,50 +38,6 @@ public class AtletaTest {
     }
 
     /**
-     * Test of validarAtividade method, of class Atleta.
-     */
-    @Test
-    public void testValidarAtividade() {
-        Atleta instance = new AtletaPro(600, 300, "Carlos", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 300);
-        boolean expResult = true;
-        boolean result = instance.validarAtividade();
-        assertEquals(expResult, result);
-    }
-
-    /**
-     * Test of invalid validarAtividade method, of class Atleta.
-     */
-    @Test
-    public void testValidarAtividadeInvalido() {
-        Atleta instance = new AtletaPro(600, 300, "Carlos", 123456789, "Masculino", 32, 70, "patinagem", "QueimaGordura", 400);
-        boolean expResult = false;
-        boolean result = instance.validarAtividade();
-        assertEquals(expResult, result);
-    }
-
-    /**
-     * Test of validarObjetivo method, of class Atleta.
-     */
-    @Test
-    public void testValidarObjetivo() {
-        Atleta instance = new AtletaSemiPro(7, "Marta", 345678123, "Feminino", 27, 65, "ciclismo", "CapacidadeCardio", 200);
-        boolean expResult = true;
-        boolean result = instance.validarObjetivo();
-        assertEquals(expResult, result);
-    }
-
-    /**
-     * Test of validarObjetivo method, of class Atleta.
-     */
-    @Test
-    public void testValidarObjetivoInvalido() {
-        Atleta instance = new AtletaSemiPro(7, "Marta", 345678123, "Feminino", 27, 65, "futebol", "Força", 300);
-        boolean expResult = false;
-        boolean result = instance.validarObjetivo();
-        assertEquals(expResult, result);
-    }
-
-    /**
      * Test of obterIT method, of class Atleta.
      */
     @Test
@@ -99,7 +55,7 @@ public class AtletaTest {
     @Test
     public void testCalcularFCMCaminhadaCorrida() {
         System.out.println("calcularFCM");
-        Atleta instance = new AtletaPro(600, 300, "Carlos", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 500);;
+        Atleta instance = new AtletaPro(600, "Carlos", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 500);;
         double expResult = 185.39;
         double result = instance.calcularFCM();
         assertEquals(expResult, result, 0.0);
@@ -152,5 +108,31 @@ public class AtletaTest {
         double result = instance.calcularFCT();
         assertEquals(expResult, result, 0.1);
     }
+        
+    /**
+     * Test of equals method, of class Atleta.
+     */
+    @Test
+    public void testEquals() {
+        Atleta instance = new AtletaAmador(22, "Jorge", 543876098, "Masculino", 35, 55, "natação", "QueimaGordura", 700);
+        Atleta instance2 = new AtletaAmador(22, "Jorge", 543876098, "Masculino", 35, 55, "natação", "QueimaGordura", 700);
+        boolean expResult = true;
+        boolean result = instance.equals(instance2);
+        assertEquals(expResult, result);
+    }
+    
+    /**
+     * Test of equals method, of class Atleta.
+     */
+    @Test
+    public void testEqualsInvalido() {
+        Atleta instance = new AtletaAmador(22, "Jorge", 543876098, "Masculino", 35, 55, "natação", "QueimaGordura", 700);
+        Atleta instance2 = new AtletaSemiPro(21, "Carla", 543876097, "Feminino", 32, 60, "caminhada", "CapacidadeCardio", 600);
+        boolean expResult = false;
+        boolean result = instance.equals(instance2);
+        assertEquals(expResult, result);
+    }
+    
+    
 
 }

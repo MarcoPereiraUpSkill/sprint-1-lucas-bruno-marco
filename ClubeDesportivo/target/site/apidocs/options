@@ -1,0 +1,22 @@
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'C:/Users/Upskills/Documents/Git/sprint-1-lucas-bruno-marco/ClubeDesportivo/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2020. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Upskills/Documents/Git/sprint-1-lucas-bruno-marco/ClubeDesportivo/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'ClubeDesportivo 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'C:/Users/Upskills/Documents/Git/sprint-1-lucas-bruno-marco/ClubeDesportivo/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'ClubeDesportivo 1.0-SNAPSHOT API'
