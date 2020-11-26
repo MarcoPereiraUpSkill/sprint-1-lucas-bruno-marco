@@ -2,7 +2,6 @@
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 
 /**
  *
@@ -11,12 +10,12 @@ import java.util.Date;
 public class ClubeDesportivo {
 
     private String nome;
-    private Date data;
+    private String data;
     private ArrayList&lt;Atleta&gt; atletas;
 
     private static final String NOME_POR_OMISSAO = &quot;&quot;;
-<span class="fc" id="L18">    private static final Date DATA_POR_OMISSAO = new Date();</span>
-<span class="fc" id="L19">    private static final ArrayList&lt;Atleta&gt; ATLETAS_POR_OMISSAO = new ArrayList&lt;Atleta&gt;();</span>
+    private static final String DATA_POR_OMISSAO = &quot;&quot;;
+<span class="fc" id="L18">    private static final ArrayList&lt;Atleta&gt; ATLETAS_POR_OMISSAO = new ArrayList&lt;Atleta&gt;();</span>
 
     /**
      *Construtor Completo
@@ -24,45 +23,56 @@ public class ClubeDesportivo {
      * @param data Data de fundação do clube
      * @param atletas Contentor para armazentar os atletas
      */
-<span class="nc" id="L27">    public ClubeDesportivo(String nome, Date data, ArrayList&lt;Atleta&gt; atletas) {</span>
-<span class="nc" id="L28">        this.nome = nome;</span>
-<span class="nc" id="L29">        this.data = data;</span>
-<span class="nc" id="L30">        this.atletas = atletas;</span>
-<span class="nc" id="L31">    }</span>
+<span class="nc" id="L26">    public ClubeDesportivo(String nome, String data, ArrayList&lt;Atleta&gt; atletas) {</span>
+<span class="nc" id="L27">        this.nome = nome;</span>
+<span class="nc" id="L28">        this.data = data;</span>
+<span class="nc" id="L29">        this.atletas = atletas;</span>
+<span class="nc" id="L30">    }</span>
+    
+    /**
+     *Construtor com nome e data como parâmetros
+     * @param nome Nome do clube desportivo
+     * @param data Data de fundação do clube
+     */
+<span class="fc" id="L37">    public ClubeDesportivo(String nome, String data) {</span>
+<span class="fc" id="L38">        this.nome = nome;</span>
+<span class="fc" id="L39">        this.data = data;</span>
+<span class="fc" id="L40">        this.atletas = ATLETAS_POR_OMISSAO;</span>
+<span class="fc" id="L41">    }</span>
 
     /**
      *Construtor com variável nome como parâmetro
      * @param nome Nome do clube desportivo
      */
-<span class="fc" id="L37">    public ClubeDesportivo(String nome) {</span>
-<span class="fc" id="L38">        this.nome = nome;</span>
-<span class="fc" id="L39">        data = DATA_POR_OMISSAO;</span>
-<span class="fc" id="L40">        atletas = ATLETAS_POR_OMISSAO;</span>
-<span class="fc" id="L41">    }</span>
+<span class="fc" id="L47">    public ClubeDesportivo(String nome) {</span>
+<span class="fc" id="L48">        this.nome = nome;</span>
+<span class="fc" id="L49">        data = DATA_POR_OMISSAO;</span>
+<span class="fc" id="L50">        atletas = ATLETAS_POR_OMISSAO;</span>
+<span class="fc" id="L51">    }</span>
 
     /**
      *Construtor vazio
      */
-<span class="nc" id="L46">    public ClubeDesportivo() {</span>
-<span class="nc" id="L47">        nome = NOME_POR_OMISSAO;</span>
-<span class="nc" id="L48">        data = DATA_POR_OMISSAO;</span>
-<span class="nc" id="L49">        atletas = ATLETAS_POR_OMISSAO;</span>
-<span class="nc" id="L50">    }</span>
+<span class="nc" id="L56">    public ClubeDesportivo() {</span>
+<span class="nc" id="L57">        nome = NOME_POR_OMISSAO;</span>
+<span class="nc" id="L58">        data = DATA_POR_OMISSAO;</span>
+<span class="nc" id="L59">        atletas = ATLETAS_POR_OMISSAO;</span>
+<span class="nc" id="L60">    }</span>
 
     /**
      *Obter nome do clube
      * @return Nome do clube
      */
     public String getNome() {
-<span class="fc" id="L57">        return nome;</span>
+<span class="fc" id="L67">        return nome;</span>
     }
 
     /**
      *Obter data de fundação
      * @return Data de fundação
      */
-    public Date getData() {
-<span class="fc" id="L65">        return data;</span>
+    public String getData() {
+<span class="fc" id="L75">        return data;</span>
     }
 
     /**
@@ -70,7 +80,7 @@ public class ClubeDesportivo {
      * @return Contentor de atletas
      */
     public ArrayList&lt;Atleta&gt; getAtletas() {
-<span class="fc" id="L73">        return atletas;</span>
+<span class="fc" id="L83">        return atletas;</span>
     }
 
     /**
@@ -78,44 +88,44 @@ public class ClubeDesportivo {
      * @param nome Nome do clube
      */
     public void setNome(String nome) {
-<span class="nc" id="L81">        this.nome = nome;</span>
-<span class="nc" id="L82">    }</span>
+<span class="nc" id="L91">        this.nome = nome;</span>
+<span class="nc" id="L92">    }</span>
 
     /**
      *Alterar data de fundação
      * @param data Data de fundação
      */
-    public void setData(Date data) {
-<span class="nc" id="L89">        this.data = data;</span>
-<span class="nc" id="L90">    }</span>
+    public void setData(String data) {
+<span class="nc" id="L99">        this.data = data;</span>
+<span class="nc" id="L100">    }</span>
 
     /**
      *Alterar contentor de atletas
      * @param atletas Contentor de atletas
      */
     public void setAtletas(ArrayList&lt;Atleta&gt; atletas) {
-<span class="nc" id="L97">        this.atletas = atletas;</span>
-<span class="nc" id="L98">    }</span>
+<span class="nc" id="L107">        this.atletas = atletas;</span>
+<span class="nc" id="L108">    }</span>
 
     @Override
     public String toString() {
-<span class="nc" id="L102">        return String.format(&quot;Clube Desportivo: nome: %s, data: %d&quot;, nome, data);</span>
+<span class="nc" id="L112">        return String.format(&quot;Clube Desportivo: nome: %s, data: %d&quot;, nome, data);</span>
     }
 
     @Override
     public boolean equals(Object obj) {
-<span class="pc bpc" id="L107" title="1 of 2 branches missed.">         if (obj == this) {</span>
-<span class="nc" id="L108">            return true;</span>
+<span class="fc bfc" id="L117" title="All 2 branches covered.">         if (obj == this) {</span>
+<span class="fc" id="L118">            return true;</span>
         }
-<span class="fc bfc" id="L110" title="All 2 branches covered.">        if (!(obj instanceof ClubeDesportivo)) {</span>
-<span class="fc" id="L111">            return false;</span>
+<span class="fc bfc" id="L120" title="All 2 branches covered.">        if (!(obj instanceof ClubeDesportivo)) {</span>
+<span class="fc" id="L121">            return false;</span>
         }
 
-<span class="fc" id="L114">        ClubeDesportivo clubeDesportivo = (ClubeDesportivo) obj;</span>
+<span class="fc" id="L124">        ClubeDesportivo clubeDesportivo = (ClubeDesportivo) obj;</span>
 
-<span class="fc bfc" id="L116" title="All 2 branches covered.">        return nome.compareTo(clubeDesportivo.getNome()) == 0</span>
-<span class="pc bpc" id="L117" title="1 of 2 branches missed.">                &amp;&amp; data.compareTo(clubeDesportivo.getData()) == 0</span>
-<span class="pc bpc" id="L118" title="1 of 2 branches missed.">                &amp;&amp; atletas.equals(clubeDesportivo.getAtletas());</span>
+<span class="pc bpc" id="L126" title="1 of 2 branches missed.">        return nome.compareTo(clubeDesportivo.getNome()) == 0</span>
+<span class="pc bpc" id="L127" title="1 of 2 branches missed.">                &amp;&amp; data.compareTo(clubeDesportivo.getData()) == 0</span>
+<span class="pc bpc" id="L128" title="1 of 2 branches missed.">                &amp;&amp; atletas.equals(clubeDesportivo.getAtletas());</span>
     }
 
     /**
@@ -123,16 +133,16 @@ public class ClubeDesportivo {
      * @param atleta Contentor com dados do atleta
      */
     public void inserirAtleta(Atleta atleta) {
-<span class="fc" id="L126">        atletas.add(atleta);</span>
-<span class="fc" id="L127">    }</span>
+<span class="fc" id="L136">        atletas.add(atleta);</span>
+<span class="fc" id="L137">    }</span>
 
     /**
      *Ordena o contentor de atletas alfabeticamente por nome
      * @return Contentor de atletas
      */
     public ArrayList&lt;Atleta&gt; ordenarAlfabeticamenteNome() {
-<span class="nc" id="L134">        Collections.sort(atletas);</span>
-<span class="nc" id="L135">        return atletas;</span>
+<span class="nc" id="L144">        Collections.sort(atletas);</span>
+<span class="nc" id="L145">        return atletas;</span>
     }
 
     /**
@@ -140,10 +150,10 @@ public class ClubeDesportivo {
      * @return Contentor de atletas
      */
     public ArrayList&lt;Atleta&gt; ordenarInversamentePremios() {
-<span class="nc" id="L143">        OrdenarPremios ordenarPremios = new OrdenarPremios();</span>
-<span class="nc" id="L144">        Collections.sort(atletas, ordenarPremios.reversed());</span>
+<span class="nc" id="L153">        OrdenarPremios ordenarPremios = new OrdenarPremios();</span>
+<span class="nc" id="L154">        Collections.sort(atletas, ordenarPremios.reversed());</span>
 
-<span class="nc" id="L146">        return atletas;</span>
+<span class="nc" id="L156">        return atletas;</span>
     }
 
     /**
@@ -151,10 +161,10 @@ public class ClubeDesportivo {
      * @return Contentor de atletas
      */
     public ArrayList&lt;Atleta&gt; ordenarCategoriaModalidadeNome() {
-<span class="nc" id="L154">        OrdenarCategoriaModalidadeNome ordenarCategoriaModalidadeNome = new OrdenarCategoriaModalidadeNome();</span>
-<span class="nc" id="L155">        Collections.sort(atletas, ordenarCategoriaModalidadeNome);</span>
+<span class="nc" id="L164">        OrdenarCategoriaModalidadeNome ordenarCategoriaModalidadeNome = new OrdenarCategoriaModalidadeNome();</span>
+<span class="nc" id="L165">        Collections.sort(atletas, ordenarCategoriaModalidadeNome);</span>
 
-<span class="nc" id="L157">        return atletas;</span>
+<span class="nc" id="L167">        return atletas;</span>
     }
 
     /**
@@ -162,15 +172,15 @@ public class ClubeDesportivo {
      * @return Valor total de IRS de todos os atletas no contentor
      */
     public double calcularTotalIRS() {
-<span class="fc" id="L165">        double valorTotalIRS = 0;</span>
+<span class="fc" id="L175">        double valorTotalIRS = 0;</span>
         
-<span class="fc bfc" id="L167" title="All 2 branches covered.">        for (Atleta atleta : atletas) {</span>
-<span class="fc bfc" id="L168" title="All 2 branches covered.">            if (atleta instanceof IRS) {</span>
-<span class="fc" id="L169">                valorTotalIRS = valorTotalIRS + ((IRS) atleta).calcularIRS();</span>
+<span class="fc bfc" id="L177" title="All 2 branches covered.">        for (Atleta atleta : atletas) {</span>
+<span class="fc bfc" id="L178" title="All 2 branches covered.">            if (atleta instanceof IRS) {</span>
+<span class="fc" id="L179">                valorTotalIRS = valorTotalIRS + ((IRS) atleta).calcularIRS();</span>
             }
-<span class="fc" id="L171">        }</span>
+<span class="fc" id="L181">        }</span>
 
-<span class="fc" id="L173">        return valorTotalIRS;</span>
+<span class="fc" id="L183">        return valorTotalIRS;</span>
     }
 
 }

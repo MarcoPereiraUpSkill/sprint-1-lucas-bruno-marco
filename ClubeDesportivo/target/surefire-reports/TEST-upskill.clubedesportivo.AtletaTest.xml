@@ -65,13 +65,13 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCT" time="0"/>
-  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testObterIT" time="0"/>
-  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testObterIT2" time="0"/>
-  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testEquals" time="0"/>
-  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCMCaminhadaCorrida" time="0"/>
-  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCMCiclismoFeminino" time="0"/>
-  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCMCiclismoMasculino" time="0"/>
   <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCMNatacao" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCMCiclismoFeminino" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCMCaminhadaCorrida" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCMCiclismoMasculino" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testObterIT2" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testObterIT" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testCalcularFCT" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testEquals" time="0"/>
   <testcase classname="upskill.clubedesportivo.AtletaTest" name="upskill.clubedesportivo.AtletaTest.testEqualsInvalido" time="0"/>
 </testsuite>

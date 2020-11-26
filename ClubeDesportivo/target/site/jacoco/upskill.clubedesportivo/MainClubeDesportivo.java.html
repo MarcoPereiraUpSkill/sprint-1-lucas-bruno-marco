@@ -31,7 +31,7 @@ import java.util.Scanner;
 <span class="nc" id="L31">        System.out.println(&quot;###### Obter nome, FCM e FCT de cada atleta semiprofissional e amador ######&quot;);</span>
 <span class="nc bnc" id="L32" title="All 2 branches missed.">        for (Atleta atleta : vizela.getAtletas()) {</span>
 <span class="nc bnc" id="L33" title="All 4 branches missed.">            if (atleta instanceof AtletaSemiPro || atleta instanceof AtletaAmador) {</span>
-<span class="nc" id="L34">                System.out.format(&quot;Nome: %s, FCM: %s, FCT: %s%n&quot;, atleta.getNome(), atleta.calcularFCM(), atleta.calcularFCT());</span>
+<span class="nc" id="L34">                System.out.format(&quot;Nome: %s, FCM: %.2f, FCT: %.2f%n&quot;, atleta.getNome(), atleta.calcularFCM(), atleta.calcularFCT());</span>
             }
 <span class="nc" id="L36">        }</span>
 <span class="nc" id="L37">        System.out.println();</span>

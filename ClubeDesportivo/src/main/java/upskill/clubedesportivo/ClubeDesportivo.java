@@ -28,6 +28,17 @@ public class ClubeDesportivo {
         this.data = data;
         this.atletas = atletas;
     }
+    
+    /**
+     *Construtor com nome e data como parâmetros
+     * @param nome Nome do clube desportivo
+     * @param data Data de fundação do clube
+     */
+    public ClubeDesportivo(String nome, String data) {
+        this.nome = nome;
+        this.data = data;
+        this.atletas = ATLETAS_POR_OMISSAO;
+    }
 
     /**
      *Construtor com variável nome como parâmetro

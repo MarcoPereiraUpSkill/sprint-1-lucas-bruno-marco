@@ -86,11 +86,11 @@ public abstract class AtletaNaoPro extends Atleta {
     }
 
     /**
-     *Obter percentagem de antiguidade
-     * @return Calcula percentagem de antiguidade mediante anos de antiguidade do atleta
+     *Obter percentagem de antiguidade mediante anos de antiguidade do atleta
+     * @return Percentagem de antiguidade
      */
     public double obterPercAntiguidade() {
-        return (antiguidade >= minAntiguidade && antiguidade <= medAntiguidade) ? percMinAntiguidade
+        return (antiguidade < minAntiguidade) ? 1 : (antiguidade >= minAntiguidade && antiguidade <= medAntiguidade) ? percMinAntiguidade
                 : (antiguidade > medAntiguidade && antiguidade <= maxAntiguidade) ? percMedAntiguidade : percMaxAntiguidade;
     }
 
