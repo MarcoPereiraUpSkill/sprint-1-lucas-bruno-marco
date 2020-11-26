@@ -73,6 +73,18 @@ public class AtletaNaoProTest {
         double result = instance.obterPercAntiguidade();
         assertEquals(expResult, result, 0.0);
     }
+    
+    /**
+     * Test of obterPercAntiguidade method, of class AtletaNaoPro.
+     */
+    
+    @Test
+    public void testObterPercAntiguidadeInvalida() {
+        AtletaNaoPro instance = new AtletaSemiPro(2, "Marta", 345678123, "Feminino", 27, 65, "ciclismo", "CapacidadeCardio", 800);
+        double expResult = 1;
+        double result = instance.obterPercAntiguidade();
+        assertEquals(expResult, result, 0.0);
+    }
 
     /**
      * Test of equals method, of class Atleta.

@@ -2,7 +2,6 @@ package upskill.clubedesportivo;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 
 /**
  *
@@ -11,11 +10,11 @@ import java.util.Date;
 public class ClubeDesportivo {
 
     private String nome;
-    private Date data;
+    private String data;
     private ArrayList<Atleta> atletas;
 
     private static final String NOME_POR_OMISSAO = "";
-    private static final Date DATA_POR_OMISSAO = new Date();
+    private static final String DATA_POR_OMISSAO = "";
     private static final ArrayList<Atleta> ATLETAS_POR_OMISSAO = new ArrayList<Atleta>();
 
     /**
@@ -24,10 +23,21 @@ public class ClubeDesportivo {
      * @param data Data de fundação do clube
      * @param atletas Contentor para armazentar os atletas
      */
-    public ClubeDesportivo(String nome, Date data, ArrayList<Atleta> atletas) {
+    public ClubeDesportivo(String nome, String data, ArrayList<Atleta> atletas) {
         this.nome = nome;
         this.data = data;
         this.atletas = atletas;
+    }
+    
+    /**
+     *Construtor com nome e data como parâmetros
+     * @param nome Nome do clube desportivo
+     * @param data Data de fundação do clube
+     */
+    public ClubeDesportivo(String nome, String data) {
+        this.nome = nome;
+        this.data = data;
+        this.atletas = ATLETAS_POR_OMISSAO;
     }
 
     /**
@@ -61,7 +71,7 @@ public class ClubeDesportivo {
      *Obter data de fundação
      * @return Data de fundação
      */
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
@@ -85,7 +95,7 @@ public class ClubeDesportivo {
      *Alterar data de fundação
      * @param data Data de fundação
      */
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
