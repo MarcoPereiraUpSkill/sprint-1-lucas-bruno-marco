@@ -14,7 +14,7 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
     private static double parcelaFixa=500;
 
     /**
-     *
+     *Construtor completo
      * @param antiguidade Número de anos que o atleta está afiliado ao clube.
      * @param nome Nome do atleta.
      * @param nic Número de identificação civil do atleta.
@@ -30,7 +30,7 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
     }
     
     /**
-     *
+     *Construtor vazio
      */
     public AtletaSemiPro() {
         super();
@@ -62,7 +62,7 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
     }
     
     /**
-     *
+     *Calcula IRS a descontar pelo atleta
      * @return Valor a descontar para IRS
      */
     @Override
@@ -71,7 +71,7 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
     }
 
     /**
-     *
+     *Obter parcela fixa
      * @return Parcela Fixa
      */
     public static double getParcelaFixa() {
@@ -79,7 +79,7 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
     }
 
     /**
-     *
+     *Alterar parcela fixa
      * @param parcelaFixa Parcela Fixa
      */
     public static void setParcelaFixa(double parcelaFixa) {
