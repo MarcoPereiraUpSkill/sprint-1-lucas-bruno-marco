@@ -136,8 +136,8 @@ public class ClubeDesportivo {
     }
 
     /**
-     *
-     * @return
+     *Ordena o contentor de atletas inversamente por prémios
+     * @return Contentor de atletas
      */
     public ArrayList<Atleta> ordenarInversamentePremios() {
         OrdenarPremios ordenarPremios = new OrdenarPremios();
@@ -147,8 +147,8 @@ public class ClubeDesportivo {
     }
 
     /**
-     *
-     * @return
+     *Ordena o contentor de atletas alfabeticamente na seguinte ordem: categoria, modalidade e nome
+     * @return Contentor de atletas
      */
     public ArrayList<Atleta> ordenarCategoriaModalidadeNome() {
         OrdenarCategoriaModalidadeNome ordenarCategoriaModalidadeNome = new OrdenarCategoriaModalidadeNome();
@@ -158,8 +158,8 @@ public class ClubeDesportivo {
     }
 
     /**
-     *
-     * @return
+     *Calcula valor total de IRS a descontar de todos os atletas registados
+     * @return Valor total de IRS de todos os atletas no contentor
      */
     public double calcularTotalIRS() {
         double valorTotalIRS = 0;

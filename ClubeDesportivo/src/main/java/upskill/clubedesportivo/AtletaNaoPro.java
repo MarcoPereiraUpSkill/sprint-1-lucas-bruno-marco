@@ -23,7 +23,7 @@ public abstract class AtletaNaoPro extends Atleta {
     private static int maxAntiguidade = 20;
 
     /**
-     *
+     *Construtor completo
      * @param antiguidade Número de anos que o atleta está afiliado ao clube.
      * @param nome Nome do atleta.
      * @param nic Número de identificação civil do atleta.
@@ -40,7 +40,7 @@ public abstract class AtletaNaoPro extends Atleta {
     }
     
     /**
-     *
+     *Construtor vazio
      */
     public AtletaNaoPro() {
         super();
@@ -48,7 +48,7 @@ public abstract class AtletaNaoPro extends Atleta {
     }
 
     /**
-     *
+     *Obter antiguidade
      * @return Antiguidade
      */
     public int getAntiguidade() {
@@ -56,7 +56,7 @@ public abstract class AtletaNaoPro extends Atleta {
     }
 
     /**
-     *
+     *Alterar antiguidade
      * @param antiguidade Antiguidade
      */
     public void setAntiguidade(int antiguidade) {
@@ -86,7 +86,7 @@ public abstract class AtletaNaoPro extends Atleta {
     }
 
     /**
-     *
+     *Obter percentagem de antiguidade
      * @return Calcula percentagem de antiguidade mediante anos de antiguidade do atleta
      */
     public double obterPercAntiguidade() {
@@ -95,31 +95,31 @@ public abstract class AtletaNaoPro extends Atleta {
     }
 
     /**
-     *
-     * @return Percentagem mediante o intervalo de antiguidade de [5,10] anos
+     *Obter percentagem mediante o intervalo de antiguidade de [5,10] anos
+     * @return Percentagem mínima de antiguidade
      */
     public static double getPercMinAntiguidade() {
         return percMinAntiguidade;
     }
     
     /**
-     *
-     * @return Percentagem mediante o intervalo de antiguidade de ]10,20] anos
+     *Obter percentagem mediante o intervalo de antiguidade de ]10,20] anos
+     * @return Segunda percentagem de antiguidade
      */
     public static double getPercMedAntiguidade() {
         return percMedAntiguidade;
     }
     
     /**
-     *
-     * @return Percentagem mediante antiguidades superiores a 20 anos
+     *Obter percentagem mediante antiguidades superiores a 20 anos
+     * @return Percentagem máxima de antiguidade
      */
     public static double getPercMaxAntiguidade() {
         return percMaxAntiguidade;
     }
     
     /**
-     *
+     *Obter valor que determina o intervalo mínimo da primeira percentagem da Tabela 
      * @return Valor que determina o intervalo mínimo da primeira percentagem da Tabela 
      */
     public static int getMinAntiguidade() {
@@ -127,7 +127,8 @@ public abstract class AtletaNaoPro extends Atleta {
     }
     
     /**
-     *
+     *Obter valor que determina o intervalo máximo da primeira percentagem da Tabela e
+     * o intervalo mínimo da segunda tabela
      * @return Valor que determina o intervalo máximo da primeira percentagem da Tabela e
      * o intervalo mínimo da segunda tabela
      */
@@ -136,7 +137,7 @@ public abstract class AtletaNaoPro extends Atleta {
     }
     
     /**
-     *
+     *Obter valor que determina o intervalo mínimo da terceira percentagem da Tabela 
      * @return Valor que determina o intervalo mínimo da terceira percentagem da Tabela 
      */
     public static int getMaxAntiguidade() {
@@ -144,31 +145,31 @@ public abstract class AtletaNaoPro extends Atleta {
     }
     
     /**
-     *
-     * @param percMinAntiguidade Percentagem mediante o intervalo de antiguidade de [5,10] anos
+     *Obter percentagem mediante o intervalo de antiguidade de [5,10] anos
+     * @param percMinAntiguidade Percentagem mínima de antiguidade
      */
     public static void setPercMinAntiguidade(double percMinAntiguidade) {
         AtletaNaoPro.percMinAntiguidade = percMinAntiguidade;
     }
 
     /**
-     *
-     * @param percMedAntiguidade Percentagem mediante o intervalo de antiguidade de ]10,20] anos
+     *Obter percentagem mediante o intervalo de antiguidade de ]10,20] anos
+     * @param percMedAntiguidade Segunda percentagem de antiguidade
      */
     public static void setPercMedAntiguidade(double percMedAntiguidade) {
         AtletaNaoPro.percMedAntiguidade = percMedAntiguidade;
     }
 
     /**
-     *
-     * @param percMaxAntiguidade Percentagem mediante antiguidades superiores a 20 anos
+     *Obter percentagem mediante antiguidades superiores a 20 anos
+     * @param percMaxAntiguidade Percentagem máxima de antiguidade
      */
     public static void setPercMaxAntiguidade(double percMaxAntiguidade) {
         AtletaNaoPro.percMaxAntiguidade = percMaxAntiguidade;
     }
 
     /**
-     *
+     *Altera valor que determina o intervalo mínimo da primeira percentagem da Tabela 
      * @param minAntiguidade Valor que determina o intervalo mínimo da primeira percentagem da Tabela 
      */
     public static void setMinAntiguidade(int minAntiguidade) {
@@ -176,7 +177,8 @@ public abstract class AtletaNaoPro extends Atleta {
     }
 
     /**
-     *
+     *Altera valor que determina o intervalo máximo da primeira percentagem da Tabela e
+     * o intervalo mínimo da segunda tabela
      * @param medAntiguidade Valor que determina o intervalo máximo da primeira percentagem da Tabela e
      * o intervalo mínimo da segunda tabela
      */
@@ -185,7 +187,7 @@ public abstract class AtletaNaoPro extends Atleta {
     }
 
     /**
-     *
+     *Altera valor que determina o intervalo mínimo da terceira percentagem da Tabela 
      * @param maxAntiguidade Valor que determina o intervalo mínimo da terceira percentagem da Tabela 
      */
     public static void setMaxAntiguidade(int maxAntiguidade) {

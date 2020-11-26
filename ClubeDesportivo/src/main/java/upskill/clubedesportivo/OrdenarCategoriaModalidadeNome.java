@@ -3,6 +3,10 @@ package upskill.clubedesportivo;
 
 import java.util.Comparator;
 
+/**
+ *
+ * @author Upskills
+ */
 public class OrdenarCategoriaModalidadeNome implements Comparator<Atleta>{
 
     @Override

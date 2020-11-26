@@ -17,7 +17,7 @@ public class AtletaAmador extends AtletaNaoPro{
     private static int qtdAtletaAmador=0;
 
     /**
-     *
+     *Construtor completo
      * @param antiguidade Número de anos que o atleta está afiliado ao clube.
      * @param nome Nome do atleta.
      * @param nic Número de identificação civil do atleta.
@@ -34,7 +34,7 @@ public class AtletaAmador extends AtletaNaoPro{
     }
     
     /**
-     *
+     *Construtor vazio
      */
     public AtletaAmador() {
         super();
@@ -68,7 +68,7 @@ public class AtletaAmador extends AtletaNaoPro{
     }
 
     /**
-     *
+     *Obter parcela fixa
      * @return Parcela Fixa
      */
     public static double getParcelaFixa() {
@@ -76,7 +76,7 @@ public class AtletaAmador extends AtletaNaoPro{
     }
     
     /**
-     *
+     *Obter parcela variável
      * @return Percentagem Parcela Variável
      */
     public static double getPercParcelaVariavel() {
@@ -84,7 +84,7 @@ public class AtletaAmador extends AtletaNaoPro{
     }
     
     /**
-     *
+     *Obter valor mínimo a pagar a atleta
      * @return Valor mínimo que o atleta tem de receber caso o valor mensal seja inferior ao mesmo
      */
     public static double getValorMinimo() {
@@ -92,7 +92,7 @@ public class AtletaAmador extends AtletaNaoPro{
     }
     
     /**
-     *
+     *Obter quantidade de instâncias de Atletas Amadores
      * @return Quantidade de instâncias de Atletas Amadores
      */
     public static int getQtdAtletaAmador() {
@@ -100,7 +100,7 @@ public class AtletaAmador extends AtletaNaoPro{
     }
     
     /**
-     *
+     *Alterar parcela fixa
      * @param parcelaFixa Parcela Fixa
      */
     public static void setParcelaFixa(double parcelaFixa) {
@@ -108,7 +108,7 @@ public class AtletaAmador extends AtletaNaoPro{
     }
 
     /**
-     *
+     *Alterar parcela variável
      * @param percParcelaVariavel Percentagem Parcela Variável
      */
     public static void setPercParcelaVariavel(double percParcelaVariavel) {
@@ -116,7 +116,7 @@ public class AtletaAmador extends AtletaNaoPro{
     }
 
     /**
-     *
+     *Alterar valor mínimo a pagar ao atleta
      * @param valorMinimo Valor mínimo que o atleta tem de receber caso o valor mensal seja inferior ao mesmo
      */
     public static void setValorMinimo(double valorMinimo) {
