@@ -267,7 +267,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
 
     /**
-     *Método abstrato para calcular valor mensal nas categorias AtletaPro, AtletaSemiPro e AtletaAmador
+     *Método para calcular valor mensal nas categorias AtletaPro, AtletaSemiPro e AtletaAmador
      * @return 
      */
     public abstract double calcularValorMensal();
