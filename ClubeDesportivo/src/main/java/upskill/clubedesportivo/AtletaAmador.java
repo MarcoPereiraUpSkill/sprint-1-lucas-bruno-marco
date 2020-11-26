@@ -8,7 +8,7 @@ package upskill.clubedesportivo;
 
 /**
  *
- * @author Vicious
+ * @author
  */
 public class AtletaAmador extends AtletaNaoPro{   
     private static double parcelaFixa=0;

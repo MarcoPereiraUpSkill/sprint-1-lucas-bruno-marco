@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Upskills
+ * @author
  */
 public class MainClubeDesportivo {
 

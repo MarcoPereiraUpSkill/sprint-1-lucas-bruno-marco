@@ -7,7 +7,7 @@ package upskill.clubedesportivo;
 
 /**
  *
- * @author Vicious
+ * @author
  */
 public class AtletaPro extends Atleta implements IRS {
 
@@ -28,9 +28,6 @@ public class AtletaPro extends Atleta implements IRS {
      *Construtor completo
      * @param parcelaFixa Parcela fixa, diferente entre atletas Profissionais,
      * usada para calcular o valor a receber ao fim do mês
-     * @param parcelaVariavel Parcela variável dependente do valor mensal
-     * arrecadado em prémios, usada para calcular o valor a receber ao fim do
-     * mês
      * @param nome Nome do atleta.
      * @param nic Número de identificação civil do atleta.
      * @param genero Género do atleta.

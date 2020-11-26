@@ -5,7 +5,7 @@ import java.util.Comparator;
 
 /**
  *
- * @author Upskills
+ * @author
  */
 public class OrdenarPremios implements Comparator<Atleta>{
 

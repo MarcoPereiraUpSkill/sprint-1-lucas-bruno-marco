@@ -7,7 +7,7 @@ package upskill.clubedesportivo;
 
 /**
  *
- * @author Vicious
+ * @author
  */
 public abstract class Atleta implements Comparable<Atleta> {
     

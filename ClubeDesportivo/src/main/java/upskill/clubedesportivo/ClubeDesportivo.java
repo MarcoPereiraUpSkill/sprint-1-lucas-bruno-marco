@@ -5,7 +5,7 @@ import java.util.Collections;
 
 /**
  *
- * @author Vicious
+ * @author
  */
 public class ClubeDesportivo {
 
