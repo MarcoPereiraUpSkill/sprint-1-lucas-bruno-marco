@@ -3,7 +3,6 @@ package upskill.clubedesportivo;
 
 import java.util.Comparator;
 
-<<<<<<< HEAD
 <span class="fc" id="L6">public class OrdenarCategoriaModalidadeNome implements Comparator&lt;Atleta&gt;{</span>
 
     @Override
@@ -20,24 +19,6 @@ import java.util.Comparator;
             }
         } else {
 <span class="fc" id="L21">            return atleta1.getClass().getName().compareTo(atleta2.getClass().getName());</span>
-=======
-<span class="nc" id="L6">public class OrdenarCategoriaModalidadeNome implements Comparator&lt;Atleta&gt;{</span>
-
-    @Override
-    public int compare(Atleta atleta1, Atleta atleta2) {
-<span class="nc bnc" id="L10" title="All 2 branches missed.">        if(atleta1.getClass().getName().compareTo(atleta2.getClass().getName())== 0){</span>
-<span class="nc bnc" id="L11" title="All 2 branches missed.">            if(atleta1.getAtividade().compareTo(atleta2.getAtividade()) == 0){</span>
-<span class="nc bnc" id="L12" title="All 2 branches missed.">                if(atleta1.getNome().compareTo(atleta2.getNome()) == 0){</span>
-<span class="nc" id="L13">                    return 0;</span>
-                } else {
-<span class="nc" id="L15">                    return atleta1.getNome().compareTo(atleta2.getNome());</span>
-                }
-            } else {
-<span class="nc" id="L18">                return atleta1.getAtividade().compareTo(atleta2.getAtividade());</span>
-            }
-        } else {
-<span class="nc" id="L21">            return atleta1.getClass().getName().compareTo(atleta2.getClass().getName());</span>
->>>>>>> 8b633b6f8c042966cc59c76a11c6029312efabcd
         }
     }
     
