@@ -65,10 +65,35 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
+<<<<<<< HEAD
   <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testEquals" time="0"/>
   <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testObterPercAntiguidadeMax" time="0"/>
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testObterPercAntiguidadeMed" time="0"/>
+=======
+  <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testEquals" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testObterPercAntiguidadeZero" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testObterPercAntiguidadeMed" time="0"/>
+>>>>>>> d5cca70c91fecb77c30d713a206c4c515b69c237
+  <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testObterPercAntiguidadeMin" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testObterPercAntiguidadeMed" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testObterPercAntiguidadeMax" time="0"/>
+<<<<<<< HEAD
+  <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testObterPercAntiguidadeInvalida" time="0"/>
+  <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testEqualsInvalido" time="0"/>
+=======
+>>>>>>> 2425b093617160c8c44c3684f9de1e3d255f076d
+>>>>>>> f0600627574bd08aa688055889545b7b07b8428e
   <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testEqualsInvalido" time="0"/>
   <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testObterPercAntiguidadeInvalida" time="0"/>
   <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testObterPercAntiguidadeMed" time="0"/>
   <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testObterPercAntiguidadeMin" time="0"/>
+<<<<<<< HEAD
+=======
+>>>>>>> d5cca70c91fecb77c30d713a206c4c515b69c237
+  <testcase classname="upskill.clubedesportivo.AtletaNaoProTest" name="upskill.clubedesportivo.AtletaNaoProTest.testEquals" time="0"/>
+>>>>>>> f0600627574bd08aa688055889545b7b07b8428e
 </testsuite>

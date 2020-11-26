@@ -65,7 +65,12 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
+<<<<<<< HEAD
+  <testcase classname="upskill.clubedesportivo.OrdenarPremiosTest" name="upskill.clubedesportivo.OrdenarPremiosTest.testCompareNegative" time="0"/>
+  <testcase classname="upskill.clubedesportivo.OrdenarPremiosTest" name="upskill.clubedesportivo.OrdenarPremiosTest.testComparePositive" time="0"/>
+=======
   <testcase classname="upskill.clubedesportivo.OrdenarPremiosTest" name="upskill.clubedesportivo.OrdenarPremiosTest.testComparePositive" time="0"/>
   <testcase classname="upskill.clubedesportivo.OrdenarPremiosTest" name="upskill.clubedesportivo.OrdenarPremiosTest.testCompareNegative" time="0"/>
+>>>>>>> d5cca70c91fecb77c30d713a206c4c515b69c237
   <testcase classname="upskill.clubedesportivo.OrdenarPremiosTest" name="upskill.clubedesportivo.OrdenarPremiosTest.testCompareEqual" time="0"/>
 </testsuite>

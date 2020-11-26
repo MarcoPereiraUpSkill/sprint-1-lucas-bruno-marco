@@ -3,7 +3,7 @@ package upskill.clubedesportivo;
 
 /**
  *
- * @author Upskills
+ * @author
  */
 public interface Atividade {
 

@@ -7,7 +7,7 @@ package upskill.clubedesportivo;
 
 /**
  *
- * @author Vicious
+ * @author
  */
 public class AtletaSemiPro extends AtletaNaoPro implements IRS{
    
