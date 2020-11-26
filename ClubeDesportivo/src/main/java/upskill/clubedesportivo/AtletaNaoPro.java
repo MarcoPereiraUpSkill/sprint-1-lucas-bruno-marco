@@ -82,7 +82,7 @@ public abstract class AtletaNaoPro extends Atleta {
 
     @Override
     public String toString() {
-        return "AtletaNaoPro{" + "antiguidade=" + antiguidade + '}';
+        return String.format("Atleta não profissional: Nome: %s, Antiguidade: %d", super.getNome(), antiguidade);
     }
 
     /**

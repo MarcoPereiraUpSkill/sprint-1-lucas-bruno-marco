@@ -83,7 +83,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
     
     /**
-     *
+     *Obter Número de Identificação Civil
      * @return Número de Identificação Civil
      */
     public int getNic() {
@@ -91,7 +91,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
     
     /**
-     *
+     *Obter Género do atleta
      * @return Género do atleta
      */
     public String getGenero() {
@@ -99,7 +99,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
     
     /**
-     *
+     *Obter Idade do atleta
      * @return Idade do atleta
      */
     public int getIdade() {
@@ -107,7 +107,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
     
     /**
-     *
+     *Obter FCR(Frequência Cardíaca em Repouso)
      * @return FCR(Frequência Cardíaca em Repouso)
      */
     public int getFcr() {
@@ -115,7 +115,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
     
     /**
-     *
+     *Obter Atividade associada ao atleta
      * @return Atividade associada ao atleta
      */
     public String getAtividade() {
@@ -123,7 +123,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
     
     /**
-     *
+     *Obter Objetivo do atleta
      * @return Objetivo do atleta
      */
     public String getObjetivo() {
@@ -131,7 +131,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
     
     /**
-     *
+     *Obter Prémios do atleta durante um mês
      * @return Prémios do atleta durante um mês
      */
     public double getPremios() {
@@ -139,7 +139,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
     
     /**
-     *
+     *Alterar Nome do atleta
      * @param nome Nome do atleta
      */
     public void setNome(String nome) {
@@ -147,7 +147,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
 
     /**
-     *
+     *Alterar Número de Identificação Civil
      * @param nic Número de Identificação Civil
      */
     public void setNic(int nic) {
@@ -155,7 +155,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
 
     /**
-     *
+     *Alterar Género do atleta
      * @param genero Género do atleta
      */
     public void setGenero(String genero) {
@@ -163,7 +163,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
 
     /**
-     *
+     *Alterar Idade do atleta
      * @param idade Idade do atleta
      */
     public void setIdade(int idade) {
@@ -171,7 +171,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
 
     /**
-     *
+     *Alterar FCR(Frequência Cardíaca em Repouso)
      * @param fcr FCR(Frequência Cardíaca em Repouso)
      */
     public void setFcr(int fcr) {
@@ -179,7 +179,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
 
     /**
-     *
+     *Alterar Atividade associada ao atleta
      * @param atividade Atividade associada ao atleta
      */
     public void setAtividade(String atividade) {
@@ -187,7 +187,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
 
     /**
-     *
+     *Alterar Objetivo do atleta
      * @param objetivo Objetivo do atleta
      */
     public void setObjetivo(String objetivo) {
@@ -195,7 +195,7 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
  
     /**
-     *
+     *Alterar Prémios do atleta durante um mês
      * @param premios Prémios do atleta durante um mês
      */
     public void setPremios(double premios) {
@@ -226,7 +226,7 @@ public abstract class Atleta implements Comparable<Atleta> {
 
     @Override
     public String toString() {
-        return "Atleta{" + "nome=" + nome + ", nic=" + nic + ", genero=" + genero + ", idade=" + idade + '}';
+        return String.format("Atleta: nome: %s, nic: %d, genero: %s, idade: %d", nome, nic, genero, idade);
     }
 
     @Override

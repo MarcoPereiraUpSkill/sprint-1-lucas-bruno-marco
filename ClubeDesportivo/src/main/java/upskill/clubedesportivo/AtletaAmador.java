@@ -54,7 +54,7 @@ public class AtletaAmador extends AtletaNaoPro{
 
     @Override
     public String toString() {
-        return "AtletaAmador{" + '}';
+        return String.format("Atleta Amador: nome: %s", super.getNome());
     }
     
     /**
