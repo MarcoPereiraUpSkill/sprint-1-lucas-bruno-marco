@@ -109,7 +109,7 @@ public class AtletaPro extends Atleta implements IRS {
      */
     @Override
     public double calcularIRS() {
-        return parcelaFixa * (taxaIRS / 100);
+        return parcelaFixa * (TAXA_IRS / 100);
     }
 
     /**

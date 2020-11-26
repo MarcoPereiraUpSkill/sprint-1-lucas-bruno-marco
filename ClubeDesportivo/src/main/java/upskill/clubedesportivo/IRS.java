@@ -12,9 +12,9 @@ package upskill.clubedesportivo;
 public interface IRS {
 
     /**
-     *@param taxaIRS Taxa imutável sobre a parcela fixa dos Atletas Profissionais e Semiprofissionais
+     *Taxa imutável sobre a parcela fixa dos Atletas Profissionais e Semiprofissionais
      */
-    public static final double taxaIRS=10;
+    public static final double TAXA_IRS=10;
     
     /**
      *Método abstrato para calcular o IRS a descontar nas categorias Profissional e Semiprofissional
