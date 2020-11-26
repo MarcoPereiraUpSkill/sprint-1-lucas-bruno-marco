@@ -25,7 +25,7 @@ public class AtletaPro extends Atleta implements IRS {
 <span class="fc" id="L25">    private static int qtdAtletaPro = 0;</span>
 
     /**
-     *
+     *Construtor completo
      * @param parcelaFixa Parcela fixa, diferente entre atletas Profissionais,
      * usada para calcular o valor a receber ao fim do mês
      * @param parcelaVariavel Parcela variável dependente do valor mensal
@@ -50,7 +50,7 @@ public class AtletaPro extends Atleta implements IRS {
 <span class="fc" id="L50">    }</span>
 
     /**
-     *
+     *Construtor vazio
      */
     public AtletaPro() {
 <span class="nc" id="L56">        super();</span>
@@ -59,7 +59,7 @@ public class AtletaPro extends Atleta implements IRS {
 <span class="nc" id="L59">    }</span>
 
     /**
-     *
+     *Obter parcela fixa
      * @return Parcela Fixa
      */
     public double getParcelaFixa() {
@@ -67,7 +67,7 @@ public class AtletaPro extends Atleta implements IRS {
     }
 
     /**
-     *
+     *Alterar parcela fixa
      * @param parcelaFixa Parcela Fixa
      */
     public void setParcelaFixa(double parcelaFixa) {
@@ -93,7 +93,7 @@ public class AtletaPro extends Atleta implements IRS {
 
     @Override
     public String toString() {
-<span class="nc" id="L96">        return &quot;AtletaPro{&quot; + &quot;parcelaFixa=&quot; + parcelaFixa + '}';</span>
+<span class="fc" id="L96">        return String.format(&quot;Atleta profissional: nome: %s, parcelaFixa: %.2f&quot;, super.getNome(), parcelaFixa);</span>
     }
 
     /**
@@ -107,16 +107,16 @@ public class AtletaPro extends Atleta implements IRS {
     }
 
     /**
-     *
+     *Calcula IRS a descontar pelo atleta 
      * @return Valor a descontar para IRS
      */
     @Override
     public double calcularIRS() {
-<span class="nc" id="L115">        return parcelaFixa * (taxaIRS / 100);</span>
+<span class="fc" id="L115">        return parcelaFixa * (taxaIRS / 100);</span>
     }
 
     /**
-     *
+     *Obter percentagem da parcela variável
      * @return Percentagem da Parcela Variável
      */
     public static double getPercParcelaVariavel() {
@@ -124,7 +124,7 @@ public class AtletaPro extends Atleta implements IRS {
     }
 
     /**
-     *
+     *Obter quantidade de instâncias de Atletas Profissionais
      * @return Quantidade de instâncias de Atletas Profissionais
      */
     public static int getQtdAtletaPro() {
@@ -132,7 +132,7 @@ public class AtletaPro extends Atleta implements IRS {
     }
 
     /**
-     *
+     *Alterar percentagem de parcela variável
      * @param percParcelaVariavel Percentagem da Parcela Variável
      */
     public static void setPercParcelaVariavel(double percParcelaVariavel) {

@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: upskill.clubedesportivo.AtletaNaoProTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
-=======
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
->>>>>>> 475013c1bf60f9f246b38b26562492ccebd46c8b
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec

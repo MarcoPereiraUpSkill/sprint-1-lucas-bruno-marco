@@ -1,18 +1,10 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-ClubeDesportivo,upskill.clubedesportivo,ClubeDesportivo,85,98,7,7,24,27,12,12,7,10
-ClubeDesportivo,upskill.clubedesportivo,AtletaAmador,26,62,0,6,14,14,9,7,9,4
+ClubeDesportivo,upskill.clubedesportivo,ClubeDesportivo,82,94,3,11,26,25,12,12,9,8
+ClubeDesportivo,upskill.clubedesportivo,AtletaAmador,24,72,0,6,13,15,8,8,8,5
 ClubeDesportivo,upskill.clubedesportivo,OrdenarCategoriaModalidadeNome,0,45,0,6,0,8,0,5,0,2
-<<<<<<< HEAD
-ClubeDesportivo,upskill.clubedesportivo,Atleta,87,198,8,22,27,41,18,22,10,15
-=======
-ClubeDesportivo,upskill.clubedesportivo,Atleta,87,198,9,21,27,41,19,21,10,15
->>>>>>> 475013c1bf60f9f246b38b26562492ccebd46c8b
+ClubeDesportivo,upskill.clubedesportivo,Atleta,92,193,8,22,28,40,19,21,11,14
 ClubeDesportivo,upskill.clubedesportivo,OrdenarPremios,0,9,0,0,0,2,0,2,0,2
-ClubeDesportivo,upskill.clubedesportivo,AtletaPro,39,64,1,7,12,16,8,8,7,5
-ClubeDesportivo,upskill.clubedesportivo,MainClubeDesportivo,388,0,22,0,58,0,14,0,3,0
-ClubeDesportivo,upskill.clubedesportivo,AtletaNaoPro,53,80,3,13,24,19,18,10,15,5
-<<<<<<< HEAD
-ClubeDesportivo,upskill.clubedesportivo,AtletaSemiPro,28,24,4,0,12,4,8,3,6,3
-=======
-ClubeDesportivo,upskill.clubedesportivo,AtletaSemiPro,22,30,3,1,10,6,7,4,5,4
->>>>>>> 475013c1bf60f9f246b38b26562492ccebd46c8b
+ClubeDesportivo,upskill.clubedesportivo,AtletaPro,22,85,1,7,10,18,6,10,5,7
+ClubeDesportivo,upskill.clubedesportivo,MainClubeDesportivo,402,0,22,0,59,0,14,0,3,0
+ClubeDesportivo,upskill.clubedesportivo,AtletaNaoPro,57,80,3,13,24,19,18,10,15,5
+ClubeDesportivo,upskill.clubedesportivo,AtletaSemiPro,22,38,4,0,10,6,6,5,4,5

@@ -63,38 +63,39 @@ import java.util.Scanner;
 <span class="nc" id="L63">        System.out.println(&quot;Valor a pagar a atletas profissionais: &quot; + valorPro);</span>
 <span class="nc" id="L64">        System.out.println(&quot;Valor a pagar a atletas semiprofissionais: &quot; + valorSemiPro);</span>
 <span class="nc" id="L65">        System.out.println(&quot;Valor a pagar a atletas amadores: &quot; + valorAmador);</span>
-<span class="nc" id="L66">        System.out.println();</span>
+<span class="nc" id="L66">        System.out.println(&quot;Valor total a pagar a todos os atletas: &quot; + (valorPro+valorSemiPro+valorAmador));</span>
+<span class="nc" id="L67">        System.out.println();</span>
 
-<span class="nc" id="L68">        System.out.println(&quot;###### Obter nome do clube ######&quot;);</span>
-<span class="nc" id="L69">        System.out.println(&quot;Nome do clube: &quot; + vizela.getNome());</span>
-<span class="nc" id="L70">        System.out.println();</span>
+<span class="nc" id="L69">        System.out.println(&quot;###### Obter nome do clube ######&quot;);</span>
+<span class="nc" id="L70">        System.out.println(&quot;Nome do clube: &quot; + vizela.getNome());</span>
+<span class="nc" id="L71">        System.out.println();</span>
 
         //Inserir um novo atleta no contentor
-<span class="nc" id="L73">        vizela.inserirAtleta(new AtletaPro(400, &quot;Marco&quot;, 345452889, &quot;Masculino&quot;, 21, 68, &quot;corrida&quot;, &quot;QueimaGordura&quot;, 2400));</span>
+<span class="nc" id="L74">        vizela.inserirAtleta(new AtletaPro(400, &quot;Marco&quot;, 345452889, &quot;Masculino&quot;, 21, 68, &quot;corrida&quot;, &quot;QueimaGordura&quot;, 2400));</span>
 
-<span class="nc" id="L75">        System.out.println(&quot;###### Lista de atletas ordenadas alfabeticamente por nome ######&quot;);</span>
-<span class="nc bnc" id="L76" title="All 2 branches missed.">        for (Atleta atleta : vizela.ordenarAlfabeticamenteNome()) {</span>
-<span class="nc" id="L77">            System.out.format(&quot;Nome: %s%n&quot;, atleta.getNome());</span>
-<span class="nc" id="L78">        }</span>
-<span class="nc" id="L79">        System.out.println();</span>
+<span class="nc" id="L76">        System.out.println(&quot;###### Lista de atletas ordenadas alfabeticamente por nome ######&quot;);</span>
+<span class="nc bnc" id="L77" title="All 2 branches missed.">        for (Atleta atleta : vizela.ordenarAlfabeticamenteNome()) {</span>
+<span class="nc" id="L78">            System.out.format(&quot;Nome: %s%n&quot;, atleta.getNome());</span>
+<span class="nc" id="L79">        }</span>
+<span class="nc" id="L80">        System.out.println();</span>
 
         //Retornar uma lista de atletas, ordenada inversamente pelo valor dos prémios
-<span class="nc" id="L82">        System.out.println(&quot;###### Lista de atletas ordenadas inversamente por prémios ######&quot;);</span>
-<span class="nc bnc" id="L83" title="All 2 branches missed.">        for (Atleta atleta : vizela.ordenarInversamentePremios()) {</span>
-<span class="nc" id="L84">            System.out.format(&quot;Nome: %s, Premios: %.2f%n&quot;, atleta.getNome(), atleta.getPremios());</span>
-<span class="nc" id="L85">        }</span>
-<span class="nc" id="L86">        System.out.println();</span>
+<span class="nc" id="L83">        System.out.println(&quot;###### Lista de atletas ordenadas inversamente por prémios ######&quot;);</span>
+<span class="nc bnc" id="L84" title="All 2 branches missed.">        for (Atleta atleta : vizela.ordenarInversamentePremios()) {</span>
+<span class="nc" id="L85">            System.out.format(&quot;Nome: %s, Premios: %.2f%n&quot;, atleta.getNome(), atleta.getPremios());</span>
+<span class="nc" id="L86">        }</span>
+<span class="nc" id="L87">        System.out.println();</span>
 
         //Retornar o valor total dos atletas, para efeito de IRS
-<span class="nc" id="L89">        System.out.println(&quot;###### Calcular valor total dos atletas, para efeitos de IRS ######&quot;);</span>
-<span class="nc" id="L90">        System.out.println(&quot;IRS: &quot; + vizela.calcularTotalIRS());</span>
-<span class="nc" id="L91">        System.out.println();</span>
+<span class="nc" id="L90">        System.out.println(&quot;###### Calcular valor total dos atletas, para efeitos de IRS ######&quot;);</span>
+<span class="nc" id="L91">        System.out.println(&quot;IRS: &quot; + vizela.calcularTotalIRS());</span>
+<span class="nc" id="L92">        System.out.println();</span>
 
         //Retornar uma lista de atletas do clube, ordenada alfabeticamente por categoria, modalidade e nome
-<span class="nc" id="L94">        System.out.println(&quot;###### Retornar uma lista de atletas do clube, ordenada alfabeticamente por categoria, modalidade e nome #####&quot;);</span>
-<span class="nc bnc" id="L95" title="All 2 branches missed.">        for (Atleta atleta : vizela.ordenarCategoriaModalidadeNome()) {</span>
-<span class="nc" id="L96">            System.out.format(&quot;Categoria: %s, Modalidade: %s, Nome: %s%n&quot;, atleta.getClass().getSimpleName(), atleta.getAtividade(), atleta.getNome());</span>
-<span class="nc" id="L97">        }</span>
-<span class="nc" id="L98">    }</span>
+<span class="nc" id="L95">        System.out.println(&quot;###### Retornar uma lista de atletas do clube, ordenada alfabeticamente por categoria, modalidade e nome #####&quot;);</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">        for (Atleta atleta : vizela.ordenarCategoriaModalidadeNome()) {</span>
+<span class="nc" id="L97">            System.out.format(&quot;Categoria: %s, Modalidade: %s, Nome: %s%n&quot;, atleta.getClass().getSimpleName(), atleta.getAtividade(), atleta.getNome());</span>
+<span class="nc" id="L98">        }</span>
+<span class="nc" id="L99">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
