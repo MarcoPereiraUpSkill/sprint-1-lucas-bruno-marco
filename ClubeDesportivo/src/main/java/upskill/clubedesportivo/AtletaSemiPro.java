@@ -67,7 +67,7 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
      */
     @Override
     public double calcularIRS(){
-     return parcelaFixa*(taxaIRS/100);
+        return parcelaFixa*(taxaIRS/100);
     }
 
     /**

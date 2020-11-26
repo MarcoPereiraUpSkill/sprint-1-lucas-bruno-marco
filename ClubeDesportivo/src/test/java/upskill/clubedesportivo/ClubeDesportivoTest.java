@@ -186,18 +186,21 @@ public class ClubeDesportivoTest {
 
         expResult.equals(result);
     }
-//
-//    /**
-//     * Test of calcularTotalIRS method, of class ClubeDesportivo.
-//     */
+
+    /**
+     * Test of calcularTotalIRS method, of class ClubeDesportivo.
+     */
 //    @Test
 //    public void testCalcularTotalIRS() {
-//        ClubeDesportivo instance = new ClubeDesportivo("Arouca FC");
+//        ClubeDesportivo instance2 = new ClubeDesportivo("Arouca FC");
 //
-//        instance.inserirAtleta(new AtletaPro(600, "Daniel", 123456789, "Masculino", 32, 70, "ciclismo", "QueimaGordura", 600));
-//
-//        double expResult = 60;
-//        double result = instance.calcularTotalIRS();
+//        instance2.inserirAtleta(new AtletaPro(600, "A", 123456789, "Masculino", 32, 70, "corrida", "QueimaGordura", 1200));
+//        instance2.inserirAtleta(new AtletaSemiPro(7, "B", 345678123, "Feminino", 27, 65, "ciclismo", "CapacidadeCardio", 800));
+//        instance2.inserirAtleta(new AtletaAmador(22, "C", 543876098, "Masculino", 40, 55, "caminhada", "QueimaGordura", 600));
+//        instance2.inserirAtleta(new AtletaPro(400, "D", 345452889, "Masculino", 21, 68, "corrida", "QueimaGordura", 2400));
+//        System.out.println(instance2.getAtletas());
+//        double expResult = 150;
+//        double result = instance2.calcularTotalIRS();
 //        
 //        assertEquals(expResult, result);
 //    }

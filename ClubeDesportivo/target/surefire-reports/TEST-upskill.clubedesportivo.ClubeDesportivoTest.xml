@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<<<<<<< HEAD
-<testsuite tests="7" failures="0" name="upskill.clubedesportivo.ClubeDesportivoTest" time="0.002" errors="0" skipped="0">
-=======
-<testsuite tests="7" failures="0" name="upskill.clubedesportivo.ClubeDesportivoTest" time="0" errors="0" skipped="0">
->>>>>>> 475013c1bf60f9f246b38b26562492ccebd46c8b
+<testsuite tests="8" failures="1" name="upskill.clubedesportivo.ClubeDesportivoTest" time="0.038" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_271\jre\bin"/>
@@ -19,6 +15,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
+    <property name="test" value="upskill.clubedesportivo.ClubeDesportivoTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\Upskills\Documents\Git\sprint-1-lucas-bruno-marco\ClubeDesportivo"/>
     <property name="java.runtime.version" value="1.8.0_271-b09"/>
@@ -39,7 +36,6 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="skipTests" value="false"/>
     <property name="os.version" value="10.0"/>
     <property name="library.jansi.path" value="C:\Program Files\NetBeans-12.0\netbeans\java\maven\bin\..\lib\jansi-native"/>
     <property name="user.home" value="C:\Users\Upskills"/>
@@ -51,13 +47,8 @@
     <property name="java.class.path" value="C:\Program Files\NetBeans-12.0\netbeans\java\maven\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-<<<<<<< HEAD
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_271\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -DskipTests=false -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.0\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 clean verify"/>
-=======
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_261\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.1\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 clean install"/>
->>>>>>> 475013c1bf60f9f246b38b26562492ccebd46c8b
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=upskill.clubedesportivo.ClubeDesportivoTest -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.0\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -74,21 +65,39 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-<<<<<<< HEAD
+  <testcase classname="upskill.clubedesportivo.ClubeDesportivoTest" name="upskill.clubedesportivo.ClubeDesportivoTest.testOrdenarCategoriaModalidadeNome" time="0"/>
+  <testcase classname="upskill.clubedesportivo.ClubeDesportivoTest" name="upskill.clubedesportivo.ClubeDesportivoTest.testEqualsSameInstance" time="0.016"/>
   <testcase classname="upskill.clubedesportivo.ClubeDesportivoTest" name="upskill.clubedesportivo.ClubeDesportivoTest.testEqualsDifAtt" time="0"/>
-  <testcase classname="upskill.clubedesportivo.ClubeDesportivoTest" name="upskill.clubedesportivo.ClubeDesportivoTest.testOrdenarAlfabeticamenteNome" time="0.002"/>
-  <testcase classname="upskill.clubedesportivo.ClubeDesportivoTest" name="upskill.clubedesportivo.ClubeDesportivoTest.testOrdenarInversamentePremios" time="0"/>
-  <testcase classname="upskill.clubedesportivo.ClubeDesportivoTest" name="upskill.clubedesportivo.ClubeDesportivoTest.testEqualsDifClass" time="0"/>
   <testcase classname="upskill.clubedesportivo.ClubeDesportivoTest" name="upskill.clubedesportivo.ClubeDesportivoTest.testInserirAtleta" time="0"/>
-  <testcase classname="upskill.clubedesportivo.ClubeDesportivoTest" name="upskill.clubedesportivo.ClubeDesportivoTest.testEqualsSameInstance" time="0"/>
-  <testcase classname="upskill.clubedesportivo.ClubeDesportivoTest" name="upskill.clubedesportivo.ClubeDesportivoTest.testOrdenarCategoriaModalidadeNome" time="0"/>
-=======
-  <testcase classname="upskill.clubedesportivo.ClubeDesportivoTest" name="upskill.clubedesportivo.ClubeDesportivoTest.testOrdenarCategoriaModalidadeNome" time="0"/>
+  <testcase classname="upskill.clubedesportivo.ClubeDesportivoTest" name="upskill.clubedesportivo.ClubeDesportivoTest.testCalcularTotalIRS" time="0.022">
+    <failure message="expected: &lt;150.0&gt; but was: &lt;870.0&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;150.0&gt; but was: &lt;870.0&gt;
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:70)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:65)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:868)
+	at upskill.clubedesportivo.ClubeDesportivoTest.testCalcularTotalIRS(ClubeDesportivoTest.java:205)
+</failure>
+    <system-out>[Atleta Amador: nome: Daniel, Atleta Amador: nome: Flávia, Atleta Amador: nome: Ana, Atleta Amador: nome: Carlos, Atleta Amador: nome: Miguel, Atleta Amador: nome: Rui, Atleta profissional: nome: Daniel, parcelaFixa: 600.00, Atleta profissional: nome: Flávia, parcelaFixa: 600.00, Atleta profissional: nome: Ana, parcelaFixa: 600.00, Atleta profissional: nome: Carlos, parcelaFixa: 600.00, Atleta profissional: nome: Miguel, parcelaFixa: 600.00, Atleta profissional: nome: Rui, parcelaFixa: 600.00, Atleta Semi Profissional: nome: José, Atleta Semi Profissional: nome: João, Atleta Semi Profissional: nome: Bruno, Atleta Semi Profissional: nome: Diogo, Atleta Semi Profissional: nome: Maria, Atleta Semi Profissional: nome: Tozé, Atleta profissional: nome: Carlos, parcelaFixa: 600.00, Atleta profissional: nome: A, parcelaFixa: 600.00, Atleta Semi Profissional: nome: B, Atleta Amador: nome: C, Atleta profissional: nome: D, parcelaFixa: 400.00]
+Valor IRS:60.0
+Valor IRS:120.0
+Valor IRS:180.0
+Valor IRS:240.0
+Valor IRS:300.0
+Valor IRS:360.0
+Valor IRS:410.0
+Valor IRS:460.0
+Valor IRS:510.0
+Valor IRS:560.0
+Valor IRS:610.0
+Valor IRS:660.0
+Valor IRS:720.0
+Valor IRS:780.0
+Valor IRS:830.0
+Valor IRS:870.0
+</system-out>
+  </testcase>
   <testcase classname="upskill.clubedesportivo.ClubeDesportivoTest" name="upskill.clubedesportivo.ClubeDesportivoTest.testOrdenarAlfabeticamenteNome" time="0"/>
   <testcase classname="upskill.clubedesportivo.ClubeDesportivoTest" name="upskill.clubedesportivo.ClubeDesportivoTest.testEqualsDifClass" time="0"/>
-  <testcase classname="upskill.clubedesportivo.ClubeDesportivoTest" name="upskill.clubedesportivo.ClubeDesportivoTest.testInserirAtleta" time="0"/>
   <testcase classname="upskill.clubedesportivo.ClubeDesportivoTest" name="upskill.clubedesportivo.ClubeDesportivoTest.testOrdenarInversamentePremios" time="0"/>
-  <testcase classname="upskill.clubedesportivo.ClubeDesportivoTest" name="upskill.clubedesportivo.ClubeDesportivoTest.testEqualsSameInstance" time="0"/>
-  <testcase classname="upskill.clubedesportivo.ClubeDesportivoTest" name="upskill.clubedesportivo.ClubeDesportivoTest.testEqualsDifAtt" time="0"/>
->>>>>>> 475013c1bf60f9f246b38b26562492ccebd46c8b
 </testsuite>
