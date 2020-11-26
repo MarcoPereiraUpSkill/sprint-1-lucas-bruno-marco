@@ -1,8 +1,10 @@
 package upskill.clubedesportivo;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -11,11 +13,11 @@ import java.util.Date;
 public class ClubeDesportivo {
 
     private String nome;
-    private Date data;
+    private Calendar data;
     private ArrayList<Atleta> atletas;
 
     private static final String NOME_POR_OMISSAO = "";
-    private static final Date DATA_POR_OMISSAO = new Date();
+    private static final Calendar DATA_POR_OMISSAO = new GregorianCalendar();
     private static final ArrayList<Atleta> ATLETAS_POR_OMISSAO = new ArrayList<Atleta>();
 
     /**
@@ -24,7 +26,7 @@ public class ClubeDesportivo {
      * @param data Data de fundação do clube
      * @param atletas Contentor para armazentar os atletas
      */
-    public ClubeDesportivo(String nome, Date data, ArrayList<Atleta> atletas) {
+    public ClubeDesportivo(String nome, Calendar data, ArrayList<Atleta> atletas) {
         this.nome = nome;
         this.data = data;
         this.atletas = atletas;
@@ -61,7 +63,7 @@ public class ClubeDesportivo {
      *Obter data de fundação
      * @return Data de fundação
      */
-    public Date getData() {
+    public Calendar getData() {
         return data;
     }
 
@@ -85,7 +87,7 @@ public class ClubeDesportivo {
      *Alterar data de fundação
      * @param data Data de fundação
      */
-    public void setData(Date data) {
+    public void setData(Calendar data) {
         this.data = data;
     }
 

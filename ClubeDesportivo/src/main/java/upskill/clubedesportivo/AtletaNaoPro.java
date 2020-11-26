@@ -97,7 +97,7 @@ public abstract class AtletaNaoPro extends Atleta {
     /**
      *Obter percentagem mediante o intervalo de antiguidade de [5,10] anos
      * @return Percentagem mínima de antiguidade
-     */
+     */ 
     public static double getPercMinAntiguidade() {
         return percMinAntiguidade;
     }
