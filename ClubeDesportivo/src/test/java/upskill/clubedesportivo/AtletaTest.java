@@ -42,9 +42,21 @@ public class AtletaTest {
      */
     @Test
     public void testObterIT() {
-        System.out.println("obterIT");
+        System.out.println("obterIT QueimaGordura");
         Atleta instance = new AtletaAmador(22, "Jorge", 543876098, "Masculino", 40, 55, "caminhada", "QueimaGordura", 400);
         double expResult = 0.6;
+        double result = instance.obterIT();
+        assertEquals(expResult, result, 0.0);
+    }
+    
+    /**
+     * Test of obterIT method, of class Atleta.
+     */
+    @Test
+    public void testObterIT2() {
+        System.out.println("obterIT CapacidadeCardio");
+        Atleta instance = new AtletaAmador(22, "Jorge", 543876098, "Masculino", 40, 55, "caminhada", "CapacidadeCardio", 400);
+        double expResult = 0.75;
         double result = instance.obterIT();
         assertEquals(expResult, result, 0.0);
     }

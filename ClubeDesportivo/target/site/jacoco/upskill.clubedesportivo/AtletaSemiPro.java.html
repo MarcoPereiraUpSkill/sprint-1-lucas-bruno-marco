@@ -14,7 +14,7 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
 <span class="fc" id="L14">    private static double parcelaFixa=500;</span>
 
     /**
-     *
+     *Construtor completo
      * @param antiguidade Número de anos que o atleta está afiliado ao clube.
      * @param nome Nome do atleta.
      * @param nic Número de identificação civil do atleta.
@@ -30,7 +30,7 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
 <span class="fc" id="L30">    }</span>
     
     /**
-     *
+     *Construtor vazio
      */
     public AtletaSemiPro() {
 <span class="nc" id="L36">        super();</span>
@@ -38,13 +38,8 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
     
     @Override
     public boolean equals(Object obj) {
-<<<<<<< HEAD
 <span class="nc bnc" id="L41" title="All 2 branches missed.">        if (!super.equals(obj)) {</span>
 <span class="nc" id="L42">            return false;</span>
-=======
-<span class="pc bpc" id="L41" title="1 of 2 branches missed.">        if (!super.equals(obj)) {</span>
-<span class="fc" id="L42">            return false;</span>
->>>>>>> 475013c1bf60f9f246b38b26562492ccebd46c8b
         }
 <span class="nc bnc" id="L44" title="All 2 branches missed.">        if (obj == this) {</span>
 <span class="nc" id="L45">            return true;</span>
@@ -54,7 +49,7 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
 
     @Override
     public String toString() {
-<span class="nc" id="L52">        return &quot;AtletaSemiPro{&quot; + '}';</span>
+<span class="fc" id="L52">        return String.format(&quot;Atleta Semi Profissional: nome: %s&quot;, super.getNome());</span>
     }
     
     /**
@@ -67,16 +62,16 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
     }
     
     /**
-     *
+     *Calcula IRS a descontar pelo atleta
      * @return Valor a descontar para IRS
      */
     @Override
     public double calcularIRS(){
-<span class="nc" id="L70">     return parcelaFixa*(taxaIRS/100);</span>
+<span class="fc" id="L70">        return parcelaFixa*(taxaIRS/100);</span>
     }
 
     /**
-     *
+     *Obter parcela fixa
      * @return Parcela Fixa
      */
     public static double getParcelaFixa() {
@@ -84,7 +79,7 @@ public class AtletaSemiPro extends AtletaNaoPro implements IRS{
     }
 
     /**
-     *
+     *Alterar parcela fixa
      * @param parcelaFixa Parcela Fixa
      */
     public static void setParcelaFixa(double parcelaFixa) {

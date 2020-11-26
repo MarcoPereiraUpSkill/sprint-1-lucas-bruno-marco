@@ -63,6 +63,7 @@ public class MainClubeDesportivo {
         System.out.println("Valor a pagar a atletas profissionais: " + valorPro);
         System.out.println("Valor a pagar a atletas semiprofissionais: " + valorSemiPro);
         System.out.println("Valor a pagar a atletas amadores: " + valorAmador);
+        System.out.println("Valor total a pagar a todos os atletas: " + (valorPro+valorSemiPro+valorAmador));
         System.out.println();
 
         System.out.println("###### Obter nome do clube ######");
