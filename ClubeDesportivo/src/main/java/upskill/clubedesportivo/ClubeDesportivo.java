@@ -109,7 +109,7 @@ public class ClubeDesportivo {
 
     @Override
     public String toString() {
-        return String.format("Clube Desportivo: nome: %s, data: %d", nome, data);
+        return String.format("Clube Desportivo: nome: %s, data: %s", nome, data);
     }
 
     @Override
