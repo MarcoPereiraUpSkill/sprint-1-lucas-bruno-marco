@@ -31,7 +31,7 @@ public class MainClubeDesportivo {
         System.out.println("###### Obter nome, FCM e FCT de cada atleta semiprofissional e amador ######");
         for (Atleta atleta : vizela.getAtletas()) {
             if (atleta instanceof AtletaSemiPro || atleta instanceof AtletaAmador) {
-                System.out.format("Nome: %s, FCM: %s, FCT: %s%n", atleta.getNome(), atleta.calcularFCM(), atleta.calcularFCT());
+                System.out.format("Nome: %s, FCM: %.2f, FCT: %.2f%n", atleta.getNome(), atleta.calcularFCM(), atleta.calcularFCT());
             }
         }
         System.out.println();
