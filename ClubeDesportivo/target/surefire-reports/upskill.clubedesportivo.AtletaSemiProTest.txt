@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: upskill.clubedesportivo.AtletaSemiProTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 sec
+=======
+<<<<<<< HEAD
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+=======
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+>>>>>>> 2425b093617160c8c44c3684f9de1e3d255f076d
+>>>>>>> d5cca70c91fecb77c30d713a206c4c515b69c237
